@@ -407,6 +407,10 @@ figure { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .media img { transition: none; } .mobile-cta { transition: none; } }
 .offer { gap: 0; }
+.seg { position: relative; }
+.seg input { left: 0; top: 0; width: 1px; height: 1px; }
+html, body { overflow-x: clip; }
+@media (max-width: 1020px) { .hero-photo { aspect-ratio: 4 / 3; } .scoreboard .note { display: none; } }
 </style>
 </head>
 <body>
