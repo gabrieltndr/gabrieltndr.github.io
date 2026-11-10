@@ -907,7 +907,7 @@ var CONTACT_EMAIL = "contact@votre-domaine.fr";
         .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
         .then(function (j) { if (j && String(j.success) === 'false') throw new Error(); showSuccess(true); })
         .catch(function () { err.textContent = "L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous à " + CONTACT_EMAIL + '.'; })
-        .then(function () { submitBtn.disabled = false; setMode(mode); });
+        .then(function () { submitBtn.disabled = false; submitBtn.innerHTML = labels[mode] + ' <span class="arrow" aria-hidden="true">→</span>'; });
     } else {
       showSuccess(false);
     }
