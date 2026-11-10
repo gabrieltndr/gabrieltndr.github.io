@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terrain Commun · Événements sportifs pour entreprises à Caen | Ligue 14</title>
+<meta name="description" content="Team building et événements sportifs clé en main pour les entreprises de Caen et du Calvados. LIGUE 14 : championnat inter-entreprises de padel et pickleball, 790 € HT par équipe.">
+<link rel="canonical" href="https://gabrieltndr.github.io/terrain-commun/">
+<meta name="theme-color" content="#1D3FC4">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Terrain Commun">
+<meta property="og:title" content="Terrain Commun · Le sport qui rapproche les équipes">
+<meta property="og:description" content="LIGUE 14, la ligue inter-entreprises de padel et pickleball de Caen. 8 soirées de matchs, 1 finale avec networking, 100 % clé en main.">
+<meta property="og:url" content="https://gabrieltndr.github.io/terrain-commun/">
+<meta property="og:image" content="https://gabrieltndr.github.io/terrain-commun/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Terrain Commun, événementiel sportif pour entreprises à Caen">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terrain Commun · Le sport qui rapproche les équipes">
+<meta name="twitter:description" content="LIGUE 14 : la ligue inter-entreprises de padel et pickleball de Caen. 790 € HT par équipe de 4.">
+<meta name="twitter:image" content="https://gabrieltndr.github.io/terrain-commun/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Terrain Commun", "description": "Événementiel sportif pour les entreprises à Caen et en Normandie : ligues inter-entreprises, tournois, séminaires sport, événements clients.", "url": "https://gabrieltndr.github.io/terrain-commun/", "areaServed": ["Caen", "Calvados", "Normandie"], "address": {"@type": "PostalAddress", "addressLocality": "Caen", "postalCode": "14000", "addressRegion": "Normandie", "addressCountry": "FR"}}, {"@context": "https://schema.org", "@type": "SportsEvent", "name": "LIGUE 14 — Saison 1", "description": "Ligue inter-entreprises de padel et pickleball de Caen et du Calvados : 8 soirées de matchs de mars à mai 2027 et une grande finale en juin.", "startDate": "2027-03-15", "endDate": "2027-06-30", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Clubs partenaires de l'agglomération caennaise", "address": {"@type": "PostalAddress", "addressLocality": "Caen", "addressCountry": "FR"}}, "organizer": {"@type": "Organization", "name": "Terrain Commun", "url": "https://gabrieltndr.github.io/terrain-commun/"}, "offers": {"@type": "Offer", "price": "790", "priceCurrency": "EUR", "url": "https://gabrieltndr.github.io/terrain-commun/#contact", "availability": "https://schema.org/PreOrder", "description": "Prix HT par équipe de 4 joueurs"}}]</script>
+<style>
+/* Layout idea: a padel court seen from above — white space, royal-blue blocks, thin court lines as the recurring motif, one electric-green accent for the ball. */
+:root {
+  --royal: #1D3FC4;
+  --royal-deep: #10257A;
+  --ink: #0E1A3D;
+  --paper: #FFFFFF;
+  --mist: #F3F5FB;
+  --line: #DCE1EF;
+  --muted: #56607A;
+  --ball: #C8F03C;
+  --ball-ink: #24310A;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(14,26,61,.06), 0 8px 24px rgba(14,26,61,.06);
+  --shadow-hover: 0 2px 4px rgba(14,26,61,.08), 0 18px 40px rgba(29,63,196,.14);
+  --wrap: 1180px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); font-stretch: 112%; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: clamp(30px, 4.4vw, 52px); font-weight: 800; }
+h3 { font-size: 21px; font-weight: 750; font-stretch: 105%; }
+p { margin: 0; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+.eyebrow { font-family: var(--font-display); font-stretch: 125%; font-weight: 700; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--royal); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; }
+.lead { font-size: 19px; color: var(--muted); max-width: 62ch; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; border-radius: 6px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-display); font-stretch: 110%; font-weight: 700; font-size: 15.5px; text-decoration: none; padding: 14px 22px; border-radius: 999px; border: 2px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease; white-space: nowrap; }
+.btn-royal { background: var(--royal); color: #fff; }
+.btn-royal:hover { background: var(--royal-deep); transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+.btn-ball { background: var(--ball); color: var(--ball-ink); }
+.btn-ball:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(200,240,60,.35); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--royal); color: var(--royal); }
+.btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.35); }
+.btn-ghost-light:hover { border-color: #fff; }
+.btn .arrow { transition: transform .2s ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* Header */
+header.site { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.88); backdrop-filter: saturate(160%) blur(12px); -webkit-backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+header.site.scrolled { border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 850; font-stretch: 118%; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); }
+.logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--royal); position: relative; flex: none; }
+.logo-mark::before { content: ""; position: absolute; inset: 6px; border: 1.6px solid rgba(255,255,255,.9); border-radius: 2px; }
+.logo-mark::after { content: ""; position: absolute; left: 50%; top: 6px; bottom: 6px; width: 1.6px; background: rgba(255,255,255,.9); transform: translateX(-50%); }
+.logo-mark i { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--ball); right: -3px; top: -3px; box-shadow: 0 0 0 2px #fff; }
+.menu { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.menu a { text-decoration: none; font-weight: 550; font-size: 15px; color: var(--muted); transition: color .2s; }
+.menu a:hover { color: var(--royal); }
+.burger { display: none; background: none; border: 1px solid var(--line); border-radius: 10px; width: 44px; height: 44px; cursor: pointer; align-items: center; justify-content: center; }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: var(--ink); position: relative; content: ""; transition: transform .2s; }
+.burger span::before { position: absolute; top: -6px; } .burger span::after { position: absolute; top: 6px; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding: 72px 0 64px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(42px, 6.6vw, 84px); font-weight: 900; font-stretch: 118%; letter-spacing: -0.025em; margin: 22px 0 24px; }
+.hero h1 em { font-style: normal; color: var(--royal); position: relative; white-space: nowrap; }
+.hero h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: .06em; height: .14em; background: var(--ball); z-index: -1; transform-origin: left; animation: sweep 1s .5s cubic-bezier(.2,.8,.2,1) both; }
+.hero .lead { margin-bottom: 34px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 48px; border-top: 1px solid var(--line); }
+.stat { padding: 18px 18px 0 0; }
+.stat + .stat { padding-left: 18px; border-left: 1px solid var(--line); }
+.stat b { display: block; font-family: var(--font-display); font-stretch: 120%; font-weight: 850; font-size: 38px; color: var(--royal); line-height: 1; }
+.stat span { font-size: 14px; color: var(--muted); display: block; margin-top: 8px; line-height: 1.4; }
+
+/* Court visual + scoreboard */
+
+
+
+
+
+.scoreboard { position: absolute; left: 18px; right: 18px; bottom: 18px; background: rgba(255,255,255,.97); border-radius: 14px; padding: 16px 18px; box-shadow: var(--shadow); }
+.scoreboard .top { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-stretch: 125%; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.live { display: inline-flex; align-items: center; gap: 6px; color: var(--royal); }
+.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--ball); box-shadow: 0 0 0 3px rgba(200,240,60,.3); }
+.score-row { display: grid; grid-template-columns: 1fr auto auto auto; gap: 12px; align-items: center; font-size: 15px; padding: 6px 0; }
+.score-row + .score-row { border-top: 1px solid var(--line); }
+.score-row b { font-weight: 600; }
+.score-row .set { font-family: var(--font-display); font-weight: 800; font-size: 17px; width: 20px; text-align: center; color: var(--muted); }
+.score-row .set.win { color: var(--royal); }
+.scoreboard .note { font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+
+@keyframes rise { from { transform: translateY(24px); } to { transform: none; } }
+@keyframes sweep { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Sections */
+section { padding: 104px 0; }
+.sec-head { display: grid; gap: 18px; margin-bottom: 52px; max-width: 760px; }
+.mist { background: var(--mist); }
+
+/* Vision */
+.vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.manifesto { font-family: var(--font-display); font-stretch: 108%; font-weight: 650; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.28; letter-spacing: -0.01em; }
+.manifesto mark { background: linear-gradient(transparent 62%, var(--ball) 62%); color: inherit; padding: 0 2px; }
+.manifesto-sub { color: var(--muted); margin-top: 22px; max-width: 54ch; }
+.pillars { display: grid; gap: 16px; }
+.pillar { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); transition: box-shadow .25s, transform .25s, border-color .25s; }
+.pillar:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); border-color: transparent; }
+.pillar .ix { font-family: var(--font-display); font-stretch: 125%; font-weight: 850; font-size: 15px; color: var(--royal); width: 56px; height: 56px; border-radius: 12px; background: var(--mist); display: grid; place-items: center; }
+.pillar p { color: var(--muted); margin-top: 6px; font-size: 16px; }
+
+/* Photo placeholder */
+
+
+
+
+/* LIGUE 14 */
+.ligue { background: var(--royal); color: #fff; position: relative; overflow: hidden; }
+.ligue::before { content: ""; position: absolute; inset: 40px -160px auto auto; width: 560px; height: 760px; border: 2px solid rgba(255,255,255,.12); border-radius: 6px; transform: rotate(-8deg); pointer-events: none; }
+.ligue::after { content: ""; position: absolute; right: -160px; top: 418px; width: 560px; height: 2px; background: rgba(255,255,255,.12); transform: rotate(-8deg); pointer-events: none; }
+.ligue .eyebrow { color: var(--ball); }
+.ligue .lead { color: rgba(255,255,255,.78); }
+.ligue-title { font-size: clamp(56px, 10vw, 128px); font-weight: 900; font-stretch: 125%; letter-spacing: -0.03em; line-height: .9; }
+.ligue-title span { color: var(--ball); }
+.season-tag { display: inline-flex; gap: 10px; align-items: center; margin-top: 18px; font-family: var(--font-display); font-stretch: 120%; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; padding: 8px 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; }
+.ligue-head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: end; margin-bottom: 64px; position: relative; z-index: 1; }
+.timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; z-index: 1; }
+.step { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 26px; transition: background .25s, transform .25s; }
+.step:hover { background: rgba(255,255,255,.12); transform: translateY(-3px); }
+.step .when { font-family: var(--font-display); font-stretch: 120%; font-weight: 700; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ball); }
+.step h3 { margin: 12px 0 10px; font-size: 24px; color: #fff; }
+.step p { color: rgba(255,255,255,.78); font-size: 15.5px; }
+.levels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill { font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; }
+
+.pricing { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; margin-top: 16px; position: relative; z-index: 1; }
+.price-main { background: #fff; color: var(--ink); border-radius: 20px; padding: 36px; display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; }
+.price-main .amount { font-family: var(--font-display); font-stretch: 118%; font-weight: 900; font-size: clamp(56px, 7vw, 84px); line-height: .9; color: var(--royal); letter-spacing: -0.03em; }
+.price-main .amount small { font-size: 18px; font-weight: 700; color: var(--muted); letter-spacing: 0; display: block; margin-top: 8px; font-stretch: 110%; }
+.price-main ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; font-size: 15.5px; }
+.price-main li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
+.price-main li::before { content: ""; width: 18px; height: 18px; border-radius: 50%; background: var(--ball); margin-top: 3px; box-shadow: inset 0 0 0 5px #fff, 0 0 0 1.5px var(--ball); }
+.price-side { display: grid; gap: 16px; }
+.price-box { border-radius: 16px; padding: 22px 24px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.price-box b { font-family: var(--font-display); font-stretch: 118%; font-weight: 850; font-size: 30px; white-space: nowrap; }
+.price-box p { font-size: 14.5px; color: rgba(255,255,255,.75); }
+.price-box h3 { color: #fff; font-size: 18px; margin-bottom: 4px; }
+.price-box.launch { background: var(--ball); color: var(--ball-ink); border-color: var(--ball); }
+.price-box.launch h3, .price-box.launch p { color: var(--ball-ink); }
+.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; position: relative; z-index: 1; }
+.benefit { border-top: 2px solid var(--ball); padding-top: 18px; }
+.benefit h3 { color: #fff; font-size: 20px; margin-bottom: 8px; }
+.benefit p { color: rgba(255,255,255,.75); font-size: 15.5px; }
+.ligue-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 48px; position: relative; z-index: 1; }
+
+/* Offers */
+.offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.offer { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 14px; transition: box-shadow .25s, transform .25s, border-color .25s; min-height: 280px; }
+.offer:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); border-color: transparent; }
+.offer .top { display: flex; justify-content: space-between; align-items: center; }
+.offer .no { font-family: var(--font-display); font-stretch: 125%; font-weight: 800; font-size: 14px; color: var(--muted); }
+.badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--mist); color: var(--royal); font-family: var(--font-display); font-stretch: 112%; }
+.badge.star { background: var(--ball); color: var(--ball-ink); }
+.offer p { color: var(--muted); font-size: 15.5px; flex: 1; }
+.offer .price { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 18px; color: var(--ink); padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.offer .price span { font-size: 13px; color: var(--muted); font-weight: 600; font-family: var(--font-body); }
+.offer.feature { background: var(--royal); color: #fff; border-color: var(--royal); }
+.offer.feature .no, .offer.feature p, .offer.feature .price span { color: rgba(255,255,255,.75); }
+.offer.feature .price { color: #fff; border-top-color: rgba(255,255,255,.2); }
+
+/* Sponsors */
+.sponsor-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
+.reach { font-family: var(--font-display); font-stretch: 110%; font-weight: 800; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; letter-spacing: -0.015em; }
+.reach .hl { color: var(--royal); }
+.reach-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+.fact { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.fact b { font-family: var(--font-display); font-stretch: 118%; font-weight: 850; font-size: 26px; color: var(--royal); display: block; }
+.fact span { font-size: 13.5px; color: var(--muted); }
+.packs { display: grid; gap: 16px; }
+.pack { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 30px; transition: box-shadow .25s, transform .25s; }
+.pack:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.pack.title { border: 2px solid var(--royal); position: relative; }
+.pack-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+.pack-head b { font-family: var(--font-display); font-stretch: 118%; font-weight: 900; font-size: 34px; color: var(--royal); white-space: nowrap; }
+.pack-head b small { font-size: 15px; color: var(--muted); font-weight: 700; }
+.pack .sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.pack ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 15px; }
+.pack li { padding-left: 18px; position: relative; }
+.pack li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 2px; background: var(--royal); }
+.pack .naming { display: inline-block; font-family: var(--font-display); font-stretch: 120%; font-weight: 800; letter-spacing: .04em; font-size: 13px; background: var(--ink); color: #fff; padding: 6px 12px; border-radius: 6px; margin-bottom: 16px; }
+.pack .naming em { font-style: normal; color: var(--ball); }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: start; }
+.form-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 34px; box-shadow: var(--shadow); }
+.tabs { display: inline-flex; padding: 4px; background: var(--mist); border-radius: 999px; margin-bottom: 26px; gap: 4px; flex-wrap: wrap; }
+.tab { border: 0; background: transparent; font-family: var(--font-display); font-stretch: 110%; font-weight: 700; font-size: 14.5px; padding: 10px 18px; border-radius: 999px; cursor: pointer; color: var(--muted); }
+.tab[aria-selected="true"] { background: var(--paper); color: var(--royal); box-shadow: 0 1px 4px rgba(14,26,61,.1); }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 14px; font-weight: 600; }
+.field input, .field select, .field textarea { font: inherit; font-size: 16px; padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); transition: border-color .2s, box-shadow .2s; width: 100%; }
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--royal); box-shadow: 0 0 0 4px rgba(29,63,196,.12); }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; font-weight: 600; font-size: 15px; display: grid; gap: 2px; transition: border-color .2s, background .2s; }
+.seg label small { font-weight: 400; color: var(--muted); font-size: 13px; }
+.seg input:checked + label { border-color: var(--royal); background: rgba(29,63,196,.05); }
+.seg input:focus-visible + label { outline: 3px solid var(--ball); outline-offset: 2px; }
+.form-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 22px; flex-wrap: wrap; }
+.form-foot small { color: var(--muted); font-size: 13px; max-width: 40ch; }
+.estimate { margin-top: 18px; padding: 14px 16px; background: var(--mist); border-radius: 12px; font-size: 14.5px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.estimate b { font-family: var(--font-display); font-stretch: 112%; color: var(--royal); }
+.error { color: #B3261E; font-size: 13.5px; min-height: 1em; }
+.success { display: none; text-align: center; padding: 30px 10px; }
+.success.show { display: block; }
+.success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--ball); display: grid; place-items: center; margin: 0 auto 18px; font-size: 30px; color: var(--ball-ink); font-weight: 800; }
+.success p { color: var(--muted); max-width: 46ch; margin: 10px auto 0; }
+.recap { text-align: left; background: var(--mist); border-radius: 12px; padding: 16px 18px; margin: 20px auto 0; max-width: 440px; font-size: 14.5px; white-space: pre-line; }
+
+.faq { display: grid; gap: 10px; }
+.faq h3 { margin-bottom: 10px; }
+details { border: 1px solid var(--line); border-radius: 12px; padding: 0 18px; background: var(--paper); transition: border-color .2s; }
+details[open] { border-color: var(--royal); }
+summary { cursor: pointer; list-style: none; padding: 16px 0; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--font-display); font-weight: 800; color: var(--royal); font-size: 20px; line-height: 1; transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--muted); padding-bottom: 16px; font-size: 15.5px; }
+.direct { margin-top: 18px; padding: 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+.direct p { color: rgba(255,255,255,.7); font-size: 14.5px; }
+.direct a { color: var(--ball); font-weight: 600; text-decoration: none; }
+
+/* Footer */
+footer { background: var(--ink); color: rgba(255,255,255,.72); padding: 64px 0 32px; font-size: 15px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+footer .logo { color: #fff; }
+footer h4 { font-family: var(--font-display); font-stretch: 118%; color: #fff; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 14px; }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+footer a { text-decoration: none; color: rgba(255,255,255,.72); }
+footer a:hover { color: var(--ball); }
+.signature { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13.5px; }
+.signature b { color: #fff; font-weight: 600; }
+
+/* Legal dialog */
+dialog { border: 0; border-radius: 18px; padding: 32px; max-width: 560px; width: calc(100% - 32px); color: var(--ink); box-shadow: 0 30px 80px rgba(14,26,61,.3); }
+dialog::backdrop { background: rgba(14,26,61,.45); }
+dialog p { color: var(--muted); margin-top: 12px; font-size: 15px; }
+
+/* Scroll motion — elements are visible at rest; they only glide into place */
+.reveal { transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.reveal.below { transform: translateY(26px); }
+
+/* Responsive */
+@media (max-width: 1020px) {
+  .hero-grid, .vision-grid, .ligue-head, .sponsor-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  
+  .offers { grid-template-columns: 1fr 1fr; }
+  .pricing { grid-template-columns: 1fr; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .menu, .nav > .btn { display: none; }
+  .burger { display: inline-flex; }
+  .menu.open { display: flex; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 72px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 8px 24px 20px; box-shadow: var(--shadow); }
+  .menu.open a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 17px; color: var(--ink); }
+  .menu.open .menu-cta { display: block; margin-top: 16px; }
+  .menu.open .menu-cta a { border: 0; text-align: center; color: #fff; padding: 14px; }
+  .timeline, .benefits { grid-template-columns: 1fr; }
+  .price-main { grid-template-columns: 1fr; gap: 20px; }
+  section { padding: 76px 0; }
+}
+.menu-cta { display: none; }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 18px; }
+  .hero { padding: 44px 0 48px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat + .stat { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
+  .stat { padding: 16px 0; }
+  .offers, .fields, .reach-facts { grid-template-columns: 1fr; }
+  .pack ul { grid-template-columns: 1fr; }
+  .form-card { padding: 24px 18px; }
+  .foot-grid { grid-template-columns: 1fr; }
+  .price-box { flex-direction: column; align-items: flex-start; }
+  .cta-row .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  
+  .reveal.below { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ===== Refonte v2 : accès rapides, photos, CTA mobile ===== */
+figure { margin: 0; }
+.skip { position: absolute; left: -9999px; top: 8px; background: var(--royal); color: #fff; padding: 10px 16px; border-radius: 8px; z-index: 100; }
+.skip:focus { left: 16px; }
+.menu a.active { color: var(--royal); }
+.menu a.active::after { content: ""; display: block; height: 2px; background: var(--ball); margin-top: 3px; border-radius: 2px; }
+
+/* Hero photo */
+.hero-visual { position: relative; }
+.hero-photo { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--royal); box-shadow: 0 30px 60px rgba(16,37,122,.25); animation: rise .9s .1s cubic-bezier(.2,.8,.2,1) both; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16,37,122,0) 45%, rgba(16,37,122,.55) 100%); }
+.hero-visual .scoreboard { z-index: 2; }
+.photo-fallback { background: linear-gradient(135deg, var(--royal), var(--royal-deep)); }
+.photo-fallback img { visibility: hidden; }
+
+/* 30-second summary */
+.tldr { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: -8px; }
+.tldr-item { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; display: grid; gap: 6px; text-decoration: none; transition: box-shadow .2s, transform .2s, border-color .2s; }
+.tldr-item:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); border-color: transparent; }
+.tldr-item .k { font-family: var(--font-display); font-stretch: 125%; font-weight: 700; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--royal); }
+.tldr-item b { font-family: var(--font-display); font-stretch: 110%; font-size: 18px; line-height: 1.25; }
+.tldr-item span { font-size: 14px; color: var(--muted); }
+.tldr-item .go { font-size: 13.5px; font-weight: 600; color: var(--royal); margin-top: 4px; }
+.quick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; align-items: center; }
+.quick > span { font-size: 13.5px; color: var(--muted); margin-right: 4px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: var(--mist); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid transparent; transition: border-color .2s, background .2s, color .2s; }
+.chip:hover { border-color: var(--royal); color: var(--royal); background: #fff; }
+
+/* Image cards */
+.media { border-radius: var(--radius); overflow: hidden; background: var(--mist); position: relative; }
+.media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.media:hover img { transform: scale(1.03); }
+.vision-photo { aspect-ratio: 16 / 10; margin-top: 32px; }
+.offer { padding: 0; overflow: hidden; }
+.offer .media { border-radius: 0; aspect-ratio: 16 / 9; }
+.offer .body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.offer:hover .media img { transform: scale(1.04); }
+.ligue-photo { aspect-ratio: 21 / 9; border-radius: 20px; margin-bottom: 48px; position: relative; z-index: 1; }
+.ligue-photo figcaption { position: absolute; left: 18px; bottom: 16px; background: rgba(16,37,122,.85); color: #fff; font-size: 13px; padding: 6px 12px; border-radius: 999px; }
+.sponsor-photo { aspect-ratio: 16 / 10; margin-top: 24px; }
+.bullets { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; }
+.bullets li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 16px; color: var(--ink); }
+.bullets li::before { content: ""; width: 18px; height: 18px; border-radius: 50%; background: var(--ball); margin-top: 3px; box-shadow: inset 0 0 0 5px var(--paper), 0 0 0 1.5px var(--ball); }
+.mist .bullets li::before { box-shadow: inset 0 0 0 5px var(--mist), 0 0 0 1.5px var(--ball); }
+
+/* Mobile sticky CTA */
+.mobile-cta { display: none; }
+@media (max-width: 860px) {
+  .mobile-cta { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; gap: 8px; padding: 8px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 10px 30px rgba(14,26,61,.18); transform: translateY(140%); transition: transform .3s ease; padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+  .mobile-cta.show { transform: none; }
+  .mobile-cta .btn { flex: 1; padding: 12px 10px; font-size: 14.5px; }
+  body { padding-bottom: 84px; }
+}
+
+/* Back to top */
+.to-top { position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--royal); color: #fff; font-size: 20px; cursor: pointer; box-shadow: var(--shadow-hover); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; z-index: 55; }
+.to-top.show { opacity: 1; pointer-events: auto; }
+.to-top:hover { transform: translateY(-2px); }
+@media (max-width: 860px) { .to-top { display: none; } }
+
+.credits { font-size: 12.5px; color: rgba(255,255,255,.5); margin-top: 14px; }
+.credits a { color: rgba(255,255,255,.65); text-decoration: underline; }
+
+@media (max-width: 1020px) {
+  .tldr { grid-template-columns: 1fr 1fr; }
+  .hero-photo { aspect-ratio: 16 / 11; }
+  .hero-visual { max-width: 640px; }
+  .ligue-photo { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 600px) {
+  .tldr { grid-template-columns: 1fr; }
+  .hero-photo { aspect-ratio: 4 / 3; }
+  .scoreboard { left: 10px; right: 10px; bottom: 10px; padding: 12px 14px; }
+  .ligue-photo { aspect-ratio: 4 / 3; margin-bottom: 36px; }
+  .quick > span { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .media img { transition: none; } .mobile-cta { transition: none; } }
+.offer { gap: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site" id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Terrain Commun, retour en haut"><span class="logo-mark"><i></i></span>Terrain Commun</a>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#offres">Nos offres</a></li>
+        <li><a href="#ligue-14">Ligue 14</a></li>
+        <li><a href="#sponsors">Espace sponsors</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="menu-cta"><a class="btn btn-royal" href="#contact" data-mode="ligue">Inscrire une équipe</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-royal" href="#contact" data-mode="ligue">Inscrire une équipe</a>
+    <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Événements sportifs pour entreprises · Caen</span>
+      <h1 id="hero-title">Le sport qui rapproche <em>les équipes.</em></h1>
+      <p class="lead">Des événements sportifs clé en main pour souder vos équipes, attirer des talents et développer votre réseau en Normandie.</p>
+      <div class="cta-row">
+        <a class="btn btn-royal" href="#ligue-14">Découvrir la Ligue 14 <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#offres">Voir nos offres entreprises</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b class="num">8</b><span>soirées de matchs, de mars à mai</span></div>
+        <div class="stat"><b class="num">1</b><span>grande finale et soirée de networking</span></div>
+        <div class="stat"><b class="num">100 %</b><span>clé en main, de l'inscription au bilan</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <figure class="hero-photo media" style="margin:0">
+        <img src="https://images.unsplash.com/photo-1770230901556-4e1c0bacfb09?auto=format&fit=crop&q=70&w=800&h=1000" srcset="https://images.unsplash.com/photo-1770230901556-4e1c0bacfb09?auto=format&fit=crop&q=70&w=480&h=600 480w, https://images.unsplash.com/photo-1770230901556-4e1c0bacfb09?auto=format&fit=crop&q=70&w=800&h=1000 800w, https://images.unsplash.com/photo-1770230901556-4e1c0bacfb09?auto=format&fit=crop&q=70&w=1200&h=1500 1200w, https://images.unsplash.com/photo-1770230901556-4e1c0bacfb09?auto=format&fit=crop&q=70&w=1600&h=2000 1600w" sizes="(max-width: 1020px) 100vw, 45vw" width="800" height="1000" alt="Deux joueurs disputent un match de padel sur un terrain bleu" fetchpriority="high" loading="eager" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')">
+      </figure>
+      <div class="scoreboard" aria-label="Exemple de tableau de score d'une rencontre de la Ligue 14">
+        <div class="top"><span class="live">Ligue 14 · Journée 3</span><span>Exemple</span></div>
+        <div class="score-row"><b>Entreprise A</b><span class="set win num">6</span><span class="set num">4</span><span class="set win num">6</span></div>
+        <div class="score-row"><b>Entreprise B</b><span class="set num">3</span><span class="set win num">6</span><span class="set num">2</span></div>
+        <p class="note">Mardi · 19h30 · Niveau Découverte</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L'ESSENTIEL EN 30 SECONDES -->
+<section aria-labelledby="tldr-title" style="padding: 0 0 72px">
+  <div class="wrap">
+    <h2 id="tldr-title" class="eyebrow" style="font-size:12.5px; margin-bottom:16px">L'essentiel en 30 secondes</h2>
+    <div class="tldr">
+      <a class="tldr-item" href="#offres"><span class="k">Ce qu'on fait</span><b>Des événements sportifs pour entreprises</b><span>Ligues, tournois, séminaires, événements clients</span><span class="go">Voir les 6 offres →</span></a>
+      <a class="tldr-item" href="#ligue-14"><span class="k">Produit phare</span><b>LIGUE 14, padel &amp; pickleball</b><span>De mars à juin 2027, à Caen</span><span class="go">Voir la ligue →</span></a>
+      <a class="tldr-item" href="#tarifs"><span class="k">Combien</span><b>790 € HT par équipe de 4</b><span>−10 % avant le 31 janvier 2027</span><span class="go">Voir les tarifs →</span></a>
+      <a class="tldr-item" href="#contact"><span class="k">Prochaine étape</span><b>Pré-inscription en 1 minute</b><span>Sans engagement, réponse sous 48 h</span><span class="go">Pré-inscrire une équipe →</span></a>
+    </div>
+    <div class="quick" aria-label="Accès rapides">
+      <span>Accès rapide :</span>
+      <a class="chip" href="#tarifs">Tarifs</a>
+      <a class="chip" href="#offres">Offres</a>
+      <a class="chip" href="#sponsors">Devenir sponsor</a>
+      <a class="chip" href="#faq">FAQ</a>
+      <a class="chip" href="#contact" data-mode="devis">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="mist" id="vision" aria-labelledby="vision-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Vision &amp; valeurs</span>
+      <h2 id="vision-title">Plus le travail devient numérique, plus il faut se retrouver en vrai.</h2>
+    </div>
+    <div class="vision-grid">
+      <div class="reveal">
+        <p class="manifesto">L'IA écrit les mails et prépare les réunions. Elle ne remplace pas ce qui soude une équipe : <mark>se retrouver, transpirer ensemble</mark> et rire d'un point raté.</p>
+        <ul class="bullets">
+          <li>Des moments réels et réguliers entre collègues</li>
+          <li>Des liens qui continuent au bureau le lendemain</li>
+          <li>Des rencontres avec d'autres entreprises du territoire</li>
+        </ul>
+        <figure class="media vision-photo" style="margin-top:28px">
+          <img src="https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=70&w=800&h=500" srcset="https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=70&w=480&h=300 480w, https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=70&w=800&h=500 800w, https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=70&w=1200&h=750 1200w, https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=70&w=1600&h=1000 1600w" sizes="(max-width: 1020px) 100vw, 45vw" width="1600" height="1000" alt="Cinq collègues se tapent dans le poing au-dessus d'un bureau" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')">
+        </figure>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal"><span class="ix">01</span><div><h3>Tout le monde joue</h3><p>Les débutants sont les bienvenus, avec des niveaux séparés. Personne ne reste sur le banc.</p></div></div>
+        <div class="pillar reveal"><span class="ix">02</span><div><h3>Zéro charge pour vous</h3><p>Terrains, matériel, calendrier, animation, communication interne, soirée : nous organisons tout. Vous n'avez qu'à venir jouer.</p></div></div>
+        <div class="pillar reveal"><span class="ix">03</span><div><h3>Des résultats mesurés</h3><p>Un bilan après chaque événement : participation, satisfaction, photos et retombées, pour prouver l'impact en interne.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGUE 14 -->
+<section class="ligue" id="ligue-14" aria-labelledby="ligue-title">
+  <div class="wrap">
+    <div class="ligue-head reveal">
+      <div>
+        <span class="eyebrow">Notre produit phare</span>
+        <h2 class="ligue-title" id="ligue-title" style="margin-top:18px">LIGUE <span>14</span></h2>
+        <span class="season-tag">Saison 1 · Printemps 2027</span>
+      </div>
+      <p class="lead">La ligue inter-entreprises de padel et pickleball de Caen et du Calvados : un championnat entre collègues pendant 3 mois, avec une grande finale pour finir.</p>
+    </div>
+
+    <figure class="media ligue-photo reveal">
+      <img src="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&q=70&w=800&h=342" srcset="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&q=70&w=480&h=205 480w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&q=70&w=800&h=342 800w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&q=70&w=1200&h=514 1200w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&q=70&w=1600&h=685 1600w" sizes="100vw" width="2100" height="900" alt="Un joueur frappe la balle lors d'un match de padel en salle" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')">
+      <figcaption>Des soirées de matchs en salle, de 18h30 à 21h30</figcaption>
+    </figure>
+
+    <div class="timeline">
+      <div class="step reveal"><span class="when">Mars → mai</span><h3>8 soirées de matchs</h3><p>En semaine, de 18h30 à 21h30. Chaque équipe joue 2 matchs en double contre une autre entreprise.</p></div>
+      <div class="step reveal"><span class="when">Tous niveaux</span><h3>2 niveaux de jeu</h3><p>Chacun joue à son niveau et peut gagner.</p><div class="levels"><span class="pill">Découverte, avec initiation au pickleball</span><span class="pill">Confirmé</span></div></div>
+      <div class="step reveal"><span class="when">Un samedi de juin</span><h3>La grande finale</h3><p>Phases finales, remise des trophées, cocktail et soirée de networking entre dirigeants, salariés et sponsors.</p></div>
+    </div>
+
+    <div class="pricing reveal" id="tarifs">
+      <div class="price-main">
+        <div class="amount num">790 €<small>HT par équipe de 4 joueurs</small></div>
+        <ul>
+          <li>Environ 22 € par joueur et par soirée, finale comprise</li>
+          <li>Terrains, balles et encadrement des soirées compris</li>
+          <li>Les polos de la ligue offerts aux 4 joueurs</li>
+          <li>La finale et la soirée de networking pour toute l'équipe</li>
+          <li>Le classement et les résultats en ligne chaque semaine</li>
+        </ul>
+      </div>
+      <div class="price-side">
+        <div class="price-box"><div><h3>Équipe supplémentaire</h3><p>À partir de la 2<sup>e</sup> équipe d'une même entreprise</p></div><b class="num">690 €</b></div>
+        <div class="price-box launch"><div><h3>Offre de lancement</h3><p>Pour toute inscription avant le 31 janvier 2027</p></div><b class="num">−10 %</b></div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit reveal"><h3>Cohésion et QVT</h3><p>Des services différents jouent ensemble chaque semaine : un team building qui dure 3 mois au lieu d'une demi-journée.</p></div>
+      <div class="benefit reveal"><h3>Marque employeur</h3><p>Un avantage concret à mettre en avant auprès des candidats et des salariés, avec des photos à partager.</p></div>
+      <div class="benefit reveal"><h3>Un networking qui fonctionne</h3><p>Rencontrer chaque semaine d'autres entreprises du Calvados, dans une ambiance détendue.</p></div>
+    </div>
+
+    <div class="ligue-cta">
+      <a class="btn btn-ball" href="#contact" data-mode="ligue">Pré-inscrire une équipe <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost-light" href="#sponsors">Devenir sponsor de la ligue</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRES -->
+<section id="offres" aria-labelledby="offres-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nos offres entreprises</span>
+      <h2 id="offres-title">Six formats pour faire bouger vos équipes toute l'année.</h2>
+      <p class="lead">Des formats réguliers pour fidéliser, des événements ponctuels pour marquer les esprits. Tous clé en main.</p>
+    </div>
+    <div class="offers">
+      <article class="offer feature reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Quatre raquettes de padel disposées en cercle avec des balles jaunes" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">01</span><span class="badge star">Produit phare</span></div>
+          <h3>Ligues inter-entreprises</h3>
+          <p>Une saison de padel et pickleball entre entreprises : 8 soirées de matchs et une grande finale.</p>
+          <div class="price">790 € HT <span>par équipe</span></div>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Un joueur s'étire pour frapper une balle haute pendant un match" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">02</span><span class="badge">Sur mesure</span></div>
+          <h3>Cups et tournois d'une journée</h3>
+          <p>Padel, pickleball, foot à 5 ou course relais, de 20 à 150 participants.</p>
+          <div class="price">2 000 € HT <span>à partir de</span></div>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Une équipe en réunion de travail autour d'une table" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">03</span><span class="badge">Clé en main</span></div>
+          <h3>Séminaires sport &amp; travail</h3>
+          <p>Une séance de travail, une activité sportive encadrée et le repas, en une demi-journée ou une journée.</p>
+          <div class="price">Sur devis <span>réponse sous 48 h</span></div>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Des invités discutent un verre à la main lors d'une réception" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">04</span><span class="badge">Prestige</span></div>
+          <h3>Événements clients et accueil VIP</h3>
+          <p>Invitez clients et prospects à un tournoi ou un événement sportif, avec réception et animation.</p>
+          <div class="price">Sur devis <span>selon le format</span></div>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1659318006095-4d44845f3a1b?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1659318006095-4d44845f3a1b?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1659318006095-4d44845f3a1b?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1659318006095-4d44845f3a1b?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1659318006095-4d44845f3a1b?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Une raquette de pickleball rouge et des balles jaunes sur un terrain bleu" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">05</span><span class="badge">4 à 8 semaines</span></div>
+          <h3>Challenges QVT inter-services</h3>
+          <p>Un défi sport et santé entre services, avec remise de prix. Compatible avec le télétravail.</p>
+          <div class="price">1 500 € HT <span>à partir de</span></div>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <figure class="media" style="margin:0"><img src="https://images.unsplash.com/photo-1675716921224-e087a0cca69a?auto=format&fit=crop&q=70&w=800&h=450" srcset="https://images.unsplash.com/photo-1675716921224-e087a0cca69a?auto=format&fit=crop&q=70&w=480&h=270 480w, https://images.unsplash.com/photo-1675716921224-e087a0cca69a?auto=format&fit=crop&q=70&w=800&h=450 800w, https://images.unsplash.com/photo-1675716921224-e087a0cca69a?auto=format&fit=crop&q=70&w=1200&h=675 1200w, https://images.unsplash.com/photo-1675716921224-e087a0cca69a?auto=format&fit=crop&q=70&w=1600&h=900 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1020px) 50vw, 33vw" width="1600" height="900" alt="Des professionnels échangent lors d'un événement de networking" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+        <div class="body">
+          <div class="top"><span class="no">06</span><span class="badge">Expertise</span></div>
+          <h3>Conseil en sponsoring sportif</h3>
+          <p>Choisir le club ou l'événement à soutenir, négocier les contreparties et exploiter le partenariat.</p>
+          <div class="price">Sur mission <span>forfait</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="cta-row reveal" style="margin-top:32px">
+      <a class="btn btn-royal" href="#contact" data-mode="devis">Demander un devis <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="mist" id="sponsors" aria-labelledby="sponsors-title">
+  <div class="wrap">
+    <div class="sponsor-grid">
+      <div class="reveal">
+        <span class="eyebrow">Espace sponsors</span>
+        <h2 class="reach" id="sponsors-title" style="margin-top:18px">Touchez directement <span class="hl">100 à 150 salariés et dirigeants</span> d'entreprises du Calvados pendant 3 mois.</h2>
+        <div class="reach-facts">
+          <div class="fact"><b class="num">3</b><span>mois de visibilité, chaque semaine</span></div>
+          <div class="fact"><b class="num">9</b><span>rendez-vous, finale comprise</span></div>
+          <div class="fact"><b class="num">B2B</b><span>un public de décideurs locaux</span></div>
+        </div>
+        <figure class="media sponsor-photo" style="margin-top:24px"><img src="https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?auto=format&fit=crop&q=70&w=800&h=500" srcset="https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?auto=format&fit=crop&q=70&w=480&h=300 480w, https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?auto=format&fit=crop&q=70&w=800&h=500 800w, https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?auto=format&fit=crop&q=70&w=1200&h=750 1200w, https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?auto=format&fit=crop&q=70&w=1600&h=1000 1600w" sizes="(max-width: 1020px) 100vw, 45vw" width="1600" height="1000" alt="Des invités échangent lors d'une soirée en lumière chaude" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('photo-fallback')"></figure>
+      </div>
+      <div class="packs">
+        <div class="pack title reveal">
+          <span class="naming">LIGUE 14 <em>by</em> Votre Marque</span>
+          <div class="pack-head"><div><h3>Sponsor titre</h3><p class="sub">Un seul partenaire, qui donne son nom à la ligue</p></div><b class="num">12 000 € <small>HT</small></b></div>
+          <ul>
+            <li>Votre nom accolé à celui de la ligue</li>
+            <li>Votre logo sur le devant des polos</li>
+            <li>2 équipes offertes</li>
+            <li>La remise des trophées à la finale</li>
+            <li>20 invitations VIP</li>
+            <li>Les photos et vidéos libres de droits</li>
+          </ul>
+        </div>
+        <div class="pack reveal">
+          <div class="pack-head"><div><h3>Partenaire officiel</h3><p class="sub">4 à 6 partenaires par saison</p></div><b class="num">2 500 € <small>HT</small></b></div>
+          <ul>
+            <li>Votre logo sur la manche des polos</li>
+            <li>Un kakémono pendant toute la saison</li>
+            <li>Un stand ou une animation à la finale</li>
+            <li>1 équipe offerte et 6 invitations</li>
+          </ul>
+        </div>
+        <a class="btn btn-royal reveal" href="#contact" data-mode="sponsor" style="justify-self:start">Recevoir le dossier sponsor <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact &amp; pré-inscription</span>
+      <h2 id="contact-title">Réservez votre place pour la saison 1.</h2>
+      <p class="lead">Sans engagement. Réponse sous 48 heures ouvrées.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="form-card reveal">
+        <div class="tabs" role="tablist" aria-label="Type de demande">
+          <button class="tab" role="tab" id="tab-ligue" aria-selected="true" data-mode="ligue" type="button">Pré-inscrire une équipe</button>
+          <button class="tab" role="tab" id="tab-devis" aria-selected="false" data-mode="devis" type="button">Demander un devis</button>
+          <button class="tab" role="tab" id="tab-sponsor" aria-selected="false" data-mode="sponsor" type="button">Devenir sponsor</button>
+        </div>
+
+        <form id="form" novalidate>
+          <div class="fields">
+            <div class="field"><label for="f-company">Nom de l'entreprise</label><input id="f-company" name="company" autocomplete="organization" required></div>
+            <div class="field"><label for="f-name">Votre nom</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email professionnel</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-phone">Téléphone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+
+            <div class="field full" data-show="ligue">
+              <span style="font-size:14px;font-weight:600" id="lv-label">Niveau souhaité</span>
+              <div class="seg" role="radiogroup" aria-labelledby="lv-label">
+                <input type="radio" name="level" id="lv-decouverte" value="Découverte" checked><label for="lv-decouverte">Découverte<small>Débutants, avec initiation au pickleball</small></label>
+                <input type="radio" name="level" id="lv-confirme" value="Confirmé"><label for="lv-confirme">Confirmé<small>Joueurs réguliers</small></label>
+              </div>
+            </div>
+            <div class="field" data-show="ligue"><label for="f-teams">Nombre d'équipes</label>
+              <select id="f-teams" name="teams"><option value="1">1 équipe (4 joueurs)</option><option value="2">2 équipes</option><option value="3">3 équipes</option><option value="4">4 équipes</option><option value="5">5 équipes ou plus</option></select>
+            </div>
+            <div class="field" data-show="ligue"><label for="f-size">Taille de l'entreprise</label>
+              <select id="f-size" name="size"><option>Moins de 30 salariés</option><option selected>30 à 100 salariés</option><option>100 à 500 salariés</option><option>Plus de 500 salariés</option></select>
+            </div>
+
+            <div class="field" data-show="devis" hidden><label for="f-format">Format envisagé</label>
+              <select id="f-format" name="format"><option>Cup ou tournoi d'une journée</option><option>Séminaire sport &amp; travail</option><option>Événement clients / VIP</option><option>Challenge QVT inter-services</option><option>Conseil en sponsoring</option><option>Je ne sais pas encore</option></select>
+            </div>
+            <div class="field" data-show="devis" hidden><label for="f-people">Nombre de participants</label><input id="f-people" name="people" type="number" min="1" inputmode="numeric" placeholder="ex. 40"></div>
+
+            <div class="field" data-show="sponsor" hidden><label for="f-pack">Formule qui vous intéresse</label>
+              <select id="f-pack" name="pack"><option>Sponsor titre (12 000 € HT)</option><option>Partenaire officiel (2 500 € HT)</option><option>Fournisseur ou partenaire média</option><option>À discuter</option></select>
+            </div>
+
+            <div class="field full"><label for="f-msg">Message (facultatif)</label><textarea id="f-msg" name="message" placeholder="Vos dates, vos questions, votre contexte…"></textarea></div>
+          </div>
+
+          <div class="estimate" data-show="ligue" id="estimate" aria-live="polite"><span>Estimation pour votre pré-inscription</span><b class="num" id="estimate-val">711 € HT</b></div>
+
+          <p class="error" id="error" role="alert"></p>
+          <div class="form-foot">
+            <small>Sans engagement. Vos données servent uniquement à vous répondre et ne sont jamais revendues.</small>
+            <button class="btn btn-royal" type="submit" id="submit">Envoyer ma pré-inscription <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+
+        <div class="success" id="success" aria-live="polite" tabindex="-1">
+          <div class="check" aria-hidden="true">✓</div>
+          <h3 id="success-title">Merci, demande envoyée</h3>
+          <p id="success-text">Nous revenons vers vous sous 48 heures ouvrées.</p>
+          <div class="recap" id="recap"></div>
+          <div class="cta-row" style="justify-content:center; margin-top:18px">
+            <button class="btn btn-royal" type="button" id="copy" hidden>Copier ma demande</button>
+            <button class="btn btn-ghost" type="button" id="again">Faire une autre demande</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="faq reveal" id="faq" aria-labelledby="faq-title">
+        <h3 id="faq-title">Questions fréquentes</h3>
+        <details open><summary>Faut-il savoir jouer au padel ?</summary><p>Non. Le niveau Découverte est fait pour les débutants, avec une initiation au pickleball. Les débutants jouent entre débutants.</p></details>
+        <details><summary>Que se passe-t-il si un joueur est absent ?</summary><p>Vous pouvez inscrire un 5<sup>e</sup> joueur remplaçant, et un collègue peut remplacer un absent. Le règlement prévoit aussi le report d'une rencontre.</p></details>
+        <details><summary>Le matériel est-il fourni ?</summary><p>Oui : terrains et balles compris, raquettes disponibles sur place. Venez en tenue de sport avec des chaussures adaptées.</p></details>
+        <details><summary>Qui paie, l'entreprise ou les salariés ?</summary><p>L'entreprise, sur facture (budget RH, QVT, communication ou CSE). Les salariés n'ont rien à payer.</p></details>
+        <details><summary>Où se jouent les matchs ?</summary><p>Dans des clubs partenaires de l'agglomération caennaise. Les lieux seront annoncés à l'ouverture des inscriptions.</p></details>
+        <div class="direct"><p>Contact direct</p><p style="color:#fff;font-weight:600;margin-top:6px"><a href="mailto:contact@votre-domaine.fr" id="contact-email">contact@votre-domaine.fr</a> · 02 00 00 00 00</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><span class="logo-mark"><i></i></span>Terrain Commun</a>
+        <p style="margin-top:16px;max-width:34ch">L'événementiel sportif pour les entreprises de Caen, du Calvados et de Normandie.</p>
+      </div>
+      <div><h4>Le site</h4><ul><li><a href="#vision">Vision</a></li><li><a href="#offres">Nos offres</a></li><li><a href="#ligue-14">Ligue 14</a></li><li><a href="#sponsors">Espace sponsors</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:contact@votre-domaine.fr">contact@votre-domaine.fr</a></li><li>02 00 00 00 00</li><li>Caen, Calvados (14)</li></ul></div>
+      <div><h4>Informations</h4><ul><li><a href="#" id="open-legal">Mentions légales</a></li><li><a href="#" id="open-privacy">Confidentialité</a></li><li><a href="#contact" data-mode="devis">Demander un devis</a></li></ul></div>
+    </div>
+    <p class="credits">Photos : <a href="https://unsplash.com" rel="noopener">Unsplash</a> (Ashford Marx, erjola qerimi, Antonio Janeski, Sergio Contreras, Vincenzo Morelli, Annie Spratt, Filip Rankovic Grobgaard, Brendan Sapp, M ACCELERATOR, Olena Kholina).</p>
+    <div class="signature"><span><b>Conçu pour dynamiser les entreprises de Normandie.</b></span><span>© 2026 Terrain Commun</span></div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobile-cta" aria-label="Actions rapides">
+  <a class="btn btn-royal" href="#contact" data-mode="ligue">Inscrire une équipe</a>
+  <a class="btn btn-ghost" href="#tarifs">Tarifs</a>
+</div>
+<button class="to-top" id="to-top" type="button" aria-label="Revenir en haut de la page">↑</button>
+
+<dialog id="legal" aria-labelledby="legal-title">
+  <h3 id="legal-title">Mentions légales</h3>
+  <p id="legal-body"></p>
+  <button class="btn btn-royal" type="button" id="close-legal" style="margin-top:22px">Fermer</button>
+</dialog>
+
+<script>
+/* Configuration : collez ici l'adresse de votre formulaire Formspree (ex. https://formspree.io/f/abcdwxyz) pour recevoir les demandes par email. */
+var FORM_ENDPOINT = "";
+var CONTACT_EMAIL = "contact@votre-domaine.fr";
+
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var header = document.querySelector('header.site');
+  var mobileCta = document.getElementById('mobile-cta');
+  var toTop = document.getElementById('to-top');
+  var hero = document.querySelector('.hero');
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 8);
+    var past = y > hero.offsetHeight * 0.7;
+    var contact = document.getElementById('contact').getBoundingClientRect();
+    var inContact = contact.top < window.innerHeight && contact.bottom > 0;
+    mobileCta.classList.toggle('show', past && !inContact);
+    toTop.classList.toggle('show', y > 900);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+
+  // Menu mobile
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  function closeMenu() { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Ouvrir le menu'); }
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  // Lien actif dans le menu
+  var links = Array.prototype.slice.call(document.querySelectorAll('.menu a[href^="#"]'));
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['vision', 'offres', 'ligue-14', 'sponsors', 'contact'].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+  }
+
+  // Apparition au défilement : contenu visible au repos, léger glissement seulement
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.remove('below'); io.unobserve(en.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add('below'); io.observe(el); }
+    });
+  }
+
+  // Formulaire : onglets
+  var mode = 'ligue';
+  var tabs = document.querySelectorAll('.tab');
+  var submitBtn = document.getElementById('submit');
+  var labels = { ligue: 'Envoyer ma pré-inscription', devis: 'Demander mon devis', sponsor: 'Recevoir le dossier sponsor' };
+  function setMode(m) {
+    mode = m;
+    tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.mode === m ? 'true' : 'false'); });
+    document.querySelectorAll('[data-show]').forEach(function (el) { el.hidden = el.dataset.show !== m; });
+    submitBtn.innerHTML = labels[m] + ' <span class="arrow" aria-hidden="true">→</span>';
+    document.getElementById('error').textContent = '';
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { setMode(t.dataset.mode); }); });
+  document.querySelectorAll('a[data-mode]').forEach(function (a) { a.addEventListener('click', function () { setMode(a.dataset.mode); showForm(); }); });
+
+  // Estimation : 790 € la 1re équipe, 690 € les suivantes, −10 % jusqu'au 31/01/2027
+  var teamsSel = document.getElementById('f-teams');
+  function estimate() {
+    var n = parseInt(teamsSel.value, 10);
+    var total = 790 + Math.max(0, n - 1) * 690;
+    var launch = new Date() <= new Date(2027, 0, 31, 23, 59);
+    var val = launch ? Math.round(total * 0.9) : total;
+    document.getElementById('estimate-val').textContent = (n >= 5 ? 'dès ' : '') + val.toLocaleString('fr-FR') + ' € HT' + (launch ? ' (offre de lancement incluse)' : '');
+  }
+  teamsSel.addEventListener('change', estimate); estimate();
+
+  // Envoi
+  var form = document.getElementById('form'), success = document.getElementById('success');
+  var tabsBox = document.querySelector('.tabs');
+  var copyBtn = document.getElementById('copy');
+  var recapText = '';
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err = document.getElementById('error');
+    var company = form.company.value.trim(), name = form.name.value.trim(), email = form.email.value.trim();
+    if (!company || !name) { err.textContent = 'Indiquez le nom de votre entreprise et votre nom.'; (company ? form.name : form.company).focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Vérifiez votre adresse email : elle doit ressembler à prenom@entreprise.fr.'; form.email.focus(); return; }
+    err.textContent = '';
+    var data = { type: mode, entreprise: company, nom: name, email: email, telephone: form.phone.value.trim(), message: form.message.value.trim() };
+    var lines = ['Entreprise : ' + company, 'Contact : ' + name + ' · ' + email + (data.telephone ? ' · ' + data.telephone : '')];
+    if (mode === 'ligue') {
+      data.niveau = form.level.value; data.equipes = teamsSel.options[teamsSel.selectedIndex].text; data.taille = form.size.value; data.estimation = document.getElementById('estimate-val').textContent;
+      lines.push('Demande : pré-inscription Ligue 14', 'Niveau : ' + data.niveau, 'Équipes : ' + data.equipes, 'Estimation : ' + data.estimation);
+    } else if (mode === 'devis') {
+      data.format = form.format.value; data.participants = form.people.value || 'à préciser';
+      lines.push('Demande : devis', 'Format : ' + data.format, 'Participants : ' + data.participants);
+    } else {
+      data.formule = form.pack.value;
+      lines.push('Demande : dossier sponsor', 'Formule : ' + data.formule);
+    }
+    if (data.message) lines.push('Message : ' + data.message);
+    recapText = lines.join('\n');
+
+    if (FORM_ENDPOINT) {
+      submitBtn.disabled = true; submitBtn.textContent = 'Envoi en cours…';
+      fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { if (!r.ok) throw new Error(); showSuccess(true); })
+        .catch(function () { err.textContent = "L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous à " + CONTACT_EMAIL + '.'; })
+        .then(function () { submitBtn.disabled = false; setMode(mode); });
+    } else {
+      showSuccess(false);
+    }
+  });
+  function showSuccess(sent) {
+    document.getElementById('success-title').textContent = sent ? 'Merci, demande envoyée' : 'Votre demande est prête';
+    document.getElementById('success-text').textContent = sent
+      ? 'Nous revenons vers vous sous 48 heures ouvrées.'
+      : "Copiez-la et envoyez-la à " + CONTACT_EMAIL + " : nous revenons vers vous sous 48 heures ouvrées.";
+    document.getElementById('recap').textContent = recapText;
+    copyBtn.hidden = sent;
+    form.hidden = true; tabsBox.hidden = true; success.classList.add('show'); success.focus();
+  }
+  copyBtn.addEventListener('click', function () {
+    if (navigator.clipboard) navigator.clipboard.writeText(recapText).then(function () { copyBtn.textContent = 'Copié ✓'; }, function () { copyBtn.textContent = 'Copie impossible : sélectionnez le texte'; });
+  });
+  function showForm() { form.hidden = false; tabsBox.hidden = false; success.classList.remove('show'); copyBtn.textContent = 'Copier ma demande'; }
+  document.getElementById('again').addEventListener('click', function () { form.reset(); estimate(); setMode(mode); showForm(); });
+
+  // Mentions légales et confidentialité
+  var dlg = document.getElementById('legal');
+  var texts = {
+    legal: ['Mentions légales', "Éditeur du site : Terrain Commun (société en cours de création), Caen (14). Raison sociale, forme juridique, capital, siège, SIREN/RCS et directeur de la publication seront précisés à l'immatriculation. Hébergement : GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."],
+    privacy: ['Confidentialité', "Les données envoyées par le formulaire servent uniquement à répondre à votre demande et à gérer votre inscription. Elles ne sont ni vendues ni cédées, et sont conservées au maximum 3 ans après le dernier contact. Vous pouvez demander leur consultation ou leur suppression à " + CONTACT_EMAIL + ". Ce site n'utilise aucun cookie de suivi."]
+  };
+  function openDlg(k, e) { e.preventDefault(); document.getElementById('legal-title').textContent = texts[k][0]; document.getElementById('legal-body').textContent = texts[k][1]; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+  document.getElementById('open-legal').addEventListener('click', function (e) { openDlg('legal', e); });
+  document.getElementById('open-privacy').addEventListener('click', function (e) { openDlg('privacy', e); });
+  document.getElementById('close-legal').addEventListener('click', function () { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); });
+})();
+</script>
+</body>
+</html>
