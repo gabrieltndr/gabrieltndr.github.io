@@ -14,17 +14,19 @@
 <link rel="canonical" href="https://gabrieltndr.github.io/photo/en/">
 <link rel="alternate" hreflang="fr" href="https://gabrieltndr.github.io/photo/">
 <link rel="alternate" hreflang="en" href="https://gabrieltndr.github.io/photo/en/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/anton.woff" as="font" type="font/woff" crossorigin>
 <style>
+@font-face{font-family:"Anton";src:url(../fonts/anton.woff) format("woff");font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/inter-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/inter-500.woff) format("woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/inter-600.woff) format("woff");font-weight:600 700;font-display:swap}
 :root{--bg:#0F0F0D;--panel:#181815;--line:rgba(240,236,226,.12);--txt:#EFEBE1;--mut:#9C988D;--acc:#D9F24A;--pad:clamp(18px,4vw,56px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.h{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+.h{font-family:"Anton","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
 .acc{color:var(--acc)}
 .mark{background:linear-gradient(transparent 62%,rgba(217,242,74,.85) 62%);color:var(--txt)}
 .lbl{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
@@ -39,7 +41,7 @@ section{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
 nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 nav.solid{background:rgba(15,15,13,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-.logo{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:.04em}
+.logo{font-family:"Anton",sans-serif;font-size:1.6rem;letter-spacing:.04em}
 .logo span{color:var(--acc)}
 nav ul{display:flex;gap:28px;list-style:none}
 nav ul a{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);transition:color .2s}
@@ -65,13 +67,13 @@ nav ul a:hover{color:var(--txt)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats div{padding:28px var(--pad) 26px;border-right:1px solid var(--line)}
 .stats div:last-child{border-right:0}
-.stats b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--acc)}
+.stats b{display:block;font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--acc)}
 .stats span{color:var(--mut);font-size:.9rem}
 @media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 
 /* portfolio */
 .tabs{display:flex;gap:6px 30px;flex-wrap:wrap;margin-bottom:24px;border-bottom:1px solid var(--line)}
-.tabs button{font:inherit;background:none;border:0;color:var(--mut);cursor:pointer;padding:12px 0;font-family:"Bebas Neue",sans-serif;font-size:1.7rem;letter-spacing:.03em;position:relative;transition:color .2s}
+.tabs button{font:inherit;background:none;border:0;color:var(--mut);cursor:pointer;padding:12px 0;font-family:"Anton",sans-serif;font-size:1.7rem;letter-spacing:.03em;position:relative;transition:color .2s}
 .tabs button:hover{color:var(--txt)}
 .tabs button[aria-selected=true]{color:var(--txt)}
 .tabs button[aria-selected=true]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--acc)}
@@ -84,7 +86,7 @@ nav ul a:hover{color:var(--txt)}
 .grid img.ok{opacity:1}
 .grid a:hover img{transform:scale(1.04)}
 .grid a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:42vw}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:34vw;gap:4px}}
 
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);align-items:center}
@@ -102,15 +104,15 @@ nav ul a:hover{color:var(--txt)}
 .clubs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .clubs div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-start}
 .clubs .lg{height:84px;width:auto;max-width:130px;object-fit:contain;margin-bottom:22px;transition:transform .3s}.clubs div:hover .lg{transform:scale(1.06)}
-.clubs b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);line-height:.95}
+.clubs b{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);line-height:.95}
 .clubs span{color:var(--mut);font-size:.85rem;margin-top:14px}
 @media(max-width:860px){.clubs{grid-template-columns:1fr 1fr}}
 
 /* services */
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .svc article{background:var(--panel);padding:30px 28px 32px;position:relative;min-height:240px}
-.svc .n{font-family:"Bebas Neue",sans-serif;color:var(--acc);font-size:1.3rem;letter-spacing:.06em}
-.svc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:16px 0 12px}
+.svc .n{font-family:"Anton",sans-serif;color:var(--acc);font-size:1.3rem;letter-spacing:.06em}
+.svc h3{font-family:"Anton",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:16px 0 12px}
 .svc p{color:var(--mut);font-size:.95rem}
 .svc .note{background:var(--acc);color:#111}
 .svc .note .n,.svc .note p{color:#111}
@@ -122,9 +124,9 @@ nav ul a:hover{color:var(--txt)}
 .proof figure{position:relative;overflow:hidden;background:var(--panel);min-height:360px}
 .proof img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .proof figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.82rem;color:#E4E0D6}
-.proof figcaption b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.5rem;color:var(--txt);letter-spacing:.02em}
+.proof figcaption b{display:block;font-family:"Anton",sans-serif;font-weight:400;font-size:1.5rem;color:var(--txt);letter-spacing:.02em}
 .bigstat{margin-top:6px;background:var(--panel);display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;padding:26px 28px}
-.bigstat b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(3rem,6vw,5rem);line-height:.9;color:var(--acc)}
+.bigstat b{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(3rem,6vw,5rem);line-height:.9;color:var(--acc)}
 .bigstat p{color:#CFCBC0;max-width:60ch}
 @media(max-width:860px){.proof{grid-template-columns:1fr 1fr}.proof figure{min-height:300px}}
 
@@ -133,13 +135,13 @@ nav ul a:hover{color:var(--txt)}
 .gear div{padding:26px 22px 8px 0;border-right:1px solid var(--line);margin-right:22px}
 .gear div:last-child{border-right:0}
 .gear .lbl{color:var(--acc)}
-.gear b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:10px 0}
+.gear b{display:block;font-family:"Anton",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:10px 0}
 .gear p{color:var(--mut);font-size:.92rem}
 @media(max-width:860px){.gear{grid-template-columns:1fr 1fr}.gear div:nth-child(2){border-right:0}}
 
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px)}
-.contact h2{font-size:clamp(3.6rem,9vw,8rem)}
+.contact h2{font-size:clamp(3rem,6.2vw,5.8rem)}
 .links{margin-top:28px;display:grid;gap:6px}
 .links a{display:flex;justify-content:space-between;align-items:center;background:var(--panel);padding:18px 20px;transition:background .2s,color .2s}
 .links a span{color:var(--mut);font-size:.9rem}
@@ -162,7 +164,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .lb{position:fixed;inset:0;z-index:100;background:rgba(8,8,7,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
 .lb.on{opacity:1;pointer-events:auto}
 .lb img{max-width:92vw;max-height:86vh;object-fit:contain}
-.lb button{position:absolute;background:none;border:0;color:var(--txt);font:400 2.4rem/1 "Bebas Neue",sans-serif;cursor:pointer;padding:16px 18px}
+.lb button{position:absolute;background:none;border:0;color:var(--txt);font:400 2.4rem/1 "Anton",sans-serif;cursor:pointer;padding:16px 18px}
 .lb button:hover{color:var(--acc)}
 .lb .x{top:6px;right:8px}
 .lb .p{left:4px;top:50%;transform:translateY(-50%)}
@@ -179,12 +181,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .svc .note .btn{margin-top:18px;background:#111;color:var(--acc)}
 .svc .note .btn:hover{background:#000;color:#fff}
 .band{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px;background:var(--panel);padding:24px 28px;border-left:3px solid var(--acc)}
-.band p{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1}
+.band p{font-family:"Anton","Oswald","Arial Narrow",Impact,sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1}
 .band div{display:flex;gap:10px;flex-wrap:wrap}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;counter-reset:s}
 .steps div{background:var(--panel);padding:28px;position:relative}
-.steps b{display:block;font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2rem;line-height:1;margin:14px 0 10px}
-.steps .n{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;line-height:1;color:var(--acc)}
+.steps b{display:block;font-family:"Anton","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2rem;line-height:1;margin:14px 0 10px}
+.steps .n{font-family:"Anton",sans-serif;font-size:3.4rem;line-height:1;color:var(--acc)}
 .steps p{color:var(--mut);font-size:.95rem}
 @media(max-width:760px){.steps{grid-template-columns:1fr}}
 .reassure{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--mut);font-size:.85rem;margin-top:4px}
@@ -211,13 +213,13 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
  .lbcta{bottom:70px}
 }
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-html,body{overflow-x:clip}.head h2,.about h2,.contact h2{overflow-wrap:anywhere}@media(max-width:600px){.head h2{font-size:12.5vw}.contact h2{font-size:15vw}}
+html,body{overflow-x:clip}.head h2,.about h2,.contact h2{overflow-wrap:anywhere}@media(max-width:600px){.head h2{font-size:12.5vw}.contact h2{font-size:13vw}}
 
 .who{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .who a{background:var(--panel);padding:26px 24px 24px;display:flex;flex-direction:column;gap:10px;min-height:250px;transition:background .25s,transform .25s;border-top:3px solid transparent}
 .who a:hover{background:#22221E;border-top-color:var(--acc);transform:translateY(-2px)}
 .who .lbl{color:var(--acc)}
-.who b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.1rem;line-height:.95}
+.who b{font-family:"Anton","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.1rem;line-height:.95}
 .who p{color:var(--mut);font-size:.93rem;flex:1}
 .who .go{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--txt)}
 @media(max-width:960px){.who{grid-template-columns:1fr 1fr}}
@@ -228,7 +230,7 @@ html,body{overflow-x:clip}.head h2,.about h2,.contact h2{overflow-wrap:anywhere}
 .acr dt{color:var(--mut)}
 .acr dd a{border-bottom:1px solid var(--line)}
 .acr .side2{background:var(--acc);color:#111;padding:28px;display:flex;flex-direction:column;gap:14px}
-.acr .side2 b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.4rem;line-height:.95}
+.acr .side2 b{font-family:"Anton","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.4rem;line-height:.95}
 .acr .side2 p{font-size:.95rem}
 .acr .side2 .btn{background:#111;color:var(--acc);justify-content:center}
 .acr .side2 .btn:hover{background:#000;color:#fff}
@@ -245,6 +247,38 @@ html,body{overflow-x:clip}.head h2,.about h2,.contact h2{overflow-wrap:anywhere}
 @media(hover:none){.grid .ex{display:none}}
 .lang{font-size:.78rem;font-weight:600;letter-spacing:.16em;color:var(--txt);border:1px solid var(--line);padding:9px 11px;margin-right:8px;transition:border-color .2s}.lang:hover{border-color:var(--acc);color:var(--acc)}
 nav .right{display:flex;align-items:center}
+
+.about .gear{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;border-top:0}
+.about .gear h3{grid-column:1/-1;margin-bottom:6px;color:var(--acc)}
+.about .gear div{padding:12px 0;border-right:0;margin:0;border-top:1px solid var(--line)}
+.about .gear b{font-size:1.5rem;margin:4px 0}
+.about .gear .lbl{color:var(--mut)}
+.about .gear p{font-size:.85rem}
+.inuse{margin:44px 0 16px;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline}
+.inuse h3{color:var(--acc)}.inuse p{color:var(--mut);max-width:60ch}
+.proof figure{min-height:300px}
+.stepsl{color:var(--acc);margin-bottom:14px}
+.steps.mini{margin-bottom:clamp(40px,6vw,70px)}
+.steps.mini div{padding:20px 22px}
+.steps.mini .n{font-size:2.2rem}
+.steps.mini b{font-size:1.5rem;margin:8px 0 6px}
+.steps.mini p{font-size:.88rem}
+.svc article{min-height:0}
+@media(max-width:760px){
+ section{padding:52px 0}
+ .head{margin-bottom:22px}
+ .head p{font-size:.92rem}
+ .who{grid-template-columns:1fr 1fr}.who a{padding:18px 16px;min-height:0;gap:6px}.who b{font-size:1.45rem}.who p{display:none}.who .go{font-size:.66rem}
+ .svc{grid-template-columns:1fr}.svc article{padding:18px 20px}.svc h3{font-size:1.6rem;margin:6px 0}.svc p{font-size:.88rem}.svc .go{margin-top:8px}
+ .proof{grid-template-columns:1fr 1fr}.proof figure{min-height:220px}
+ .clubs div{min-height:0;padding:18px 16px}.clubs .lg{height:56px;margin-bottom:12px}.clubs b{font-size:1.5rem}
+ .about .gear{grid-template-columns:1fr 1fr}
+ .acr .box{padding:20px}.acr .side2{padding:22px}
+ .steps.mini{grid-template-columns:1fr}.steps.mini div{padding:16px 18px}.steps.mini p{display:none}
+ .about .ph{aspect-ratio:1/1}
+ .band{padding:18px 20px}
+ .hero h1{font-size:15.5vw}
+}
 </style>
 </head>
 <body>
@@ -255,7 +289,6 @@ nav .right{display:flex;align-items:center}
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#apropos">About</a></li>
     <li><a href="#prestations">Services</a></li>
-    <li><a href="#materiel">Gear</a></li>
     <li><a href="#accreditation">Accreditation</a></li>
   </ul>
   <div class="right"><a class="lang" href="../" hreflang="fr" lang="fr" title="Version française">FR</a><a href="#contact" class="btn">Contact me</a></div>
@@ -312,6 +345,13 @@ nav .right{display:flex;align-items:center}
       <li><b>Education</b>Master's in Sports Event Management, Win Sport School</li>
       <li><b>Area</b>Caen, Calvados and all of Normandy</li>
     </ul>
+    <div class="gear" id="materiel">
+      <h3 class="lbl">Gear</h3>
+      <div><span class="lbl">Main body</span><b>Sony A6400</b><p>APS-C, light and fast: it took most of the photos on this site.</p></div>
+      <div><span class="lbl">Second body</span><b>Sony A7 IV</b><p>33 MP full frame, for the darkest halls.</p></div>
+      <div><span class="lbl">Telephoto</span><b>Sigma 70-200 f/2.8</b><p>Duels, shots, saves.</p></div>
+      <div><span class="lbl">All-round zoom</span><b>Tamron 17-70 f/2.8</b><p>Dressing rooms, celebrations, portraits.</p></div>
+    </div>
   </div>
 </div></section>
 
@@ -323,6 +363,13 @@ nav .right{display:flex;align-items:center}
     <div><img class="lg" src="../img/logos/smcaen.png" alt="Logo SM Caen" loading="lazy" onerror="this.remove()"><b>SM Caen</b><span>Football · U17 National league</span></div>
     <div><img class="lg" src="../img/logos/herouville-futsal.png" alt="Logo Hérouville Futsal" loading="lazy" onerror="this.remove()"><b>Hérouville Futsal</b><span>Futsal</span></div>
     <div><img class="lg" src="../img/logos/cft.png" alt="Logo Caen Football Training" loading="lazy" onerror="this.remove()"><b>Caen Football Training</b><span>Futsal</span></div>
+  </div>
+  <div class="inuse rv"><h3 class="lbl">In use</h3><p>My images don't stay on a hard drive: clubs publish, print and share them.</p></div>
+  <div class="proof rv">
+    <figure><img src="../../assets/partenaire-maillots.jpg" alt="Kit launch with a sponsor" loading="lazy"><figcaption><b>Kit launch</b>Sponsor shoot · SC Hérouville</figcaption></figure>
+    <figure><img src="../../assets/lamine-poster.jpg" alt="Lamine Futsal Cup video content" loading="lazy"><figcaption><b>Lamine Futsal Cup</b>1,000+ visitors · 200K impressions</figcaption></figure>
+    <figure><img src="../../assets/herouvillais-ep3-poster.jpg" alt="Les Hérouvillais video series, episode 3" loading="lazy"><figcaption><b>Les Hérouvillais</b>Video series · club YouTube</figcaption></figure>
+    <figure><img src="../../assets/partenaire-visuel.jpg" alt="Sponsor visual made for the club" loading="lazy"><figcaption><b>Sponsor visual</b>Sponsor post · SCH social media</figcaption></figure>
   </div>
 </div></section>
 
@@ -338,27 +385,6 @@ nav .right{display:flex;align-items:center}
   </div>
 </div></section>
 
-<section id="preuves"><div class="wrap">
-  <div class="head rv"><h2 class="h">In <span class="acc">use</span></h2><p>My images don't stay on a hard drive: clubs publish, print and share them.</p></div>
-  <div class="proof rv">
-    <figure><img src="../../assets/partenaire-maillots.jpg" alt="Kit launch with a sponsor" loading="lazy"><figcaption><b>Kit launch</b>Sponsor shoot · SC Hérouville</figcaption></figure>
-    <figure><img src="../../assets/lamine-poster.jpg" alt="Lamine Futsal Cup video content" loading="lazy"><figcaption><b>Lamine Futsal Cup</b>1,000+ visitors · 200K impressions</figcaption></figure>
-    <figure><img src="../../assets/herouvillais-ep3-poster.jpg" alt="Les Hérouvillais video series, episode 3" loading="lazy"><figcaption><b>Les Hérouvillais</b>Video series · club YouTube</figcaption></figure>
-    <figure><img src="../../assets/partenaire-visuel.jpg" alt="Sponsor visual made for the club" loading="lazy"><figcaption><b>Sponsor visual</b>Sponsor post · SCH social media</figcaption></figure>
-  </div>
-  <div class="bigstat rv"><b>+1 M</b><p>views in 30 days on SC Hérouville's social media (September 2026). I run the club's communications on my own, photos included.</p></div>
-</div></section>
-
-<section id="materiel"><div class="wrap">
-  <div class="head rv"><h2 class="h">Gear</h2><p>Two Sony bodies and two f/2.8 zooms: enough to follow the action indoors and outdoors, even in low light.</p></div>
-  <div class="gear rv">
-    <div><span class="lbl">Main body</span><b>Sony A7 IV</b><p>33 MP full frame, at ease in sports halls.</p></div>
-    <div><span class="lbl">Second body</span><b>Sony A6400</b><p>APS-C, light, for behind-the-scenes.</p></div>
-    <div><span class="lbl">Telephoto</span><b>Sigma 70-200 f/2.8</b><p>Duels, shots, saves.</p></div>
-    <div><span class="lbl">All-round zoom</span><b>Tamron 17-70 f/2.8</b><p>Dressing rooms, celebrations, portraits.</p></div>
-  </div>
-</div></section>
-
 <section id="accreditation"><div class="wrap">
   <div class="head rv"><h2 class="h">Accre<span class="acc">ditation</span></h2><p>For press officers and organisers: everything you need in one place.</p></div>
   <div class="acr rv">
@@ -368,7 +394,7 @@ nav .right{display:flex;align-items:center}
       <dt>Based in</dt><dd>Caen (14), Normandy, France</dd>
       <dt>Sports</dt><dd>Football, futsal, handball</dd>
       <dt>References</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training</dd>
-      <dt>Gear</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
+      <dt>Gear</dt><dd>Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
       <dt>Publication</dt><dd>Club and sponsor social media, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
       <dt>Contact</dt><dd><a href="tel:+33659189721">+33 6 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
     </dl></div>
@@ -383,16 +409,11 @@ nav .right{display:flex;align-items:center}
   </div>
 </div></section>
 
-<section id="process"><div class="wrap">
-  <div class="head rv"><h2 class="h">How it <span class="acc">works</span></h2><p>Three steps, no commitment until you approve the proposal.</p></div>
-  <div class="steps rv">
+<section id="contact"><div class="wrap"><h3 class="lbl stepsl">How it works</h3><div class="steps rv mini">
     <div><span class="n">01</span><b>You get in touch</b><p>Date, venue, sport and what you need: the form below or a WhatsApp message is enough.</p></div>
     <div><span class="n">02</span><b>I send a proposal</b><p>A clear offer, tailored to your event and your budget. Once you approve it, the date is booked.</p></div>
     <div><span class="n">03</span><b>I shoot, you publish</b><p>I'm pitchside on the day, then I deliver an edited selection, ready for your social media and sponsors.</p></div>
-  </div>
-</div></section>
-
-<section id="contact"><div class="wrap contact">
+  </div></div><div class="wrap contact">
   <div class="rv">
     <p class="lbl acc">Contact</p>
     <h2 class="h">A match,<br>a project?</h2>
@@ -416,7 +437,7 @@ nav .right{display:flex;align-items:center}
   </form>
 </div></section>
 
-<footer><div class="wrap"><span>© Gabriel Tondeur · Sports photographer · Caen, Normandy</span><a href="../../">My communications &amp; events profile (FR) →</a></div></footer>
+<footer><div class="wrap"><span>© Gabriel Tondeur · Sports photographer · Caen, Normandy · <a href="../mentions-legales.html" style="text-decoration:underline">Legal notice</a></span><a href="../../">My communications &amp; events profile (FR) →</a></div></footer>
 
 <a class="fab" id="fab" href="https://wa.me/33659189721?text=Hi%20Gabriel%2C%20I%27d%20like%20a%20photo%20quote." target="_blank" rel="noopener" aria-label="Contact me on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 <div class="mbar" id="mbar"><a href="#contact" class="btn" data-b="">Book a date</a><a href="https://wa.me/33659189721?text=Hi%20Gabriel%2C%20I%27d%20like%20a%20photo%20quote." class="btn wa" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></div>
@@ -433,7 +454,7 @@ nav .right{display:flex;align-items:center}
 
 <script>
 var TABS=[["handball","Handball"],["futsal","Futsal"],["football","Football"],["sch","SC Hérouville"],["portraits","Portraits & Media day"]];
-var D={"handball": [["01", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "102 mm", "f/2.8", "1/800 s", "ISO 2000"]], ["02", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "173 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["03", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "90 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["04", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "182 mm", "f/2.8", "1/1250 s", "ISO 1600"]], ["05", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/640 s", "ISO 2500"]], ["06", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "122 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["07", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["09", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "137 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["11", 720, 377, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["12", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]]], "futsal": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "45 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "25 mm", "f/2.8", "1/1000 s", "ISO 1250"]], ["03", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/1000 s", "ISO 3200"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "66 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "55 mm", "f/2.8", "1/800 s", "ISO 3200"]], ["06", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/800 s", "ISO 3200"]], ["07", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "31 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "166 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["10", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "154 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["11", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["12", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]]], "football": [["01", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "172 mm", "f/2.8", "1/6400 s", "ISO 400"]], ["02", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "104 mm", "f/3.2", "1/6400 s", "ISO 640"]], ["03", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "129 mm", "f/2.8", "1/6400 s", "ISO 500"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "53 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["06", 720, 480, ["Sony A6400", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/4000 s", "ISO 800"]], ["07", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 320"]], ["08", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "85 mm", "f/2.8", "1/3200 s", "ISO 1000"]], ["09", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "39 mm", "f/2.8", "1/3200 s", "ISO 800"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "193 mm", "f/2.8", "1/200 s", "ISO 2000"]], ["11", 568, 720, ["Sony A7 IV", "Tamron 17-70 mm f/2.8", "34 mm", "f/2.8", "1/500 s", "ISO 1600"]], ["12", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "150 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["13", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/4000 s", "ISO 500"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "184 mm", "f/2.8", "1/6400 s", "ISO 500"]]], "sch": [["01", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["02", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/500 s", "ISO 3200"]], ["03", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "55 mm", "f/2.8", "1/3200 s", "ISO 1250"]], ["04", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/2500 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 500"]], ["06", 405, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "166 mm", "f/3.2", "1/4000 s", "ISO 800"]], ["07", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "149 mm", "f/2.8", "1/5000 s", "ISO 400"]], ["09", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 640"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/6400 s", "ISO 500"]], ["11", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "166 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["12", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "158 mm", "f/2.8", "1/5000 s", "ISO 640"]], ["13", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 400"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 400"]]], "portraits": [["01", 405, 720, null], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "44 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["03", 576, 720, null], ["04", 625, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "30 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["05", 576, 720, null], ["06", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "33 mm", "f/3.2", "1/4000 s", "ISO 400"]], ["07", 576, 720, null], ["08", 583, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["09", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "56 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["10", 576, 720, null], ["11", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "29 mm", "f/3.2", "1/4000 s", "ISO 250"]], ["12", 528, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "34 mm", "f/3.5", "1/4000 s", "ISO 320"]]]};
+var D={"handball": [["01", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "102 mm", "f/2.8", "1/800 s", "ISO 2000"]], ["02", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "173 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["03", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "90 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["04", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "182 mm", "f/2.8", "1/1250 s", "ISO 1600"]], ["05", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/640 s", "ISO 2500"]], ["06", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "122 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["07", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["09", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "137 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["11", 720, 377, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["12", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]]], "futsal": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "45 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "25 mm", "f/2.8", "1/1000 s", "ISO 1250"]], ["03", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/1000 s", "ISO 3200"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "66 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "55 mm", "f/2.8", "1/800 s", "ISO 3200"]], ["06", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/800 s", "ISO 3200"]], ["07", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "31 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "166 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["10", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "154 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["11", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["12", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1000 s", "ISO 2500"]]], "football": [["01", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "172 mm", "f/2.8", "1/6400 s", "ISO 400"]], ["02", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "104 mm", "f/3.2", "1/6400 s", "ISO 640"]], ["03", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "129 mm", "f/2.8", "1/6400 s", "ISO 500"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "53 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["06", 720, 480, ["Sony A6400", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/4000 s", "ISO 800"]], ["07", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 320"]], ["08", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "85 mm", "f/2.8", "1/3200 s", "ISO 1000"]], ["09", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "39 mm", "f/2.8", "1/3200 s", "ISO 800"]], ["11", 568, 720, ["Sony A7 IV", "Tamron 17-70 mm f/2.8", "34 mm", "f/2.8", "1/500 s", "ISO 1600"]], ["12", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "150 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["13", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/4000 s", "ISO 500"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "184 mm", "f/2.8", "1/6400 s", "ISO 500"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "193 mm", "f/2.8", "1/200 s", "ISO 2000"]]], "sch": [["01", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["02", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/500 s", "ISO 3200"]], ["03", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "55 mm", "f/2.8", "1/3200 s", "ISO 1250"]], ["04", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/2500 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 500"]], ["06", 405, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "166 mm", "f/3.2", "1/4000 s", "ISO 800"]], ["07", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["08", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "149 mm", "f/2.8", "1/5000 s", "ISO 400"]], ["09", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 640"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/6400 s", "ISO 500"]], ["11", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "166 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["12", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "158 mm", "f/2.8", "1/5000 s", "ISO 640"]], ["13", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 400"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/5000 s", "ISO 400"]]], "portraits": [["01", 405, 720, null], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "44 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["03", 576, 720, null], ["04", 625, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "30 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["05", 576, 720, null], ["06", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "33 mm", "f/3.2", "1/4000 s", "ISO 400"]], ["07", 576, 720, null], ["08", 583, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["09", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "56 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["10", 576, 720, null], ["11", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "29 mm", "f/3.2", "1/4000 s", "ISO 250"]], ["12", 528, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "34 mm", "f/3.5", "1/4000 s", "ISO 320"]]]};
 var tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.c'),cur='handball',idx=0;
 function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function label(t){for(var i=0;i<TABS.length;i++)if(TABS[i][0]==t)return TABS[i][1]}
@@ -475,7 +496,7 @@ form.onsubmit=function(e){e.preventDefault();
   else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Photo request — '+g('nom'))+'&body='+encodeURIComponent(body)}
   okb.textContent='Your request is ready in '+(via=='wa'?'WhatsApp':'your email app')+': just press Send. I\'ll get back to you quickly.';okb.classList.add('on')};
 document.getElementById('copy').onclick=function(){
-  var t='Name: Gabriel Tondeur\nRole: Sports photographer\nOrganisation: SC Hérouville (Head of Communications & Events)\nCity: Caen (14), Normandy, France\nSports: football, futsal, handball\nReferences: SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training\nGear: Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nPhone: +33 6 59 18 97 21\nEmail: gabrieltondeur14@gmail.com\nInstagram: @gabrieltndr\nPortfolio: https://gabrieltndr.github.io/photo/en/';
+  var t='Name: Gabriel Tondeur\nRole: Sports photographer\nOrganisation: SC Hérouville (Head of Communications & Events)\nCity: Caen (14), Normandy, France\nSports: football, futsal, handball\nReferences: SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training\nGear: Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nPhone: +33 6 59 18 97 21\nEmail: gabrieltondeur14@gmail.com\nInstagram: @gabrieltndr\nPortfolio: https://gabrieltndr.github.io/photo/en/';
   var done=function(){document.getElementById('copied').textContent='Details copied ✓'};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
   function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}
