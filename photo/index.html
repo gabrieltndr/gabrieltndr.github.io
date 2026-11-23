@@ -347,8 +347,8 @@ nav .right{display:flex;align-items:center}
     </ul>
     <div class="gear" id="materiel">
       <h3 class="lbl">Matériel</h3>
-      <div><span class="lbl">Boîtier principal</span><b>Sony A6400</b><p>APS-C, léger et réactif : il a pris la plupart des photos de ce site.</p></div>
-      <div><span class="lbl">Second boîtier</span><b>Sony A7 IV</b><p>Plein format 33 Mpx, pour les salles les plus sombres.</p></div>
+      <div><span class="lbl">Boîtier principal</span><b>Sony A7 IV</b><p>Plein format 33 Mpx, à l'aise en gymnase.</p></div>
+      <div><span class="lbl">Second boîtier</span><b>Sony A6400</b><p>APS-C, léger, pour les coulisses.</p></div>
       <div><span class="lbl">Téléobjectif</span><b>Sigma 70-200 f/2.8</b><p>Les duels, les tirs, les arrêts.</p></div>
       <div><span class="lbl">Zoom polyvalent</span><b>Tamron 17-70 f/2.8</b><p>Vestiaires, célébrations, portraits.</p></div>
     </div>
@@ -394,7 +394,7 @@ nav .right{display:flex;align-items:center}
       <dt>Basé à</dt><dd>Caen (14), Normandie</dd>
       <dt>Disciplines</dt><dd>Football, futsal, handball</dd>
       <dt>Références</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training</dd>
-      <dt>Matériel</dt><dd>Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
+      <dt>Matériel</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
       <dt>Diffusion</dt><dd>Réseaux des clubs et partenaires, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
       <dt>Contact</dt><dd><a href="tel:+33659189721">06 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
     </dl></div>
@@ -496,7 +496,7 @@ form.onsubmit=function(e){e.preventDefault();
   else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Demande photo — '+g('nom'))+'&body='+encodeURIComponent(body)}
   okb.textContent='Votre demande est prête dans '+(via=='wa'?'WhatsApp':'votre messagerie')+' : il ne reste qu\'à appuyer sur « Envoyer ». Je vous réponds rapidement.';okb.classList.add('on')};
 document.getElementById('copy').onclick=function(){
-  var t='Nom : Gabriel Tondeur\nFonction : Photographe sport\nStructure : SC Hérouville (responsable communication & événementiel)\nVille : Caen (14), Normandie\nDisciplines : football, futsal, handball\nRéférences : SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training\nMatériel : Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nTéléphone : 06 59 18 97 21\nE-mail : gabrieltondeur14@gmail.com\nInstagram : @gabrieltndr\nPortfolio : https://gabrieltndr.github.io/photo/';
+  var t='Nom : Gabriel Tondeur\nFonction : Photographe sport\nStructure : SC Hérouville (responsable communication & événementiel)\nVille : Caen (14), Normandie\nDisciplines : football, futsal, handball\nRéférences : SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training\nMatériel : Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nTéléphone : 06 59 18 97 21\nE-mail : gabrieltondeur14@gmail.com\nInstagram : @gabrieltndr\nPortfolio : https://gabrieltndr.github.io/photo/';
   var done=function(){document.getElementById('copied').textContent='Informations copiées ✓'};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
   function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}
@@ -505,5 +505,6 @@ var fab=document.getElementById('fab'),mbar=document.getElementById('mbar'),ct=d
 function bars(){var y=scrollY,r=ct.getBoundingClientRect(),inC=r.top<innerHeight*.8&&r.bottom>0,show=y>innerHeight*.7&&!inC;fab.classList.toggle('on',show);mbar.classList.toggle('on',show)}
 addEventListener('scroll',bars,{passive:true});bars();
 </script>
+<script data-goatcounter="https://gabrieltndr.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

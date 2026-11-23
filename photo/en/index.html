@@ -347,8 +347,8 @@ nav .right{display:flex;align-items:center}
     </ul>
     <div class="gear" id="materiel">
       <h3 class="lbl">Gear</h3>
-      <div><span class="lbl">Main body</span><b>Sony A6400</b><p>APS-C, light and fast: it took most of the photos on this site.</p></div>
-      <div><span class="lbl">Second body</span><b>Sony A7 IV</b><p>33 MP full frame, for the darkest halls.</p></div>
+      <div><span class="lbl">Main body</span><b>Sony A7 IV</b><p>33 MP full frame, at ease in sports halls.</p></div>
+      <div><span class="lbl">Second body</span><b>Sony A6400</b><p>APS-C, light, for behind-the-scenes.</p></div>
       <div><span class="lbl">Telephoto</span><b>Sigma 70-200 f/2.8</b><p>Duels, shots, saves.</p></div>
       <div><span class="lbl">All-round zoom</span><b>Tamron 17-70 f/2.8</b><p>Dressing rooms, celebrations, portraits.</p></div>
     </div>
@@ -394,7 +394,7 @@ nav .right{display:flex;align-items:center}
       <dt>Based in</dt><dd>Caen (14), Normandy, France</dd>
       <dt>Sports</dt><dd>Football, futsal, handball</dd>
       <dt>References</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training</dd>
-      <dt>Gear</dt><dd>Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
+      <dt>Gear</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
       <dt>Publication</dt><dd>Club and sponsor social media, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
       <dt>Contact</dt><dd><a href="tel:+33659189721">+33 6 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
     </dl></div>
@@ -496,7 +496,7 @@ form.onsubmit=function(e){e.preventDefault();
   else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Photo request — '+g('nom'))+'&body='+encodeURIComponent(body)}
   okb.textContent='Your request is ready in '+(via=='wa'?'WhatsApp':'your email app')+': just press Send. I\'ll get back to you quickly.';okb.classList.add('on')};
 document.getElementById('copy').onclick=function(){
-  var t='Name: Gabriel Tondeur\nRole: Sports photographer\nOrganisation: SC Hérouville (Head of Communications & Events)\nCity: Caen (14), Normandy, France\nSports: football, futsal, handball\nReferences: SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training\nGear: Sony A6400, Sony A7 IV, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nPhone: +33 6 59 18 97 21\nEmail: gabrieltondeur14@gmail.com\nInstagram: @gabrieltndr\nPortfolio: https://gabrieltndr.github.io/photo/en/';
+  var t='Name: Gabriel Tondeur\nRole: Sports photographer\nOrganisation: SC Hérouville (Head of Communications & Events)\nCity: Caen (14), Normandy, France\nSports: football, futsal, handball\nReferences: SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training\nGear: Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nPhone: +33 6 59 18 97 21\nEmail: gabrieltondeur14@gmail.com\nInstagram: @gabrieltndr\nPortfolio: https://gabrieltndr.github.io/photo/en/';
   var done=function(){document.getElementById('copied').textContent='Details copied ✓'};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
   function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}
@@ -505,5 +505,6 @@ var fab=document.getElementById('fab'),mbar=document.getElementById('mbar'),ct=d
 function bars(){var y=scrollY,r=ct.getBoundingClientRect(),inC=r.top<innerHeight*.8&&r.bottom>0,show=y>innerHeight*.7&&!inC;fab.classList.toggle('on',show);mbar.classList.toggle('on',show)}
 addEventListener('scroll',bars,{passive:true});bars();
 </script>
+<script data-goatcounter="https://gabrieltndr.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
