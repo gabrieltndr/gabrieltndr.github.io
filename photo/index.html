@@ -165,6 +165,46 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media(max-width:600px){.logo{font-size:1.3rem;white-space:nowrap}nav .btn{padding:10px 14px;font-size:.7rem;letter-spacing:.1em}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none;font-size:1.45rem}.hero h1{font-size:17vw}}
+
+/* conversion */
+.svc article[data-b]{cursor:pointer;transition:background .25s,transform .25s}
+.svc article[data-b]:hover{background:#22221E;transform:translateY(-2px)}
+.svc .go{display:inline-block;margin-top:18px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.svc .note .btn{margin-top:18px;background:#111;color:var(--acc)}
+.svc .note .btn:hover{background:#000;color:#fff}
+.band{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px;background:var(--panel);padding:24px 28px;border-left:3px solid var(--acc)}
+.band p{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1}
+.band div{display:flex;gap:10px;flex-wrap:wrap}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;counter-reset:s}
+.steps div{background:var(--panel);padding:28px;position:relative}
+.steps b{display:block;font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2rem;line-height:1;margin:14px 0 10px}
+.steps .n{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;line-height:1;color:var(--acc)}
+.steps p{color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.reassure{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--mut);font-size:.85rem;margin-top:4px}
+.reassure span::before{content:"✓ ";color:var(--acc)}
+.sendrow{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn.wa{background:#25D366;color:#0b2b17}
+.btn.wa:hover{background:#fff}
+.ok{grid-column:1/-1;display:none;background:var(--panel);border-left:3px solid var(--acc);padding:16px 18px;color:#D7D3C8}
+.ok.on{display:block}
+input:invalid:not(:placeholder-shown){border-color:#E5674D}
+.lbcta{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.fab{position:fixed;right:20px;bottom:20px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .2s;opacity:0;pointer-events:none}
+.fab.on{opacity:1;pointer-events:auto}
+.fab:hover{transform:scale(1.07)}
+.fab svg{width:30px;height:30px;fill:#fff}
+.mbar{display:none}
+@media(max-width:760px){
+ .fab{display:none}
+ .mbar{display:grid;grid-template-columns:1fr auto;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,15,13,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+ .mbar.on{transform:none}
+ .mbar .btn{justify-content:center}
+ body{padding-bottom:0}
+ footer{padding-bottom:90px}
+ .lbcta{bottom:70px}
+}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -188,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <h1 class="h">Photographe<br>sport</h1>
     <div class="row">
       <p>Football, handball, futsal. Je couvre les matchs, les coulisses et les événements des clubs normands, et je livre des images prêtes pour les réseaux et les partenaires.</p>
-      <div class="cta"><a href="#portfolio" class="btn">Voir le portfolio</a><a href="#contact" class="btn o">Demander un devis</a></div>
+      <div class="cta"><a href="#contact" class="btn" data-b="">Réserver une date →</a><a href="#portfolio" class="btn o">Voir le portfolio</a></div>
     </div>
   </div>
 </header>
@@ -204,6 +244,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="head rv"><h2 class="h">Portfolio</h2><p>Une sélection resserrée, sport par sport. Cliquez sur une photo pour l'ouvrir en grand.</p></div>
   <div class="tabs" role="tablist" id="tabs"></div>
   <div class="grid" id="grid" role="tabpanel"></div>
+  <div class="band rv"><p>Des images comme celles-ci pour votre club ?</p><div><a href="#contact" class="btn" data-b="Couverture de match">Demander un devis</a><a href="https://wa.me/33659189721?text=Bonjour%20Gabriel%2C%20j%27ai%20vu%20ton%20portfolio%20et%20j%27aimerais%20un%20devis%20photo." class="btn o" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div></div>
 </div></section>
 
 <section id="apropos"><div class="wrap about">
@@ -236,12 +277,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <section id="prestations"><div class="wrap">
   <div class="head rv"><h2 class="h">Prestations</h2><p>Pour les clubs, les organisateurs d'événements et les marques partenaires.</p></div>
   <div class="svc rv">
-    <article><span class="n">01</span><h3>Couverture de match</h3><p>Avant-match, action, émotions, vestiaire. Une sélection retouchée, prête à publier.</p></article>
-    <article><span class="n">02</span><h3>Média day &amp; portraits</h3><p>Portraits joueurs et staff, photos d'équipe, présentations de maillots.</p></article>
-    <article><span class="n">03</span><h3>Événements &amp; tournois</h3><p>Tournois, galas, remises de trophées : l'ambiance et les temps forts de la journée.</p></article>
-    <article><span class="n">04</span><h3>Contenus réseaux</h3><p>Formats pensés pour Instagram et TikTok : carrousels, stories et vidéos courtes.</p></article>
-    <article><span class="n">05</span><h3>Visuels partenaires</h3><p>Des images qui mettent en avant vos sponsors : maillots, panneaux, activations.</p></article>
-    <article class="note"><span class="n">Tarifs</span><h3>Sur devis</h3><p>Chaque club a ses besoins. Dites-moi la date, le lieu et le format : je vous réponds avec une proposition adaptée.</p></article>
+    <article data-b="Couverture de match" tabindex="0" role="link"><span class="n">01</span><h3>Couverture de match</h3><p>Avant-match, action, émotions, vestiaire. Une sélection retouchée, prête à publier.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Média day / portraits" tabindex="0" role="link"><span class="n">02</span><h3>Média day &amp; portraits</h3><p>Portraits joueurs et staff, photos d'équipe, présentations de maillots.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Événement / tournoi" tabindex="0" role="link"><span class="n">03</span><h3>Événements &amp; tournois</h3><p>Tournois, galas, remises de trophées : l'ambiance et les temps forts de la journée.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Contenus réseaux" tabindex="0" role="link"><span class="n">04</span><h3>Contenus réseaux</h3><p>Formats pensés pour Instagram et TikTok : carrousels, stories et vidéos courtes.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Visuels partenaires" tabindex="0" role="link"><span class="n">05</span><h3>Visuels partenaires</h3><p>Des images qui mettent en avant vos sponsors : maillots, panneaux, activations.</p><span class="go">Demander un devis →</span></article>
+    <article class="note"><span class="n">Tarifs</span><h3>Sur devis</h3><p>Chaque club a ses besoins. Dites-moi la date, le lieu et le format : je vous réponds avec une proposition adaptée.</p><a href="#contact" class="btn" data-b="">Demander mon devis</a></article>
   </div>
 </div></section>
 
@@ -266,6 +307,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </div>
 </div></section>
 
+<section id="process"><div class="wrap">
+  <div class="head rv"><h2 class="h">Comment <span class="acc">ça marche</span></h2><p>Trois étapes, sans engagement jusqu'à ce que vous validiez la proposition.</p></div>
+  <div class="steps rv">
+    <div><span class="n">01</span><b>Vous me contactez</b><p>Date, lieu, sport et ce dont vous avez besoin : le formulaire ci-dessous ou un message WhatsApp suffit.</p></div>
+    <div><span class="n">02</span><b>Je vous fais une proposition</b><p>Une offre claire, adaptée à votre événement et à votre budget. Vous validez, la date est réservée.</p></div>
+    <div><span class="n">03</span><b>Je couvre, vous publiez</b><p>Je suis au bord du terrain le jour J, puis je vous livre une sélection retouchée, prête pour vos réseaux et vos partenaires.</p></div>
+  </div>
+</div></section>
+
 <section id="contact"><div class="wrap contact">
   <div class="rv">
     <p class="lbl acc">Contact</p>
@@ -276,19 +326,24 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <a href="mailto:gabrieltondeur14@gmail.com">E-mail <span>gabrieltondeur14@gmail.com →</span></a>
     </div>
   </div>
-  <form id="f" class="rv">
-    <label>Nom / club<input name="nom" required autocomplete="organization"></label>
+  <form id="f" class="rv" novalidate>
+    <label>Nom / club *<input name="nom" required autocomplete="organization" placeholder="Ex. : US Caen, Jean Dupont"></label>
+    <label>Téléphone ou e-mail *<input name="contact" required autocomplete="email" placeholder="Pour vous répondre"></label>
     <label>Sport<select name="sport"><option>Football</option><option>Futsal</option><option>Handball</option><option>Autre</option></select></label>
     <label>Date<input name="date" type="date"></label>
+    <label>Besoin<select name="besoin"><option>Couverture de match</option><option>Média day / portraits</option><option>Événement / tournoi</option><option>Contenus réseaux</option><option>Visuels partenaires</option><option>Autre</option></select></label>
     <label>Lieu<input name="lieu" placeholder="Ville, stade, salle"></label>
-    <label class="f">Besoin<select name="besoin"><option>Couverture de match</option><option>Média day / portraits</option><option>Événement / tournoi</option><option>Contenus réseaux</option><option>Visuels partenaires</option><option>Autre</option></select></label>
-    <label class="f">Message<textarea name="msg" placeholder="Quelques mots sur votre projet"></textarea></label>
-    <button class="btn" type="submit">Envoyer la demande →</button>
-    <small>Le bouton ouvre votre messagerie avec la demande déjà remplie.</small>
+    <label class="f">Message<textarea name="msg" placeholder="Quelques mots sur votre projet (facultatif)"></textarea></label>
+    <div class="sendrow"><button class="btn wa" type="submit" data-via="wa">Envoyer par WhatsApp →</button><button class="btn o" type="submit" data-via="mail">Envoyer par e-mail</button></div>
+    <div class="reassure"><span>Sans engagement</span><span>Devis gratuit</span><span>Basé à Caen, déplacements en Normandie</span></div>
+    <div class="ok" id="ok" role="status"></div>
   </form>
 </div></section>
 
 <footer><div class="wrap"><span>© Gabriel Tondeur · Photographe sport · Caen, Normandie</span><a href="../">Mon profil communication &amp; événementiel →</a></div></footer>
+
+<a class="fab" id="fab" href="https://wa.me/33659189721?text=Bonjour%20Gabriel%2C%20j%27aimerais%20un%20devis%20photo." target="_blank" rel="noopener" aria-label="Me contacter sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<div class="mbar" id="mbar"><a href="#contact" class="btn" data-b="">Réserver une date</a><a href="https://wa.me/33659189721?text=Bonjour%20Gabriel%2C%20j%27aimerais%20un%20devis%20photo." class="btn wa" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo en grand">
   <img alt="">
@@ -296,6 +351,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <button class="p" aria-label="Photo précédente">←</button>
   <button class="n" aria-label="Photo suivante">→</button>
   <div class="c lbl"></div>
+  <a href="#contact" class="btn lbcta" id="lbcta">Je veux ce type de photos →</a>
 </div>
 
 <script>
@@ -323,9 +379,26 @@ lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedT
 var h=location.hash.slice(1);show(D[h]?h:'handball');
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -60px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
-document.getElementById('f').onsubmit=function(e){e.preventDefault();var f=e.target,g=function(n){return f.elements[n].value||'—'};
-  var body='Nom / club : '+g('nom')+'\nSport : '+g('sport')+'\nDate : '+g('date')+'\nLieu : '+g('lieu')+'\nBesoin : '+g('besoin')+'\n\n'+(f.elements.msg.value||'');
-  location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Demande photo — '+g('nom'))+'&body='+encodeURIComponent(body)};
+var form=document.getElementById('f'),okb=document.getElementById('ok'),via='wa';
+function pick(b){if(b){form.elements.besoin.value=b}}
+document.querySelectorAll('[data-b]').forEach(function(el){
+  var go=function(e){if(el.tagName=='ARTICLE'||el.getAttribute('href')=='#contact'){e.preventDefault();pick(el.dataset.b);close();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(function(){form.elements.nom.focus({preventScroll:true})},700)}};
+  el.addEventListener('click',go);if(el.tagName=='ARTICLE')el.addEventListener('keydown',function(e){if(e.key=='Enter')go(e)})});
+var map={handball:'Couverture de match',futsal:'Couverture de match',football:'Couverture de match',sch:'Couverture de match',celebrations:'Couverture de match'};
+document.getElementById('lbcta').addEventListener('click',function(e){e.preventDefault();pick(map[cur]);var sp={handball:'Handball',futsal:'Futsal',football:'Football',sch:'Football'}[cur];if(sp)form.elements.sport.value=sp;close();document.getElementById('contact').scrollIntoView({behavior:'smooth'})});
+form.querySelectorAll('[data-via]').forEach(function(b){b.addEventListener('click',function(){via=b.dataset.via})});
+form.onsubmit=function(e){e.preventDefault();
+  var miss=[].filter.call(form.querySelectorAll('[required]'),function(i){return !i.value.trim()});
+  if(miss.length){miss[0].focus();okb.textContent='Merci d\'indiquer votre nom (ou club) et un moyen de vous répondre.';okb.classList.add('on');return}
+  var g=function(n){return form.elements[n].value.trim()||'—'};
+  var d=g('date');if(d!='—'){var p=d.split('-');d=p[2]+'/'+p[1]+'/'+p[0]}
+  var body='Bonjour Gabriel,\n\nNom / club : '+g('nom')+'\nContact : '+g('contact')+'\nSport : '+g('sport')+'\nBesoin : '+g('besoin')+'\nDate : '+d+'\nLieu : '+g('lieu')+(form.elements.msg.value.trim()?'\n\n'+form.elements.msg.value.trim():'');
+  if(via=='wa'){window.open('https://wa.me/33659189721?text='+encodeURIComponent(body),'_blank','noopener')}
+  else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Demande photo — '+g('nom'))+'&body='+encodeURIComponent(body)}
+  okb.textContent='Votre demande est prête dans '+(via=='wa'?'WhatsApp':'votre messagerie')+' : il ne reste qu\'à appuyer sur « Envoyer ». Je vous réponds rapidement.';okb.classList.add('on')};
+var fab=document.getElementById('fab'),mbar=document.getElementById('mbar'),ct=document.getElementById('contact');
+function bars(){var y=scrollY,r=ct.getBoundingClientRect(),inC=r.top<innerHeight*.8&&r.bottom>0,show=y>innerHeight*.7&&!inC;fab.classList.toggle('on',show);mbar.classList.toggle('on',show)}
+addEventListener('scroll',bars,{passive:true});bars();
 </script>
 </body>
 </html>
