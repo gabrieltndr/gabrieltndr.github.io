@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel Tondeur — Portfolio photo sport</title>
+<meta name="description" content="Portfolio photo de Gabriel Tondeur : football, SC Hérouville, handball, futsal et célébrations.">
+<meta property="og:title" content="Gabriel Tondeur — Portfolio photo sport">
+<meta property="og:description" content="Football, SC Hérouville, handball, futsal, célébrations.">
+<meta property="og:image" content="img/handball/01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2C5BA4;--cream:#F3E9DC;--ink:#111;--red:#E63329;--muted:#5b5b5b;--pad:clamp(20px,5vw,88px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.display{font-family:Anton,'Arial Narrow',Impact,sans-serif;text-transform:uppercase;line-height:.92;font-weight:400}
+.kicker{font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px var(--pad);background:rgba(243,233,220,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(0,0,0,.08)}
+nav .logo{font-family:Anton,sans-serif;font-size:1.35rem;text-decoration:none}
+nav .logo span{color:var(--red)}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:12px 22px;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;transition:background .25s}
+.btn:hover{background:var(--red)}
+header{padding:clamp(48px,8vw,110px) var(--pad) clamp(24px,4vw,48px);max-width:1440px;margin:0 auto}
+header h1{font-size:clamp(3rem,10vw,9rem)}
+header h1 em{font-style:normal;color:var(--blue)}
+header p{margin-top:20px;font-size:clamp(1rem,1.4vw,1.2rem);font-weight:500;max-width:52ch}
+.tabs{position:sticky;top:64px;z-index:40;background:var(--cream);padding:12px var(--pad);display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;border-bottom:2px solid var(--ink)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font:inherit;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tabs button:hover{background:rgba(17,17,17,.08)}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.tabs button sup{color:var(--red);margin-left:4px}
+main{padding:clamp(24px,4vw,48px) var(--pad) 80px;max-width:1440px;margin:0 auto}
+.grid{columns:3 320px;column-gap:14px}
+.grid a{display:block;margin-bottom:14px;break-inside:avoid;overflow:hidden;background:#ddd;position:relative;cursor:zoom-in}
+.grid img{display:block;width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .5s;opacity:0}
+.grid img.ok{opacity:1}
+.grid a:hover img{transform:scale(1.035)}
+.grid a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+footer{background:var(--ink);color:var(--cream);padding:48px var(--pad);display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer .display{font-size:clamp(2rem,5vw,3.6rem)}
+footer a.btn{background:var(--red)}
+footer a.btn:hover{background:var(--blue)}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.96);display:none;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lb button{position:absolute;background:none;border:0;color:#fff;font:700 2.2rem/1 Inter,sans-serif;cursor:pointer;padding:18px;opacity:.8}
+.lb button:hover{opacity:1;color:var(--red)}
+.lb .x{top:8px;right:12px}
+.lb .p{left:6px;top:50%;transform:translateY(-50%)}
+.lb .n{right:6px;top:50%;transform:translateY(-50%)}
+.lb .c{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#bbb;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+@media(max-width:600px){.grid{columns:2;column-gap:8px}.grid a{margin-bottom:8px}.tabs{top:62px}nav .btn{padding:10px 14px}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">G<span>.</span>TONDEUR</a>
+  <a href="../#contact" class="btn">Me contacter</a>
+</nav>
+<header>
+  <p class="kicker" style="color:var(--red)">Portfolio photo</p>
+  <h1 class="display">Le sport<br><em>au plus près.</em></h1>
+  <p>Matchs, vestiaires, tribunes : une sélection de mes photos retouchées, du foot amateur au handball professionnel.</p>
+</header>
+<div class="tabs" role="tablist" id="tabs"></div>
+<main><div class="grid" id="grid" role="tabpanel"></div></main>
+<footer>
+  <p class="display">Un projet photo ?</p>
+  <a class="btn" href="mailto:gabrieltondeur14@gmail.com?subject=Projet%20photo">Écrivez-moi</a>
+</footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo en grand">
+  <img alt="">
+  <button class="x" aria-label="Fermer">×</button>
+  <button class="p" aria-label="Photo précédente">‹</button>
+  <button class="n" aria-label="Photo suivante">›</button>
+  <div class="c"></div>
+</div>
+<script>
+var TABS=[["football","Football"],["sch","SC Hérouville"],["handball","Handball"],["futsal","Futsal"],["celebrations","Célébrations"]];
+var D={"football": [["01", 576, 720], ["02", 480, 720], ["03", 720, 405], ["04", 576, 720], ["05", 576, 720], ["06", 480, 720], ["07", 405, 720], ["08", 480, 720], ["09", 576, 720], ["10", 720, 480], ["11", 480, 720], ["12", 480, 720], ["13", 405, 720], ["14", 480, 720], ["15", 480, 720], ["16", 405, 720], ["17", 480, 720], ["18", 405, 720]], "sch": [["01", 720, 480], ["02", 544, 720], ["03", 480, 720], ["04", 593, 720], ["05", 480, 720], ["06", 480, 720], ["07", 480, 720], ["08", 480, 720], ["09", 480, 720], ["10", 720, 480], ["11", 480, 720], ["12", 576, 720], ["13", 576, 720], ["14", 576, 720], ["15", 720, 480], ["16", 720, 480], ["17", 720, 480], ["18", 480, 720], ["19", 720, 480]], "handball": [["01", 576, 720], ["02", 576, 720], ["03", 576, 720], ["04", 576, 720], ["05", 576, 720], ["06", 576, 720], ["07", 576, 720], ["08", 720, 377], ["09", 532, 720], ["10", 720, 416], ["11", 720, 480], ["12", 405, 720], ["13", 480, 720], ["14", 480, 720], ["15", 405, 720], ["16", 576, 720], ["17", 480, 720], ["18", 720, 480]], "futsal": [["01", 576, 720], ["02", 720, 480], ["03", 576, 720], ["04", 480, 720], ["05", 576, 720], ["06", 576, 720], ["07", 480, 720], ["08", 480, 720], ["09", 576, 720], ["10", 576, 720], ["11", 576, 720], ["12", 405, 720], ["13", 480, 720], ["14", 576, 720], ["15", 576, 720], ["16", 576, 720], ["17", 478, 720], ["18", 576, 720], ["19", 480, 720]], "celebrations": [["01", 480, 720], ["02", 480, 720], ["03", 480, 720], ["04", 480, 720], ["05", 480, 720], ["06", 480, 720], ["07", 480, 720], ["08", 405, 720], ["09", 405, 720], ["10", 550, 720], ["11", 576, 720], ["12", 480, 720], ["13", 480, 720], ["14", 480, 720], ["15", 480, 720], ["16", 480, 720], ["17", 480, 720], ["18", 480, 720], ["19", 720, 480]]};
+var tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.c'),cur='football',idx=0;
+TABS.forEach(function(t){var b=document.createElement('button');b.role='tab';b.dataset.t=t[0];b.innerHTML=t[1]+'<sup>'+D[t[0]].length+'</sup>';b.onclick=function(){show(t[0],true)};tabs.appendChild(b)});
+function label(t){for(var i=0;i<TABS.length;i++)if(TABS[i][0]==t)return TABS[i][1]}
+function show(t,push){cur=D[t]?t:'football';
+  [].forEach.call(tabs.children,function(b){b.setAttribute('aria-selected',b.dataset.t==cur)});
+  grid.innerHTML='';
+  D[cur].forEach(function(p,i){var a=document.createElement('a');a.href='img/'+cur+'/'+p[0]+'.jpg';
+    var im=new Image();im.width=p[1];im.height=p[2];im.loading='lazy';im.decoding='async';im.alt=label(cur)+' — photo '+(i+1);
+    im.onload=function(){im.classList.add('ok')};im.src='img/'+cur+'/'+p[0]+'-s.jpg';
+    a.appendChild(im);a.onclick=function(e){e.preventDefault();open(i)};grid.appendChild(a)});
+  if(push)history.replaceState(null,'','#'+cur);
+}
+function open(i){idx=(i+D[cur].length)%D[cur].length;lbi.src='img/'+cur+'/'+D[cur][idx][0]+'.jpg';lbi.alt=label(cur)+' — photo '+(idx+1);lbc.textContent=label(cur)+'  ·  '+(idx+1)+' / '+D[cur].length;lb.classList.add('on');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('on');document.body.style.overflow=''}
+lb.querySelector('.x').onclick=close;lb.querySelector('.p').onclick=function(){open(idx-1)};lb.querySelector('.n').onclick=function(){open(idx+1)};
+lb.onclick=function(e){if(e.target==lb)close()};
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key=='Escape')close();if(e.key=='ArrowLeft')open(idx-1);if(e.key=='ArrowRight')open(idx+1)});
+var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)open(idx+(dx<0?1:-1));sx=null});
+function fix(){tabs.style.top=document.querySelector('nav').offsetHeight+'px'}fix();addEventListener('resize',fix);
+show(location.hash.slice(1)||'football',false);
+</script>
+</body>
+</html>
