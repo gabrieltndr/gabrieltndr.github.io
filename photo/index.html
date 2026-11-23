@@ -93,8 +93,9 @@ nav ul a:hover{color:var(--txt)}
 @media(max-width:860px){.about{grid-template-columns:1fr}.about ul{grid-template-columns:1fr}}
 
 /* clubs */
-.clubs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.clubs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .clubs div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.clubs .lg{height:64px;width:auto;max-width:120px;object-fit:contain;margin-bottom:18px;filter:grayscale(1) brightness(1.6);opacity:.85;transition:filter .3s,opacity .3s}.clubs div:hover .lg{filter:none;opacity:1}
 .clubs b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);line-height:.95}
 .clubs span{color:var(--mut);font-size:.85rem;margin-top:14px}
 @media(max-width:860px){.clubs{grid-template-columns:1fr 1fr}}
@@ -194,7 +195,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <div class="stats">
   <div><b>5 000+</b><span>photos retouchées</span></div>
-  <div><b>4</b><span>clubs suivis en saison</span></div>
+  <div><b>5</b><span>clubs suivis en saison</span></div>
   <div><b>+1 M</b><span>de vues en 30 jours sur les réseaux du SCH</span></div>
   <div><b>3</b><span>saisons au bord des terrains</span></div>
 </div>
@@ -224,10 +225,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <section id="clubs"><div class="wrap">
   <div class="head rv"><h2 class="h">Ils m'ont fait <span class="acc">confiance</span></h2><p>Les clubs que je photographie en saison.</p></div>
   <div class="clubs rv">
-    <div><b>Vikings de Caen</b><span>Handball</span></div>
-    <div><b>SM Caen</b><span>Football · U17 Nationaux</span></div>
-    <div><b>Hérouville Futsal</b><span>Futsal</span></div>
-    <div><b>SC Hérouville</b><span>Football · seniors, jeunes, événements</span></div>
+    <div><img class="lg" src="img/logos/sch.png" alt="Logo SC Hérouville" loading="lazy" onerror="this.remove()"><b>SC Hérouville</b><span>Football · seniors, jeunes, événements</span></div>
+    <div><img class="lg" src="img/logos/vikings.png" alt="Logo Vikings de Caen" loading="lazy" onerror="this.remove()"><b>Vikings de Caen</b><span>Handball</span></div>
+    <div><img class="lg" src="img/logos/smcaen.png" alt="Logo SM Caen" loading="lazy" onerror="this.remove()"><b>SM Caen</b><span>Football · U17 Nationaux</span></div>
+    <div><img class="lg" src="img/logos/herouville-futsal.png" alt="Logo Hérouville Futsal" loading="lazy" onerror="this.remove()"><b>Hérouville Futsal</b><span>Futsal</span></div>
+    <div><img class="lg" src="img/logos/cft.png" alt="Logo Caen Foot Training" loading="lazy" onerror="this.remove()"><b>Caen Foot Training</b><span>Futsal</span></div>
   </div>
 </div></section>
 
