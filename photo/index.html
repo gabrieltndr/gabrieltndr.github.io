@@ -8,6 +8,8 @@
 <meta property="og:title" content="Gabriel Tondeur — Photographe sport · Caen">
 <meta property="og:description" content="Couverture de matchs, média days, événements et contenus réseaux. Basé à Caen, Normandie.">
 <meta property="og:image" content="img/handball/10.jpg">
+<link rel="alternate" hreflang="fr" href="https://gabrieltndr.github.io/photo/">
+<link rel="alternate" hreflang="en" href="https://gabrieltndr.github.io/photo/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -164,7 +166,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .lb .c{position:absolute;bottom:16px;left:0;right:0;text-align:center}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
-@media(max-width:600px){.logo{font-size:1.3rem;white-space:nowrap}nav .btn{padding:10px 14px;font-size:.7rem;letter-spacing:.1em}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none;font-size:1.45rem}.hero h1{font-size:17vw}}
+@media(max-width:600px){.logo{font-size:1.3rem;white-space:nowrap}nav .btn{padding:10px 12px;font-size:.66rem;letter-spacing:.08em;white-space:nowrap}.lang{padding:8px 9px;margin-right:6px}.logo{font-size:1.15rem}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none;font-size:1.45rem}.hero h1{font-size:17vw}}
 
 /* conversion */
 .svc article[data-b]{cursor:pointer;transition:background .25s,transform .25s}
@@ -229,6 +231,15 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
 .acr .side2 .btn.l:hover{background:#111;color:#fff}
 .copied{font-size:.85rem;font-weight:600;min-height:1.2em}
 @media(max-width:860px){.acr{grid-template-columns:1fr}.acr dl{grid-template-columns:1fr;gap:2px 0}.acr dd{margin-bottom:10px}}
+
+.grid .ex{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-size:.72rem;line-height:1.45;color:#E8E4DA;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.grid .ex b{display:block;color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.64rem;margin-bottom:2px}
+.grid a:hover .ex,.grid a:focus-visible .ex{opacity:1;transform:none}
+.lb .ex2{position:absolute;top:18px;left:20px;font-size:.78rem;color:#cfcbc0;line-height:1.5}
+.lb .ex2 b{color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.66rem;display:block}
+@media(hover:none){.grid .ex{display:none}}
+.lang{font-size:.78rem;font-weight:600;letter-spacing:.16em;color:var(--txt);border:1px solid var(--line);padding:9px 11px;margin-right:8px;transition:border-color .2s}.lang:hover{border-color:var(--acc);color:var(--acc)}
+nav .right{display:flex;align-items:center}
 </style>
 </head>
 <body>
@@ -242,7 +253,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
     <li><a href="#materiel">Matériel</a></li>
     <li><a href="#accreditation">Accréditation</a></li>
   </ul>
-  <a href="#contact" class="btn">Me contacter</a>
+  <div class="right"><a class="lang" href="en/" hreflang="en" lang="en" title="English version">EN</a><a href="#contact" class="btn">Me contacter</a></div>
 </div></nav>
 
 <header class="hero" id="top">
@@ -277,7 +288,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
 </div></section>
 
 <section id="portfolio"><div class="wrap">
-  <div class="head rv"><h2 class="h">Portfolio</h2><p>Une sélection resserrée, sport par sport. Cliquez sur une photo pour l'ouvrir en grand.</p></div>
+  <div class="head rv"><h2 class="h">Portfolio</h2><p>Une sélection resserrée, sport par sport. Survolez une photo pour voir ses réglages, cliquez pour l'ouvrir en grand.</p></div>
   <div class="tabs" role="tablist" id="tabs"></div>
   <div class="grid" id="grid" role="tabpanel"></div>
   <div class="band rv"><p>Des images comme celles-ci pour votre club ?</p><div><a href="#contact" class="btn" data-b="Couverture de match">Demander un devis</a><a href="https://wa.me/33659189721?text=Bonjour%20Gabriel%2C%20j%27ai%20vu%20ton%20portfolio%20et%20j%27aimerais%20un%20devis%20photo." class="btn o" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div></div>
@@ -339,7 +350,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
     <div><span class="lbl">Boîtier principal</span><b>Sony A7 IV</b><p>Plein format 33 Mpx, à l'aise en gymnase.</p></div>
     <div><span class="lbl">Second boîtier</span><b>Sony A6400</b><p>APS-C, léger, pour les coulisses.</p></div>
     <div><span class="lbl">Téléobjectif</span><b>Sigma 70-200 f/2.8</b><p>Les duels, les tirs, les arrêts.</p></div>
-    <div><span class="lbl">Zoom polyvalent</span><b>Tamron 24-70 f/2.8</b><p>Vestiaires, célébrations, portraits.</p></div>
+    <div><span class="lbl">Zoom polyvalent</span><b>Tamron 17-70 f/2.8</b><p>Vestiaires, célébrations, portraits.</p></div>
   </div>
 </div></section>
 
@@ -352,7 +363,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
       <dt>Basé à</dt><dd>Caen (14), Normandie</dd>
       <dt>Disciplines</dt><dd>Football, futsal, handball</dd>
       <dt>Références</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training</dd>
-      <dt>Matériel</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 24-70 f/2.8</dd>
+      <dt>Matériel</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
       <dt>Diffusion</dt><dd>Réseaux des clubs et partenaires, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
       <dt>Contact</dt><dd><a href="tel:+33659189721">06 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
     </dl></div>
@@ -411,13 +422,15 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
   <button class="p" aria-label="Photo précédente">←</button>
   <button class="n" aria-label="Photo suivante">→</button>
   <div class="c lbl"></div>
+  <div class="ex2" id="ex2"></div>
   <a href="#contact" class="btn lbcta" id="lbcta">Je veux ce type de photos →</a>
 </div>
 
 <script>
 var TABS=[["handball","Handball"],["futsal","Futsal"],["football","Football"],["sch","SC Hérouville"],["celebrations","Célébrations"]];
-var D={"football": [["01", 576, 720], ["02", 480, 720], ["03", 720, 405], ["04", 576, 720], ["05", 576, 720], ["08", 480, 720], ["09", 576, 720], ["11", 480, 720], ["13", 405, 720], ["14", 480, 720], ["15", 480, 720], ["16", 405, 720]], "sch": [["02", 544, 720], ["03", 480, 720], ["04", 593, 720], ["05", 480, 720], ["06", 480, 720], ["08", 480, 720], ["09", 480, 720], ["10", 720, 480], ["12", 576, 720], ["13", 576, 720], ["16", 720, 480], ["18", 480, 720]], "handball": [["01", 576, 720], ["02", 576, 720], ["03", 576, 720], ["04", 576, 720], ["06", 576, 720], ["07", 576, 720], ["08", 720, 377], ["10", 720, 416], ["12", 405, 720], ["13", 480, 720], ["14", 480, 720], ["15", 405, 720]], "futsal": [["01", 576, 720], ["02", 720, 480], ["03", 576, 720], ["05", 576, 720], ["07", 480, 720], ["09", 576, 720], ["10", 576, 720], ["11", 576, 720], ["12", 405, 720], ["14", 576, 720], ["15", 576, 720], ["19", 480, 720]], "celebrations": [["02", 480, 720], ["03", 480, 720], ["04", 480, 720], ["05", 480, 720], ["06", 480, 720], ["08", 405, 720], ["09", 405, 720], ["10", 550, 720], ["11", 576, 720], ["13", 480, 720], ["14", 480, 720], ["19", 720, 480]]};
+var D={"football": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "29 mm", "f/3.2", "1/3200 s", "ISO 500"]], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "32 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["03", 720, 405, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "47 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["08", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "46 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["09", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/3.2", "1/4000 s", "ISO 500"]], ["11", 480, 720, ["Sony A6400", "Sony 55-210 mm", "144 mm", "f/5.6", "1/4000 s", "ISO 1000"]], ["13", 405, 720, ["Sony A6400", "Sony 55-210 mm", "55 mm", "f/4.5", "1/4000 s", "ISO 1000"]], ["14", 480, 720, ["Sony A6400", "Sony 55-210 mm", "173 mm", "f/6.3", "1/4000 s", "ISO 1000"]], ["15", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["16", 405, 720, ["Sony A6400", "Sony 55-210 mm", "145 mm", "f/5.6", "1/3200 s", "ISO 1000"]]], "sch": [["02", 544, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "137 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["03", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["04", 593, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["05", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["06", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "171 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["08", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "78 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["09", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "27 mm", "f/2.8", "1/400 s", "ISO 1000"]], ["10", 720, 480, ["Sony A6400", "Sony 55-210 mm", "132 mm", "f/5.6", "1/3200 s", "ISO 800"]], ["12", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 800"]], ["13", 576, 720, ["Sony A6400", "Sony 55-210 mm", "83 mm", "f/5", "1/4000 s", "ISO 1000"]], ["16", 720, 480, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/4.5", "1/4000 s", "ISO 320"]], ["18", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/4.5", "1/4000 s", "ISO 400"]]], "handball": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "46 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["02", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "52 mm", "f/2.8", "1/2000 s", "ISO 2000"]], ["03", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "57 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "51 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["06", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/2000 s", "ISO 2500"]], ["07", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "49 mm", "f/2.8", "1/2000 s", "ISO 2500"]], ["08", 720, 377, ["Sony A6400", "Tamron 17-70 mm f/2.8", "38 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["10", 720, 416, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["12", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "48 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["13", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["14", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "140 mm", "f/2.8", "1/250 s", "ISO 2500"]], ["15", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "174 mm", "f/2.8", "1/1250 s", "ISO 2500"]]], "futsal": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "66 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["02", 720, 480, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/4.5", "1/10 s", "ISO 200"]], ["03", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "97 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["05", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "177 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["07", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "85 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "118 mm", "f/2.8", "1/800 s", "ISO 2500"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "75 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["11", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "161 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["12", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "192 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["15", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 3200"]], ["19", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "150 mm", "f/2.8", "1/1000 s", "ISO 2500"]]], "celebrations": [["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["03", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "25 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["04", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "54 mm", "f/2.8", "1/1000 s", "ISO 3200"]], ["05", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/500 s", "ISO 2500"]], ["06", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "58 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["08", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "27 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["10", 550, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["11", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["13", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "159 mm", "f/2.8", "1/1250 s", "ISO 1600"]], ["14", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "166 mm", "f/3.2", "1/800 s", "ISO 1000"]], ["19", 720, 480, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/160 s", "ISO 500"]]]};
 var tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.c'),cur='handball',idx=0;
+function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function label(t){for(var i=0;i<TABS.length;i++)if(TABS[i][0]==t)return TABS[i][1]}
 TABS.forEach(function(t){var b=document.createElement('button');b.setAttribute('role','tab');b.dataset.t=t[0];b.textContent=t[1];b.onclick=function(){show(t[0])};tabs.appendChild(b)});
 function show(t){cur=D[t]?t:'handball';
@@ -427,9 +440,9 @@ function show(t){cur=D[t]?t:'handball';
     var r=p[1]/p[2];
     if(r>1.2){a.className=(!bigDone&&i<4)?'big':'w';bigDone=true}else if(r<.9)a.className='t';
     var im=new Image();im.loading='lazy';im.decoding='async';im.alt=label(cur)+' — photo '+(i+1);im.onload=function(){im.classList.add('ok')};im.src='img/'+cur+'/'+p[0]+'-s.jpg';
-    a.appendChild(im);a.onclick=function(e){e.preventDefault();open(i)};grid.appendChild(a)});
+    a.appendChild(im);if(p[3]){var x=document.createElement('span');x.className='ex';x.innerHTML='<b>'+esc(p[3][1])+'</b>'+esc([p[3][2],p[3][3],p[3][4],p[3][5]].filter(Boolean).join(' · '));a.appendChild(x)}a.onclick=function(e){e.preventDefault();open(i)};grid.appendChild(a)});
 }
-function open(i){idx=(i+D[cur].length)%D[cur].length;lbi.src='img/'+cur+'/'+D[cur][idx][0]+'.jpg';lbi.alt=label(cur)+' — photo '+(idx+1);lbc.textContent=label(cur)+' · '+(idx+1)+' / '+D[cur].length;lb.classList.add('on');document.body.style.overflow='hidden'}
+function open(i){idx=(i+D[cur].length)%D[cur].length;lbi.src='img/'+cur+'/'+D[cur][idx][0]+'.jpg';lbi.alt=label(cur)+' — photo '+(idx+1);lbc.textContent=label(cur)+' · '+(idx+1)+' / '+D[cur].length;var q=D[cur][idx][3];document.getElementById('ex2').innerHTML=q?'<b>'+esc(q[0])+' · '+esc(q[1])+'</b>'+esc([q[2],q[3],q[4],q[5]].filter(Boolean).join(' · ')):'';lb.classList.add('on');document.body.style.overflow='hidden'}
 function close(){lb.classList.remove('on');document.body.style.overflow=''}
 lb.querySelector('.x').onclick=close;lb.querySelector('.p').onclick=function(){open(idx-1)};lb.querySelector('.n').onclick=function(){open(idx+1)};
 lb.onclick=function(e){if(e.target==lb)close()};
@@ -457,7 +470,7 @@ form.onsubmit=function(e){e.preventDefault();
   else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Demande photo — '+g('nom'))+'&body='+encodeURIComponent(body)}
   okb.textContent='Votre demande est prête dans '+(via=='wa'?'WhatsApp':'votre messagerie')+' : il ne reste qu\'à appuyer sur « Envoyer ». Je vous réponds rapidement.';okb.classList.add('on')};
 document.getElementById('copy').onclick=function(){
-  var t='Nom : Gabriel Tondeur\nFonction : Photographe sport\nStructure : SC Hérouville (responsable communication & événementiel)\nVille : Caen (14), Normandie\nDisciplines : football, futsal, handball\nRéférences : SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training\nMatériel : Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 24-70 f/2.8\nTéléphone : 06 59 18 97 21\nE-mail : gabrieltondeur14@gmail.com\nInstagram : @gabrieltndr\nPortfolio : https://gabrieltndr.github.io/photo/';
+  var t='Nom : Gabriel Tondeur\nFonction : Photographe sport\nStructure : SC Hérouville (responsable communication & événementiel)\nVille : Caen (14), Normandie\nDisciplines : football, futsal, handball\nRéférences : SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training\nMatériel : Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nTéléphone : 06 59 18 97 21\nE-mail : gabrieltondeur14@gmail.com\nInstagram : @gabrieltndr\nPortfolio : https://gabrieltndr.github.io/photo/';
   var done=function(){document.getElementById('copied').textContent='Informations copiées ✓'};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
   function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}

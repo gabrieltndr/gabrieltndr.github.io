@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel Tondeur — Sports photographer · Caen, France</title>
+<meta name="description" content="Gabriel Tondeur, sports photographer based in Caen, Normandy (France). Football, handball, futsal: match coverage, media days, events and social media content.">
+<meta property="og:title" content="Gabriel Tondeur — Sports photographer · Caen">
+<meta property="og:description" content="Match coverage, media days, events and social content. Based in Caen, Normandy.">
+<meta property="og:image" content="../img/handball/10.jpg">
+<link rel="alternate" hreflang="fr" href="https://gabrieltndr.github.io/photo/">
+<link rel="alternate" hreflang="en" href="https://gabrieltndr.github.io/photo/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F0F0D;--panel:#181815;--line:rgba(240,236,226,.12);--txt:#EFEBE1;--mut:#9C988D;--acc:#D9F24A;--pad:clamp(18px,4vw,56px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.h{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+.acc{color:var(--acc)}
+.mark{background:linear-gradient(transparent 62%,rgba(217,242,74,.85) 62%);color:var(--txt)}
+.lbl{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.wrap{max-width:1400px;margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+.side{position:absolute;top:50%;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);left:10px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.head h2{font-size:clamp(3.4rem,8vw,7rem)}
+.head p{max-width:42ch;color:var(--mut)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(15,15,13,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:.04em}
+.logo span{color:var(--acc)}
+nav ul{display:flex;gap:28px;list-style:none}
+nav ul a{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);transition:color .2s}
+nav ul a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#111;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;transition:background .2s,color .2s}
+.btn:hover{background:var(--txt)}
+.btn.o{background:transparent;color:var(--txt);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.o:hover{box-shadow:inset 0 0 0 1px var(--txt)}
+@media(max-width:900px){nav ul{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;border:0;padding:0}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,13,.45) 0%,rgba(15,15,13,0) 30%,rgba(15,15,13,.25) 55%,rgba(15,15,13,.95) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(36px,6vw,72px)}
+.hero h1{font-size:clamp(4.2rem,15vw,15rem);line-height:.82}
+.hero .row{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-top:22px}
+.hero p{max-width:44ch;font-size:clamp(1rem,1.3vw,1.15rem);color:#D7D3C8}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap}
+.hero .side{z-index:2;color:rgba(239,235,225,.7)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:28px var(--pad) 26px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--acc)}
+.stats span{color:var(--mut);font-size:.9rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* portfolio */
+.tabs{display:flex;gap:6px 30px;flex-wrap:wrap;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;background:none;border:0;color:var(--mut);cursor:pointer;padding:12px 0;font-family:"Bebas Neue",sans-serif;font-size:1.7rem;letter-spacing:.03em;position:relative;transition:color .2s}
+.tabs button:hover{color:var(--txt)}
+.tabs button[aria-selected=true]{color:var(--txt)}
+.tabs button[aria-selected=true]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,17vw,250px);grid-auto-flow:dense;gap:6px}
+.grid a{position:relative;overflow:hidden;background:var(--panel);cursor:zoom-in}
+.grid a.t{grid-row:span 2}
+.grid a.w{grid-column:span 2}
+.grid a.big{grid-column:span 2;grid-row:span 2}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .6s;opacity:0}
+.grid img.ok{opacity:1}
+.grid a:hover img{transform:scale(1.04)}
+.grid a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:42vw}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);align-items:center}
+.about .ph{position:relative;aspect-ratio:4/5;overflow:hidden}
+.about .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.about .ph .tag{position:absolute;left:0;bottom:0;background:var(--acc);color:#111;padding:8px 14px;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.about h2{font-size:clamp(3.2rem,7vw,6rem);margin:14px 0 22px}
+.about p{color:#CFCBC0;max-width:56ch;margin-bottom:14px}
+.about ul{list-style:none;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.about li{padding-top:10px;border-top:1px solid var(--line);font-size:.92rem;color:var(--mut)}
+.about li b{display:block;color:var(--txt);font-weight:600}
+@media(max-width:860px){.about{grid-template-columns:1fr}.about ul{grid-template-columns:1fr}}
+
+/* clubs */
+.clubs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.clubs div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-start}
+.clubs .lg{height:84px;width:auto;max-width:130px;object-fit:contain;margin-bottom:22px;transition:transform .3s}.clubs div:hover .lg{transform:scale(1.06)}
+.clubs b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);line-height:.95}
+.clubs span{color:var(--mut);font-size:.85rem;margin-top:14px}
+@media(max-width:860px){.clubs{grid-template-columns:1fr 1fr}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.svc article{background:var(--panel);padding:30px 28px 32px;position:relative;min-height:240px}
+.svc .n{font-family:"Bebas Neue",sans-serif;color:var(--acc);font-size:1.3rem;letter-spacing:.06em}
+.svc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:16px 0 12px}
+.svc p{color:var(--mut);font-size:.95rem}
+.svc .note{background:var(--acc);color:#111}
+.svc .note .n,.svc .note p{color:#111}
+@media(max-width:960px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc{grid-template-columns:1fr}}
+
+/* proof */
+.proof{display:grid;grid-template-columns:1.2fr .8fr .8fr 1.2fr;gap:6px;align-items:stretch}
+.proof figure{position:relative;overflow:hidden;background:var(--panel);min-height:360px}
+.proof img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.82rem;color:#E4E0D6}
+.proof figcaption b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.5rem;color:var(--txt);letter-spacing:.02em}
+.bigstat{margin-top:6px;background:var(--panel);display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;padding:26px 28px}
+.bigstat b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(3rem,6vw,5rem);line-height:.9;color:var(--acc)}
+.bigstat p{color:#CFCBC0;max-width:60ch}
+@media(max-width:860px){.proof{grid-template-columns:1fr 1fr}.proof figure{min-height:300px}}
+
+/* gear */
+.gear{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.gear div{padding:26px 22px 8px 0;border-right:1px solid var(--line);margin-right:22px}
+.gear div:last-child{border-right:0}
+.gear .lbl{color:var(--acc)}
+.gear b{display:block;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:10px 0}
+.gear p{color:var(--mut);font-size:.92rem}
+@media(max-width:860px){.gear{grid-template-columns:1fr 1fr}.gear div:nth-child(2){border-right:0}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px)}
+.contact h2{font-size:clamp(3.6rem,9vw,8rem)}
+.links{margin-top:28px;display:grid;gap:6px}
+.links a{display:flex;justify-content:space-between;align-items:center;background:var(--panel);padding:18px 20px;transition:background .2s,color .2s}
+.links a span{color:var(--mut);font-size:.9rem}
+.links a:hover{background:var(--acc);color:#111}
+.links a:hover span{color:#111}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;align-content:start}
+form label{display:grid;gap:6px;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+form .f{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--txt);background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;border-radius:0;outline:none}
+select option{background:var(--bg)}
+input:focus,select:focus,textarea:focus{border-color:var(--acc)}
+textarea{min-height:110px;resize:vertical}
+form .btn{border:0;cursor:pointer;justify-self:start}
+form small{grid-column:1/-1;color:var(--mut)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,8,7,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain}
+.lb button{position:absolute;background:none;border:0;color:var(--txt);font:400 2.4rem/1 "Bebas Neue",sans-serif;cursor:pointer;padding:16px 18px}
+.lb button:hover{color:var(--acc)}
+.lb .x{top:6px;right:8px}
+.lb .p{left:4px;top:50%;transform:translateY(-50%)}
+.lb .n{right:4px;top:50%;transform:translateY(-50%)}
+.lb .c{position:absolute;bottom:16px;left:0;right:0;text-align:center}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:600px){.logo{font-size:1.3rem;white-space:nowrap}nav .btn{padding:10px 12px;font-size:.66rem;letter-spacing:.08em;white-space:nowrap}.lang{padding:8px 9px;margin-right:6px}.logo{font-size:1.15rem}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none;font-size:1.45rem}.hero h1{font-size:17vw}}
+
+/* conversion */
+.svc article[data-b]{cursor:pointer;transition:background .25s,transform .25s}
+.svc article[data-b]:hover{background:#22221E;transform:translateY(-2px)}
+.svc .go{display:inline-block;margin-top:18px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.svc .note .btn{margin-top:18px;background:#111;color:var(--acc)}
+.svc .note .btn:hover{background:#000;color:#fff}
+.band{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 28px;background:var(--panel);padding:24px 28px;border-left:3px solid var(--acc)}
+.band p{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1}
+.band div{display:flex;gap:10px;flex-wrap:wrap}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;counter-reset:s}
+.steps div{background:var(--panel);padding:28px;position:relative}
+.steps b{display:block;font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2rem;line-height:1;margin:14px 0 10px}
+.steps .n{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;line-height:1;color:var(--acc)}
+.steps p{color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.reassure{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--mut);font-size:.85rem;margin-top:4px}
+.reassure span::before{content:"✓ ";color:var(--acc)}
+.sendrow{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn.wa{background:#25D366;color:#0b2b17}
+.btn.wa:hover{background:#fff}
+.ok{grid-column:1/-1;display:none;background:var(--panel);border-left:3px solid var(--acc);padding:16px 18px;color:#D7D3C8}
+.ok.on{display:block}
+input:invalid:not(:placeholder-shown){border-color:#E5674D}
+.lbcta{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.fab{position:fixed;right:20px;bottom:20px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .2s;opacity:0;pointer-events:none}
+.fab.on{opacity:1;pointer-events:auto}
+.fab:hover{transform:scale(1.07)}
+.fab svg{width:30px;height:30px;fill:#fff}
+.mbar{display:none}
+@media(max-width:760px){
+ .fab{display:none}
+ .mbar{display:grid;grid-template-columns:1fr auto;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,15,13,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+ .mbar.on{transform:none}
+ .mbar .btn{justify-content:center}
+ body{padding-bottom:0}
+ footer{padding-bottom:90px}
+ .lbcta{bottom:70px}
+}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.who a{background:var(--panel);padding:26px 24px 24px;display:flex;flex-direction:column;gap:10px;min-height:250px;transition:background .25s,transform .25s;border-top:3px solid transparent}
+.who a:hover{background:#22221E;border-top-color:var(--acc);transform:translateY(-2px)}
+.who .lbl{color:var(--acc)}
+.who b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.1rem;line-height:.95}
+.who p{color:var(--mut);font-size:.93rem;flex:1}
+.who .go{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--txt)}
+@media(max-width:960px){.who{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.who{grid-template-columns:1fr}.who a{min-height:0}}
+.acr{display:grid;grid-template-columns:1.1fr .9fr;gap:6px}
+.acr .box{background:var(--panel);padding:28px}
+.acr dl{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;font-size:.95rem}
+.acr dt{color:var(--mut)}
+.acr dd a{border-bottom:1px solid var(--line)}
+.acr .side2{background:var(--acc);color:#111;padding:28px;display:flex;flex-direction:column;gap:14px}
+.acr .side2 b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.4rem;line-height:.95}
+.acr .side2 p{font-size:.95rem}
+.acr .side2 .btn{background:#111;color:var(--acc);justify-content:center}
+.acr .side2 .btn:hover{background:#000;color:#fff}
+.acr .side2 .btn.l{background:transparent;color:#111;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4)}
+.acr .side2 .btn.l:hover{background:#111;color:#fff}
+.copied{font-size:.85rem;font-weight:600;min-height:1.2em}
+@media(max-width:860px){.acr{grid-template-columns:1fr}.acr dl{grid-template-columns:1fr;gap:2px 0}.acr dd{margin-bottom:10px}}
+
+.grid .ex{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-size:.72rem;line-height:1.45;color:#E8E4DA;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.grid .ex b{display:block;color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.64rem;margin-bottom:2px}
+.grid a:hover .ex,.grid a:focus-visible .ex{opacity:1;transform:none}
+.lb .ex2{position:absolute;top:18px;left:20px;font-size:.78rem;color:#cfcbc0;line-height:1.5}
+.lb .ex2 b{color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.66rem;display:block}
+@media(hover:none){.grid .ex{display:none}}
+.lang{font-size:.78rem;font-weight:600;letter-spacing:.16em;color:var(--txt);border:1px solid var(--line);padding:9px 11px;margin-right:8px;transition:border-color .2s}.lang:hover{border-color:var(--acc);color:var(--acc)}
+nav .right{display:flex;align-items:center}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo">Gabriel Tondeur<span>.</span></a>
+  <ul>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#apropos">About</a></li>
+    <li><a href="#prestations">Services</a></li>
+    <li><a href="#materiel">Gear</a></li>
+    <li><a href="#accreditation">Accreditation</a></li>
+  </ul>
+  <div class="right"><a class="lang" href="../" hreflang="fr" lang="fr" title="Version française">FR</a><a href="#contact" class="btn">Contact me</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <img src="../img/handball/10.jpg" alt="Handball action, Vikings de Caen" fetchpriority="high">
+  <span class="side">Portfolio · Season 2026–2027</span>
+  <div class="wrap">
+    <p class="lbl acc">Based in Caen · Normandy, France</p>
+    <h1 class="h">Sports<br>photographer</h1>
+    <div class="row">
+      <p>Football, handball, futsal. I cover matches, behind-the-scenes and events for clubs in Normandy, and deliver images ready for social media and sponsors.</p>
+      <div class="cta"><a href="#contact" class="btn" data-b="">Book a date →</a><a href="#portfolio" class="btn o">See the portfolio</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div><b>5 000+</b><span>edited photos</span></div>
+  <div><b>5</b><span>clubs covered each season</span></div>
+  <div><b>+1 M</b><span>views in 30 days on SCH social media</span></div>
+  <div><b>3</b><span>seasons pitchside</span></div>
+</div>
+
+
+<section id="vous"><div class="wrap">
+  <div class="head rv"><h2 class="h">You <span class="acc">are…</span></h2><p>Go straight to what matters to you.</p></div>
+  <div class="who rv">
+    <a href="#accreditation"><span class="lbl">Press · organiser</span><b>Press officer</b><p>My accreditation sheet is ready: identity, references, gear, contact. Copy it or download it as a PDF.</p><span class="go">See the sheet →</span></a>
+    <a href="#contact" data-b="Couverture de match" data-s="Football"><span class="lbl">Club</span><b>Comms manager</b><p>Matches, media days, social content and sponsor visuals: I run a club's communications myself, so I deliver images that are ready to post.</p><span class="go">Request a quote →</span></a>
+    <a href="#contact" data-b="Photos joueur / portrait"><span class="lbl">Player · agent</span><b>Player or agent</b><p>Action shots and portraits for your profile, your social media or your recruitment file.</p><span class="go">Book a shoot →</span></a>
+    <a href="#contact" data-b="Événement / tournoi"><span class="lbl">Organisation · brand</span><b>Event</b><p>Tournaments, galas, sponsor activations: the atmosphere, the key moments and your sponsors, on camera.</p><span class="go">Tell me about your event →</span></a>
+  </div>
+</div></section>
+
+<section id="portfolio"><div class="wrap">
+  <div class="head rv"><h2 class="h">Portfolio</h2><p>A tight selection, sport by sport. Hover over a photo to see its settings, click to open it full size.</p></div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="grid" id="grid" role="tabpanel"></div>
+  <div class="band rv"><p>Images like these for your club?</p><div><a href="#contact" class="btn" data-b="Couverture de match">Request a quote</a><a href="https://wa.me/33659189721?text=Hi%20Gabriel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20a%20photo%20quote." class="btn o" target="_blank" rel="noopener">Message on WhatsApp</a></div></div>
+</div></section>
+
+<section id="apropos"><div class="wrap about">
+  <div class="ph rv"><img src="../img/gabriel.jpg" alt="Gabriel Tondeur pitchside, camera in hand" loading="lazy"><span class="tag">Pitchside</span></div>
+  <div class="rv">
+    <p class="lbl">About</p>
+    <h2 class="h">Gabriel <span class="acc">Tondeur</span></h2>
+    <p>I am Head of Communications and Events at <span class="mark">Sporting Club Hérouville</span>, the football club with the most registered players in Normandy.</p>
+    <p>Photography is at the heart of my work: I know what a club needs from an image, because I'm the one who publishes it afterwards. I don't just deliver photos, I deliver content that serves the club's and its sponsors' communications.</p>
+    <ul>
+      <li><b>Photo &amp; video</b>Lightroom, Photoshop, Premiere Pro, CapCut</li>
+      <li><b>Communications</b>Social media, sponsors, events</li>
+      <li><b>Education</b>Master's in Sports Event Management, Win Sport School</li>
+      <li><b>Area</b>Caen, Calvados and all of Normandy</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="clubs"><div class="wrap">
+  <div class="head rv"><h2 class="h">They <span class="acc">trust me</span></h2><p>The clubs I photograph during the season.</p></div>
+  <div class="clubs rv">
+    <div><img class="lg" src="../img/logos/sch.png" alt="Logo SC Hérouville" loading="lazy" onerror="this.remove()"><b>SC Hérouville</b><span>Football · senior, youth, events</span></div>
+    <div><img class="lg" src="../img/logos/vikings.png" alt="Logo Vikings de Caen" loading="lazy" onerror="this.remove()"><b>Vikings de Caen</b><span>Handball</span></div>
+    <div><img class="lg" src="../img/logos/smcaen.png" alt="Logo SM Caen" loading="lazy" onerror="this.remove()"><b>SM Caen</b><span>Football · U17 National league</span></div>
+    <div><img class="lg" src="../img/logos/herouville-futsal.png" alt="Logo Hérouville Futsal" loading="lazy" onerror="this.remove()"><b>Hérouville Futsal</b><span>Futsal</span></div>
+    <div><img class="lg" src="../img/logos/cft.png" alt="Logo Caen Football Training" loading="lazy" onerror="this.remove()"><b>Caen Football Training</b><span>Futsal</span></div>
+  </div>
+</div></section>
+
+<section id="prestations"><div class="wrap">
+  <div class="head rv"><h2 class="h">Services</h2><p>For clubs, event organisers and sponsor brands.</p></div>
+  <div class="svc rv">
+    <article data-b="Couverture de match" tabindex="0" role="link"><span class="n">01</span><h3>Match coverage</h3><p>Pre-match, action, emotion, dressing room. An edited selection, ready to post.</p><span class="go">Request a quote →</span></article>
+    <article data-b="Média day / portraits" tabindex="0" role="link"><span class="n">02</span><h3>Media day &amp; portraits</h3><p>Player and staff portraits, team photos, kit launches.</p><span class="go">Request a quote →</span></article>
+    <article data-b="Événement / tournoi" tabindex="0" role="link"><span class="n">03</span><h3>Events &amp; tournaments</h3><p>Tournaments, galas, trophy ceremonies: the atmosphere and the key moments of the day.</p><span class="go">Request a quote →</span></article>
+    <article data-b="Contenus réseaux" tabindex="0" role="link"><span class="n">04</span><h3>Social content</h3><p>Formats built for Instagram and TikTok: carousels, stories and short videos.</p><span class="go">Request a quote →</span></article>
+    <article data-b="Visuels partenaires" tabindex="0" role="link"><span class="n">05</span><h3>Sponsor visuals</h3><p>Images that showcase your sponsors: kits, boards, activations.</p><span class="go">Request a quote →</span></article>
+    <article class="note"><span class="n">Pricing</span><h3>On quote</h3><p>Every club has its own needs. Tell me the date, the venue and the format: I'll reply with a tailored proposal.</p><a href="#contact" class="btn" data-b="">Get my quote</a></article>
+  </div>
+</div></section>
+
+<section id="preuves"><div class="wrap">
+  <div class="head rv"><h2 class="h">In <span class="acc">use</span></h2><p>My images don't stay on a hard drive: clubs publish, print and share them.</p></div>
+  <div class="proof rv">
+    <figure><img src="../../assets/partenaire-maillots.jpg" alt="Kit launch with a sponsor" loading="lazy"><figcaption><b>Kit launch</b>Sponsor shoot · SC Hérouville</figcaption></figure>
+    <figure><img src="../../assets/lamine-poster.jpg" alt="Lamine Futsal Cup video content" loading="lazy"><figcaption><b>Lamine Futsal Cup</b>1,000+ visitors · 200K impressions</figcaption></figure>
+    <figure><img src="../../assets/herouvillais-ep3-poster.jpg" alt="Les Hérouvillais video series, episode 3" loading="lazy"><figcaption><b>Les Hérouvillais</b>Video series · club YouTube</figcaption></figure>
+    <figure><img src="../../assets/partenaire-visuel.jpg" alt="Sponsor visual made for the club" loading="lazy"><figcaption><b>Sponsor visual</b>Sponsor post · SCH social media</figcaption></figure>
+  </div>
+  <div class="bigstat rv"><b>+1 M</b><p>views in 30 days on SC Hérouville's social media (September 2026). I run the club's communications on my own, photos included.</p></div>
+</div></section>
+
+<section id="materiel"><div class="wrap">
+  <div class="head rv"><h2 class="h">Gear</h2><p>Two Sony bodies and two f/2.8 zooms: enough to follow the action indoors and outdoors, even in low light.</p></div>
+  <div class="gear rv">
+    <div><span class="lbl">Main body</span><b>Sony A7 IV</b><p>33 MP full frame, at ease in sports halls.</p></div>
+    <div><span class="lbl">Second body</span><b>Sony A6400</b><p>APS-C, light, for behind-the-scenes.</p></div>
+    <div><span class="lbl">Telephoto</span><b>Sigma 70-200 f/2.8</b><p>Duels, shots, saves.</p></div>
+    <div><span class="lbl">All-round zoom</span><b>Tamron 17-70 f/2.8</b><p>Dressing rooms, celebrations, portraits.</p></div>
+  </div>
+</div></section>
+
+<section id="accreditation"><div class="wrap">
+  <div class="head rv"><h2 class="h">Accre<span class="acc">ditation</span></h2><p>For press officers and organisers: everything you need in one place.</p></div>
+  <div class="acr rv">
+    <div class="box"><dl>
+      <dt>Name</dt><dd>Gabriel Tondeur</dd>
+      <dt>Role</dt><dd>Sports photographer · Head of Communications &amp; Events, SC Hérouville</dd>
+      <dt>Based in</dt><dd>Caen (14), Normandy, France</dd>
+      <dt>Sports</dt><dd>Football, futsal, handball</dd>
+      <dt>References</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training</dd>
+      <dt>Gear</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8</dd>
+      <dt>Publication</dt><dd>Club and sponsor social media, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
+      <dt>Contact</dt><dd><a href="tel:+33659189721">+33 6 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
+    </dl></div>
+    <div class="side2">
+      <b>Approve my accreditation</b>
+      <p>Download my sheet for your file, or copy my details to paste into your accreditation form.</p>
+      <a class="btn" href="../accreditation-sheet.pdf" download>Download the sheet (PDF)</a>
+      <button class="btn l" type="button" id="copy">Copy my details</button>
+      <a class="btn l" href="#contact" data-b="Accréditation (match / événement)">Confirm an accreditation</a>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head rv"><h2 class="h">How it <span class="acc">works</span></h2><p>Three steps, no commitment until you approve the proposal.</p></div>
+  <div class="steps rv">
+    <div><span class="n">01</span><b>You get in touch</b><p>Date, venue, sport and what you need: the form below or a WhatsApp message is enough.</p></div>
+    <div><span class="n">02</span><b>I send a proposal</b><p>A clear offer, tailored to your event and your budget. Once you approve it, the date is booked.</p></div>
+    <div><span class="n">03</span><b>I shoot, you publish</b><p>I'm pitchside on the day, then I deliver an edited selection, ready for your social media and sponsors.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div class="rv">
+    <p class="lbl acc">Contact</p>
+    <h2 class="h">A match,<br>a project?</h2>
+    <div class="links">
+      <a href="https://wa.me/33659189721" target="_blank" rel="noopener">WhatsApp <span>+33 6 59 18 97 21 →</span></a>
+      <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">Instagram <span>@gabrieltndr →</span></a>
+      <a href="mailto:gabrieltondeur14@gmail.com">E-mail <span>gabrieltondeur14@gmail.com →</span></a>
+    </div>
+  </div>
+  <form id="f" class="rv" novalidate>
+    <label>Name / club *<input name="nom" required autocomplete="organization" placeholder="e.g. US Caen, John Smith"></label>
+    <label>Phone or email *<input name="contact" required autocomplete="email" placeholder="So I can reply"></label>
+    <label>Sport<select name="sport"><option>Football</option><option>Futsal</option><option>Handball</option><option value="Autre">Other</option></select></label>
+    <label>Date<input name="date" type="date"></label>
+    <label>Need<select name="besoin"><option value="Couverture de match">Match coverage</option><option value="Accréditation (match / événement)">Accreditation (match / event)</option><option value="Photos joueur / portrait">Player photos / portrait</option><option value="Média day / portraits">Media day / portraits</option><option value="Événement / tournoi">Event / tournament</option><option value="Contenus réseaux">Social content</option><option value="Visuels partenaires">Sponsor visuals</option><option value="Autre">Other</option></select></label>
+    <label>Venue<input name="lieu" placeholder="Town, stadium, hall"></label>
+    <label class="f">Message<textarea name="msg" placeholder="A few words about your project (optional)"></textarea></label>
+    <div class="sendrow"><button class="btn wa" type="submit" data-via="wa">Send via WhatsApp →</button><button class="btn o" type="submit" data-via="mail">Send by email</button></div>
+    <div class="reassure"><span>No commitment</span><span>Free quote</span><span>Based in Caen, travelling across Normandy</span></div>
+    <div class="ok" id="ok" role="status"></div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Gabriel Tondeur · Sports photographer · Caen, Normandy</span><a href="../../">My communications &amp; events profile (FR) →</a></div></footer>
+
+<a class="fab" id="fab" href="https://wa.me/33659189721?text=Hi%20Gabriel%2C%20I%27d%20like%20a%20photo%20quote." target="_blank" rel="noopener" aria-label="Contact me on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<div class="mbar" id="mbar"><a href="#contact" class="btn" data-b="">Book a date</a><a href="https://wa.me/33659189721?text=Hi%20Gabriel%2C%20I%27d%20like%20a%20photo%20quote." class="btn wa" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Full-size photo">
+  <img alt="">
+  <button class="x" aria-label="Close">✕</button>
+  <button class="p" aria-label="Previous photo">←</button>
+  <button class="n" aria-label="Next photo">→</button>
+  <div class="c lbl"></div>
+  <div class="ex2" id="ex2"></div>
+  <a href="#contact" class="btn lbcta" id="lbcta">I want photos like this →</a>
+</div>
+
+<script>
+var TABS=[["handball","Handball"],["futsal","Futsal"],["football","Football"],["sch","SC Hérouville"],["celebrations","Celebrations"]];
+var D={"football": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "29 mm", "f/3.2", "1/3200 s", "ISO 500"]], ["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "32 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["03", 720, 405, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/3.2", "1/4000 s", "ISO 320"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "47 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["05", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["08", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "46 mm", "f/2.8", "1/4000 s", "ISO 1000"]], ["09", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/3.2", "1/4000 s", "ISO 500"]], ["11", 480, 720, ["Sony A6400", "Sony 55-210 mm", "144 mm", "f/5.6", "1/4000 s", "ISO 1000"]], ["13", 405, 720, ["Sony A6400", "Sony 55-210 mm", "55 mm", "f/4.5", "1/4000 s", "ISO 1000"]], ["14", 480, 720, ["Sony A6400", "Sony 55-210 mm", "173 mm", "f/6.3", "1/4000 s", "ISO 1000"]], ["15", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["16", 405, 720, ["Sony A6400", "Sony 55-210 mm", "145 mm", "f/5.6", "1/3200 s", "ISO 1000"]]], "sch": [["02", 544, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "137 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["03", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "131 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["04", 593, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["05", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 400"]], ["06", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "171 mm", "f/3.5", "1/4000 s", "ISO 400"]], ["08", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "78 mm", "f/2.8", "1/4000 s", "ISO 640"]], ["09", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "27 mm", "f/2.8", "1/400 s", "ISO 1000"]], ["10", 720, 480, ["Sony A6400", "Sony 55-210 mm", "132 mm", "f/5.6", "1/3200 s", "ISO 800"]], ["12", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/2.8", "1/4000 s", "ISO 800"]], ["13", 576, 720, ["Sony A6400", "Sony 55-210 mm", "83 mm", "f/5", "1/4000 s", "ISO 1000"]], ["16", 720, 480, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/4.5", "1/4000 s", "ISO 320"]], ["18", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "70 mm", "f/4.5", "1/4000 s", "ISO 400"]]], "handball": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "46 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["02", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "52 mm", "f/2.8", "1/2000 s", "ISO 2000"]], ["03", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "57 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["04", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "51 mm", "f/2.8", "1/1600 s", "ISO 2000"]], ["06", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/2000 s", "ISO 2500"]], ["07", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "49 mm", "f/2.8", "1/2000 s", "ISO 2500"]], ["08", 720, 377, ["Sony A6400", "Tamron 17-70 mm f/2.8", "38 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["10", 720, 416, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["12", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "48 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["13", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "176 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["14", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "140 mm", "f/2.8", "1/250 s", "ISO 2500"]], ["15", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "174 mm", "f/2.8", "1/1250 s", "ISO 2500"]]], "futsal": [["01", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "66 mm", "f/2.8", "1/1000 s", "ISO 2000"]], ["02", 720, 480, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/4.5", "1/10 s", "ISO 200"]], ["03", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "97 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["05", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "177 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["07", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "85 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 576, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "118 mm", "f/2.8", "1/800 s", "ISO 2500"]], ["10", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "75 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["11", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "161 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["12", 405, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "200 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["14", 576, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "192 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["15", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 3200"]], ["19", 480, 720, ["Sony A7 IV", "Sigma 70-200 mm f/2.8", "150 mm", "f/2.8", "1/1000 s", "ISO 2500"]]], "celebrations": [["02", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "43 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["03", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "25 mm", "f/2.8", "1/500 s", "ISO 2000"]], ["04", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "54 mm", "f/2.8", "1/1000 s", "ISO 3200"]], ["05", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/500 s", "ISO 2500"]], ["06", 480, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "58 mm", "f/2.8", "1/1600 s", "ISO 2500"]], ["08", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["09", 405, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "27 mm", "f/2.8", "1/1000 s", "ISO 2500"]], ["10", 550, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["11", 576, 720, ["Sony A6400", "Tamron 17-70 mm f/2.8", "70 mm", "f/2.8", "1/1250 s", "ISO 2500"]], ["13", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "159 mm", "f/2.8", "1/1250 s", "ISO 1600"]], ["14", 480, 720, ["Sony A6400", "Sigma 70-200 mm f/2.8", "166 mm", "f/3.2", "1/800 s", "ISO 1000"]], ["19", 720, 480, ["Sony A6400", "Tamron 17-70 mm f/2.8", "17 mm", "f/2.8", "1/160 s", "ISO 500"]]]};
+var tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.c'),cur='handball',idx=0;
+function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function label(t){for(var i=0;i<TABS.length;i++)if(TABS[i][0]==t)return TABS[i][1]}
+TABS.forEach(function(t){var b=document.createElement('button');b.setAttribute('role','tab');b.dataset.t=t[0];b.textContent=t[1];b.onclick=function(){show(t[0])};tabs.appendChild(b)});
+function show(t){cur=D[t]?t:'handball';
+  [].forEach.call(tabs.children,function(b){b.setAttribute('aria-selected',b.dataset.t==cur)});
+  grid.innerHTML='';var bigDone=false;
+  D[cur].forEach(function(p,i){var a=document.createElement('a');a.href='../img/'+cur+'/'+p[0]+'.jpg';
+    var r=p[1]/p[2];
+    if(r>1.2){a.className=(!bigDone&&i<4)?'big':'w';bigDone=true}else if(r<.9)a.className='t';
+    var im=new Image();im.loading='lazy';im.decoding='async';im.alt=label(cur)+' — photo '+(i+1);im.onload=function(){im.classList.add('ok')};im.src='../img/'+cur+'/'+p[0]+'-s.jpg';
+    a.appendChild(im);if(p[3]){var x=document.createElement('span');x.className='ex';x.innerHTML='<b>'+esc(p[3][1])+'</b>'+esc([p[3][2],p[3][3],p[3][4],p[3][5]].filter(Boolean).join(' · '));a.appendChild(x)}a.onclick=function(e){e.preventDefault();open(i)};grid.appendChild(a)});
+}
+function open(i){idx=(i+D[cur].length)%D[cur].length;lbi.src='../img/'+cur+'/'+D[cur][idx][0]+'.jpg';lbi.alt=label(cur)+' — photo '+(idx+1);lbc.textContent=label(cur)+' · '+(idx+1)+' / '+D[cur].length;var q=D[cur][idx][3];document.getElementById('ex2').innerHTML=q?'<b>'+esc(q[0])+' · '+esc(q[1])+'</b>'+esc([q[2],q[3],q[4],q[5]].filter(Boolean).join(' · ')):'';lb.classList.add('on');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('on');document.body.style.overflow=''}
+lb.querySelector('.x').onclick=close;lb.querySelector('.p').onclick=function(){open(idx-1)};lb.querySelector('.n').onclick=function(){open(idx+1)};
+lb.onclick=function(e){if(e.target==lb)close()};
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key=='Escape')close();if(e.key=='ArrowLeft')open(idx-1);if(e.key=='ArrowRight')open(idx+1)});
+var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)open(idx+(dx<0?1:-1));sx=null});
+var h=location.hash.slice(1);show(D[h]?h:'handball');
+var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -60px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+var form=document.getElementById('f'),okb=document.getElementById('ok'),via='wa';
+function pick(b,sp){if(b){form.elements.besoin.value=b}if(sp){form.elements.sport.value=sp}}
+document.querySelectorAll('[data-b]').forEach(function(el){
+  var go=function(e){if(el.tagName=='ARTICLE'||el.getAttribute('href')=='#contact'){e.preventDefault();pick(el.dataset.b,el.dataset.s);close();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(function(){form.elements.nom.focus({preventScroll:true})},700)}};
+  el.addEventListener('click',go);if(el.tagName=='ARTICLE')el.addEventListener('keydown',function(e){if(e.key=='Enter')go(e)})});
+var map={handball:'Couverture de match',futsal:'Couverture de match',football:'Couverture de match',sch:'Couverture de match',celebrations:'Couverture de match'};
+document.getElementById('lbcta').addEventListener('click',function(e){e.preventDefault();pick(map[cur]);var sp={handball:'Handball',futsal:'Futsal',football:'Football',sch:'Football'}[cur];if(sp)form.elements.sport.value=sp;close();document.getElementById('contact').scrollIntoView({behavior:'smooth'})});
+form.querySelectorAll('[data-via]').forEach(function(b){b.addEventListener('click',function(){via=b.dataset.via})});
+form.onsubmit=function(e){e.preventDefault();
+  var miss=[].filter.call(form.querySelectorAll('[required]'),function(i){return !i.value.trim()});
+  if(miss.length){miss[0].focus();okb.textContent='Please enter your name (or club) and a way to reach you.';okb.classList.add('on');return}
+  var g=function(n){return form.elements[n].value.trim()||'—'};
+  var d=g('date');if(d!='—'){var p=d.split('-');d=p[2]+'/'+p[1]+'/'+p[0]}
+  var body='Hi Gabriel,\n\nName / club: '+g('nom')+'\nContact: '+g('contact')+'\nSport: '+g('sport')+'\nNeed: '+form.elements.besoin.options[form.elements.besoin.selectedIndex].text+'\nDate: '+d+'\nVenue: '+g('lieu')+(form.elements.msg.value.trim()?'\n\n'+form.elements.msg.value.trim():'');
+  if(via=='wa'){window.open('https://wa.me/33659189721?text='+encodeURIComponent(body),'_blank','noopener')}
+  else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Photo request — '+g('nom'))+'&body='+encodeURIComponent(body)}
+  okb.textContent='Your request is ready in '+(via=='wa'?'WhatsApp':'your email app')+': just press Send. I\'ll get back to you quickly.';okb.classList.add('on')};
+document.getElementById('copy').onclick=function(){
+  var t='Name: Gabriel Tondeur\nRole: Sports photographer\nOrganisation: SC Hérouville (Head of Communications & Events)\nCity: Caen (14), Normandy, France\nSports: football, futsal, handball\nReferences: SC Hérouville, Vikings de Caen, SM Caen (U17 National), Hérouville Futsal, Caen Football Training\nGear: Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 17-70 f/2.8\nPhone: +33 6 59 18 97 21\nEmail: gabrieltondeur14@gmail.com\nInstagram: @gabrieltndr\nPortfolio: https://gabrieltndr.github.io/photo/en/';
+  var done=function(){document.getElementById('copied').textContent='Details copied ✓'};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
+  function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}
+};
+var fab=document.getElementById('fab'),mbar=document.getElementById('mbar'),ct=document.getElementById('contact');
+function bars(){var y=scrollY,r=ct.getBoundingClientRect(),inC=r.top<innerHeight*.8&&r.bottom>0,show=y>innerHeight*.7&&!inC;fab.classList.toggle('on',show);mbar.classList.toggle('on',show)}
+addEventListener('scroll',bars,{passive:true});bars();
+</script>
+</body>
+</html>
