@@ -205,6 +205,30 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
  .lbcta{bottom:70px}
 }
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.who a{background:var(--panel);padding:26px 24px 24px;display:flex;flex-direction:column;gap:10px;min-height:250px;transition:background .25s,transform .25s;border-top:3px solid transparent}
+.who a:hover{background:#22221E;border-top-color:var(--acc);transform:translateY(-2px)}
+.who .lbl{color:var(--acc)}
+.who b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.1rem;line-height:.95}
+.who p{color:var(--mut);font-size:.93rem;flex:1}
+.who .go{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--txt)}
+@media(max-width:960px){.who{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.who{grid-template-columns:1fr}.who a{min-height:0}}
+.acr{display:grid;grid-template-columns:1.1fr .9fr;gap:6px}
+.acr .box{background:var(--panel);padding:28px}
+.acr dl{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;font-size:.95rem}
+.acr dt{color:var(--mut)}
+.acr dd a{border-bottom:1px solid var(--line)}
+.acr .side2{background:var(--acc);color:#111;padding:28px;display:flex;flex-direction:column;gap:14px}
+.acr .side2 b{font-family:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;font-weight:400;font-size:2.4rem;line-height:.95}
+.acr .side2 p{font-size:.95rem}
+.acr .side2 .btn{background:#111;color:var(--acc);justify-content:center}
+.acr .side2 .btn:hover{background:#000;color:#fff}
+.acr .side2 .btn.l{background:transparent;color:#111;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4)}
+.acr .side2 .btn.l:hover{background:#111;color:#fff}
+.copied{font-size:.85rem;font-weight:600;min-height:1.2em}
+@media(max-width:860px){.acr{grid-template-columns:1fr}.acr dl{grid-template-columns:1fr;gap:2px 0}.acr dd{margin-bottom:10px}}
 </style>
 </head>
 <body>
@@ -216,6 +240,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#prestations">Prestations</a></li>
     <li><a href="#materiel">Matériel</a></li>
+    <li><a href="#accreditation">Accréditation</a></li>
   </ul>
   <a href="#contact" class="btn">Me contacter</a>
 </div></nav>
@@ -239,6 +264,17 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
   <div><b>+1 M</b><span>de vues en 30 jours sur les réseaux du SCH</span></div>
   <div><b>3</b><span>saisons au bord des terrains</span></div>
 </div>
+
+
+<section id="vous"><div class="wrap">
+  <div class="head rv"><h2 class="h">Vous <span class="acc">êtes…</span></h2><p>Allez directement à ce qui vous concerne.</p></div>
+  <div class="who rv">
+    <a href="#accreditation"><span class="lbl">Presse · organisateur</span><b>Attaché·e de presse</b><p>Ma fiche d'accréditation est prête : identité, références, matériel, contact. À copier ou à télécharger en PDF.</p><span class="go">Voir la fiche →</span></a>
+    <a href="#contact" data-b="Couverture de match" data-s="Football"><span class="lbl">Club</span><b>Responsable com'</b><p>Matchs, média days, contenus réseaux et visuels partenaires : je suis moi-même responsable com d'un club et je livre des images prêtes à publier.</p><span class="go">Demander un devis →</span></a>
+    <a href="#contact" data-b="Photos joueur / portrait"><span class="lbl">Joueur · agent</span><b>Joueur·se ou agent</b><p>Photos d'action et portraits pour votre profil, vos réseaux ou votre dossier de recrutement.</p><span class="go">Réserver un shooting →</span></a>
+    <a href="#contact" data-b="Événement / tournoi"><span class="lbl">Organisation · marque</span><b>Événement</b><p>Tournois, galas, activations partenaires : l'ambiance, les temps forts et vos sponsors en image.</p><span class="go">Parler de mon événement →</span></a>
+  </div>
+</div></section>
 
 <section id="portfolio"><div class="wrap">
   <div class="head rv"><h2 class="h">Portfolio</h2><p>Une sélection resserrée, sport par sport. Cliquez sur une photo pour l'ouvrir en grand.</p></div>
@@ -307,6 +343,30 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
   </div>
 </div></section>
 
+<section id="accreditation"><div class="wrap">
+  <div class="head rv"><h2 class="h">Accré<span class="acc">ditation</span></h2><p>Pour les attachés de presse et les organisateurs : toutes les informations utiles au même endroit.</p></div>
+  <div class="acr rv">
+    <div class="box"><dl>
+      <dt>Nom</dt><dd>Gabriel Tondeur</dd>
+      <dt>Fonction</dt><dd>Photographe sport · responsable communication &amp; événementiel du SC Hérouville</dd>
+      <dt>Basé à</dt><dd>Caen (14), Normandie</dd>
+      <dt>Disciplines</dt><dd>Football, futsal, handball</dd>
+      <dt>Références</dt><dd>SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training</dd>
+      <dt>Matériel</dt><dd>Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 24-70 f/2.8</dd>
+      <dt>Diffusion</dt><dd>Réseaux des clubs et partenaires, portfolio, Instagram <a href="https://www.instagram.com/gabrieltndr/" target="_blank" rel="noopener">@gabrieltndr</a></dd>
+      <dt>Contact</dt><dd><a href="tel:+33659189721">06 59 18 97 21</a> · <a href="mailto:gabrieltondeur14@gmail.com">gabrieltondeur14@gmail.com</a></dd>
+    </dl></div>
+    <div class="side2">
+      <b>Valider mon accréditation</b>
+      <p>Téléchargez ma fiche pour votre dossier, ou copiez mes informations pour les coller dans votre formulaire d'accréditation.</p>
+      <a class="btn" href="fiche-accreditation.pdf" download>Télécharger la fiche (PDF)</a>
+      <button class="btn l" type="button" id="copy">Copier mes informations</button>
+      <a class="btn l" href="#contact" data-b="Accréditation (match / événement)">Me confirmer une accréditation</a>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+  </div>
+</div></section>
+
 <section id="process"><div class="wrap">
   <div class="head rv"><h2 class="h">Comment <span class="acc">ça marche</span></h2><p>Trois étapes, sans engagement jusqu'à ce que vous validiez la proposition.</p></div>
   <div class="steps rv">
@@ -331,7 +391,7 @@ input:invalid:not(:placeholder-shown){border-color:#E5674D}
     <label>Téléphone ou e-mail *<input name="contact" required autocomplete="email" placeholder="Pour vous répondre"></label>
     <label>Sport<select name="sport"><option>Football</option><option>Futsal</option><option>Handball</option><option>Autre</option></select></label>
     <label>Date<input name="date" type="date"></label>
-    <label>Besoin<select name="besoin"><option>Couverture de match</option><option>Média day / portraits</option><option>Événement / tournoi</option><option>Contenus réseaux</option><option>Visuels partenaires</option><option>Autre</option></select></label>
+    <label>Besoin<select name="besoin"><option>Couverture de match</option><option>Accréditation (match / événement)</option><option>Photos joueur / portrait</option><option>Média day / portraits</option><option>Événement / tournoi</option><option>Contenus réseaux</option><option>Visuels partenaires</option><option>Autre</option></select></label>
     <label>Lieu<input name="lieu" placeholder="Ville, stade, salle"></label>
     <label class="f">Message<textarea name="msg" placeholder="Quelques mots sur votre projet (facultatif)"></textarea></label>
     <div class="sendrow"><button class="btn wa" type="submit" data-via="wa">Envoyer par WhatsApp →</button><button class="btn o" type="submit" data-via="mail">Envoyer par e-mail</button></div>
@@ -380,9 +440,9 @@ var h=location.hash.slice(1);show(D[h]?h:'handball');
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -60px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
 var form=document.getElementById('f'),okb=document.getElementById('ok'),via='wa';
-function pick(b){if(b){form.elements.besoin.value=b}}
+function pick(b,sp){if(b){form.elements.besoin.value=b}if(sp){form.elements.sport.value=sp}}
 document.querySelectorAll('[data-b]').forEach(function(el){
-  var go=function(e){if(el.tagName=='ARTICLE'||el.getAttribute('href')=='#contact'){e.preventDefault();pick(el.dataset.b);close();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(function(){form.elements.nom.focus({preventScroll:true})},700)}};
+  var go=function(e){if(el.tagName=='ARTICLE'||el.getAttribute('href')=='#contact'){e.preventDefault();pick(el.dataset.b,el.dataset.s);close();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(function(){form.elements.nom.focus({preventScroll:true})},700)}};
   el.addEventListener('click',go);if(el.tagName=='ARTICLE')el.addEventListener('keydown',function(e){if(e.key=='Enter')go(e)})});
 var map={handball:'Couverture de match',futsal:'Couverture de match',football:'Couverture de match',sch:'Couverture de match',celebrations:'Couverture de match'};
 document.getElementById('lbcta').addEventListener('click',function(e){e.preventDefault();pick(map[cur]);var sp={handball:'Handball',futsal:'Futsal',football:'Football',sch:'Football'}[cur];if(sp)form.elements.sport.value=sp;close();document.getElementById('contact').scrollIntoView({behavior:'smooth'})});
@@ -396,6 +456,12 @@ form.onsubmit=function(e){e.preventDefault();
   if(via=='wa'){window.open('https://wa.me/33659189721?text='+encodeURIComponent(body),'_blank','noopener')}
   else{location.href='mailto:gabrieltondeur14@gmail.com?subject='+encodeURIComponent('Demande photo — '+g('nom'))+'&body='+encodeURIComponent(body)}
   okb.textContent='Votre demande est prête dans '+(via=='wa'?'WhatsApp':'votre messagerie')+' : il ne reste qu\'à appuyer sur « Envoyer ». Je vous réponds rapidement.';okb.classList.add('on')};
+document.getElementById('copy').onclick=function(){
+  var t='Nom : Gabriel Tondeur\nFonction : Photographe sport\nStructure : SC Hérouville (responsable communication & événementiel)\nVille : Caen (14), Normandie\nDisciplines : football, futsal, handball\nRéférences : SC Hérouville, Vikings de Caen, SM Caen (U17 Nationaux), Hérouville Futsal, Caen Football Training\nMatériel : Sony A7 IV, Sony A6400, Sigma 70-200 f/2.8, Tamron 24-70 f/2.8\nTéléphone : 06 59 18 97 21\nE-mail : gabrieltondeur14@gmail.com\nInstagram : @gabrieltndr\nPortfolio : https://gabrieltndr.github.io/photo/';
+  var done=function(){document.getElementById('copied').textContent='Informations copiées ✓'};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
+  function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}ta.remove()}
+};
 var fab=document.getElementById('fab'),mbar=document.getElementById('mbar'),ct=document.getElementById('contact');
 function bars(){var y=scrollY,r=ct.getBoundingClientRect(),inC=r.top<innerHeight*.8&&r.bottom>0,show=y>innerHeight*.7&&!inC;fab.classList.toggle('on',show);mbar.classList.toggle('on',show)}
 addEventListener('scroll',bars,{passive:true});bars();
