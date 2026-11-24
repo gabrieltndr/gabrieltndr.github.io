@@ -4,6 +4,7 @@ window.TARIFS = {
   maj: "Novembre 2026",
   prestations: [
     { id: "match", cat: "1 · Couverture de match (club)", nom: "Couverture de match", prix: 300, unite: "match",
+      accroche: "Immortalisez votre saison pour 20 € par joueur : 300 € partagés entre 14 joueurs et le coach, moins qu'un maillot.",
       detail: "De l'échauffement à l'après-match : action, émotions, vestiaire. Sélection retouchée, galerie en ligne, livraison sous 48 h." },
     { id: "match-live", cat: "1 · Couverture de match (club)", nom: "Option photos en direct", prix: 90, unite: "match",
       detail: "Photos envoyées à la mi-temps et au coup de sifflet final, prêtes pour les réseaux." },
