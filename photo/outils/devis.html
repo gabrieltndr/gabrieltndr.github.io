@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Devis — Gabriel Tondeur</title>
+<style>
+/* VOICE: sobre, net, professionnel — un document qu'un club signe
+   IDEA: la feuille de match / le document officiel, en-tête noir comme le site
+   PICTURE: le devis lui-même, A4, éditable à l'écran
+   COLOUR and TYPE: noir #0F0F0D, blanc papier, accent fluo #D9F24A ; Anton + Inter (DA du portfolio)
+   LAYOUT: barre d'outils au-dessus, feuille A4 centrée, impression en une page */
+@font-face{font-family:"Anton";src:url(../fonts/anton.woff) format("woff")}
+@font-face{font-family:"Inter";src:url(../fonts/inter-400.woff) format("woff");font-weight:400}
+@font-face{font-family:"Inter";src:url(../fonts/inter-500.woff) format("woff");font-weight:500}
+@font-face{font-family:"Inter";src:url(../fonts/inter-600.woff) format("woff");font-weight:600 700}
+@page{size:A4;margin:0}
+:root{--ink:#141412;--bg:#0F0F0D;--mut:#6d6a62;--line:#e3e0d8;--soft:#f5f3ee;--acc:#D9F24A}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+body{background:#2a2a26;font:15px/1.5 Inter,Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.h{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.92}
+/* toolbar */
+.bar{position:sticky;top:0;z-index:10;background:var(--bg);color:#EFEBE1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px max(3vw,12px);border-bottom:1px solid #333}
+.bar b{font-family:Anton,sans-serif;font-weight:400;font-size:1.2rem;margin-right:auto}
+.bar b span{color:var(--acc)}
+.bar button,.bar select{font:600 13px Inter,sans-serif;letter-spacing:.06em;padding:10px 14px;border:0;cursor:pointer;background:#22221e;color:#EFEBE1;min-height:40px}
+.bar button.p{background:var(--acc);color:#111}
+.bar button:hover{filter:brightness(1.15)}
+.bar label{font-size:12px;color:#bbb;display:flex;align-items:center;gap:6px}
+.tip{color:#bbb;font-size:12.5px;max-width:1240px;margin:14px auto 0;padding:0 max(3vw,12px)}
+/* sheet */
+.sheet{width:210mm;min-height:297mm;margin:18px auto 40px;background:#fff;display:flex;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+header{background:var(--bg);color:#EFEBE1;padding:8mm 14mm 6mm;display:grid;grid-template-columns:1fr auto;gap:6mm;align-items:end}
+header .who .h{font-size:24pt}
+header .who .h span{color:var(--acc)}
+header .who p{font-size:8.5pt;color:#cfcbc0;margin-top:2mm;line-height:1.45}
+header .doc{text-align:right}
+header .doc .h{font-size:34pt;color:var(--acc)}
+header .doc p{font-size:8.5pt;color:#cfcbc0;margin-top:1.5mm}
+.e{outline:none;border-bottom:1px dashed transparent;transition:border-color .2s;min-width:1ch;display:inline-block}
+.e:hover,.e:focus{border-bottom-color:var(--acc)}
+.sheet .body{padding:6mm 14mm 5mm;flex:1;display:flex;flex-direction:column;gap:4.2mm}
+.parties{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.card{background:var(--soft);padding:3mm 4.5mm;font-size:8.8pt;line-height:1.45}
+.card .t{font-size:7pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:1.5mm}
+.card .n{font-weight:600;font-size:10.5pt}
+.obj{font-size:9.5pt;border-left:3px solid var(--acc);padding:1mm 0 1mm 4mm}
+.obj b{font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:9pt}
+thead th{background:var(--bg);color:#EFEBE1;font-weight:600;font-size:7pt;letter-spacing:.16em;text-transform:uppercase;text-align:left;padding:2.6mm 3mm}
+th.r,td.r{text-align:right;white-space:nowrap}
+tbody td{padding:2mm 3mm;border-bottom:1px solid var(--line);vertical-align:top}
+tbody td .d{display:block;color:var(--mut);font-size:7.8pt;margin-top:.5mm;line-height:1.35}
+td.x{width:8mm;padding-left:0;padding-right:0;text-align:center}
+td.x button{border:0;background:none;color:#b33;font-size:14px;cursor:pointer;width:28px;height:28px}
+.tot{display:grid;grid-template-columns:1fr 70mm;gap:7mm;align-items:start}
+.tot .note{font-size:8pt;color:var(--mut)}
+.tot dl{display:grid;grid-template-columns:1fr auto;font-size:9.5pt}
+.tot dt,.tot dd{padding:1.2mm 0;border-bottom:1px solid var(--line)}
+.tot dd{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tot .big dt,.tot .big dd{background:var(--acc);border:0;padding:3mm;font-weight:700;font-size:11pt}
+.tot .big dt{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em}
+.cond{font-size:7.3pt;line-height:1.38;color:#3b3a36}
+.cond h3,.sign h3{font-size:7pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:1.5mm}
+.cond ul{list-style:none;display:grid;gap:.8mm}
+.cond .note{margin-bottom:2.5mm}
+.cond li{padding-left:3.5mm;position:relative}
+.cond li::before{content:"";position:absolute;left:0;top:1.6mm;width:1.6mm;height:1.6mm;background:var(--ink)}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:auto}
+.sign .box{border:1px solid var(--line);padding:3mm 4mm;min-height:20mm;font-size:8.5pt;color:var(--mut)}
+.sign .box b{color:var(--ink)}
+footer{background:var(--acc);padding:3.5mm 14mm;display:flex;justify-content:space-between;font-size:7.6pt;font-weight:600;gap:4mm;flex-wrap:wrap}
+@media print{
+  body{background:#fff}.bar,.tip,.noprint,td.x{display:none!important}
+  .sheet{margin:0;box-shadow:none;width:210mm;min-height:296mm}
+  thead{display:table-header-group}tr,.tot,.sign,.cond{break-inside:avoid}
+  .e{border:0!important}
+}
+@media screen and (max-width:820px){
+  .sheet{width:100%;min-height:0;margin:0}
+  header,.parties,.tot,.sign{grid-template-columns:1fr}
+  header .doc{text-align:left}
+  table{font-size:12px}
+}
+</style>
+</head>
+<body>
+<div class="bar noprint">
+  <b>Devis<span>.</span></b>
+  <select id="add" aria-label="Ajouter une prestation"><option value="">+ Ajouter une prestation…</option></select>
+  <button id="addFree" type="button">+ Ligne libre</button>
+  <label><input type="checkbox" id="tva"> Assujetti à la TVA (20 %)</label>
+  <button id="nouveau" type="button">Nouveau devis</button>
+  <button id="print" class="p" type="button">Imprimer / PDF</button>
+</div>
+<p class="tip noprint">Tout ce qui est souligné au survol se modifie en cliquant dessus. Ton identité, ton SIRET et le brouillon en cours restent enregistrés dans ce navigateur. « Imprimer / PDF » → choisis « Enregistrer au format PDF », sans marges, avec les graphiques d'arrière-plan.</p>
+
+<div class="sheet" id="sheet">
+  <header>
+    <div class="who">
+      <div class="h">Gabriel <span>Tondeur</span></div>
+      <p><span class="e" contenteditable data-k="statut">Photographe sport · EI</span><br>
+        <span class="e" contenteditable data-k="adresse">Adresse, 14000 Caen</span><br>
+        SIRET : <span class="e" contenteditable data-k="siret">à compléter</span><br>
+        <span class="e" contenteditable data-k="contact">06 59 18 97 21 · gabrieltondeur14@gmail.com</span></p>
+    </div>
+    <div class="doc">
+      <div class="h">Devis</div>
+      <p>N° <span class="e" contenteditable data-k="num" id="num">D-2026-001</span></p>
+      <p>Émis le <span class="e" contenteditable data-k="date" id="date"></span> · valable 30 jours</p>
+    </div>
+  </header>
+
+  <div class="body">
+    <div class="parties">
+      <div class="card"><div class="t">Prestataire</div>
+        <div class="n">Gabriel Tondeur, EI</div>
+        Photographe sport · Caen, Normandie<br>gabrieltndr.github.io/photo</div>
+      <div class="card"><div class="t">Client</div>
+        <div class="n e" contenteditable data-k="cNom">Nom du club ou de l'organisation</div><br>
+        <span class="e" contenteditable data-k="cContact">Contact : prénom nom, fonction</span><br>
+        <span class="e" contenteditable data-k="cAdr">Adresse</span><br>
+        <span class="e" contenteditable data-k="cId">SIRET / RNA (si professionnel ou association)</span></div>
+    </div>
+
+    <p class="obj"><b>Objet :</b> <span class="e" contenteditable data-k="objet">Couverture photo</span> · <b>Date :</b> <span class="e" contenteditable data-k="quand">à définir</span> · <b>Lieu :</b> <span class="e" contenteditable data-k="lieu">à définir</span></p>
+
+    <table>
+      <thead><tr><th>Désignation</th><th class="r">Qté</th><th class="r">Prix unit.</th><th class="r">Total</th><th class="noprint"></th></tr></thead>
+      <tbody id="lines"></tbody>
+    </table>
+
+    <div class="tot">
+      <div class="cond"><p class="note" id="tvanote">TVA non applicable, art. 293 B du CGI.</p><h3>Conditions</h3><ul id="cond"></ul></div>
+      <dl id="totals"></dl>
+    </div>
+
+    <div class="sign">
+      <div class="box"><b>Le prestataire</b><br>Gabriel Tondeur<br><br>Date et signature :</div>
+      <div class="box"><b>Le client</b><br>Date, signature et mention manuscrite « Bon pour accord » :</div>
+    </div>
+  </div>
+  <footer><span>Gabriel Tondeur · Photographe sport · Caen</span><span>06 59 18 97 21 · gabrieltondeur14@gmail.com</span></footer>
+</div>
+
+<script src="tarifs.js"></script>
+<script>
+{
+const T=window.TARIFS, all=[...T.prestations,...T.options];
+const $=s=>document.querySelector(s), esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const eur=n=>n.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
+const store={get(k,d){try{const v=localStorage.getItem('devis.'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('devis.'+k,JSON.stringify(v))}catch(e){}}};
+const SELLER=['statut','adresse','siret','contact'];
+let st=store.get('draft',null);
+function blank(){const d=new Date();return{num:nextNum(false),date:d.toLocaleDateString('fr-FR'),lines:[{nom:'Couverture de match',detail:T.prestations[0].detail,q:1,p:150}],tva:false,f:{}}}
+function nextNum(bump){let n=store.get('seq',1);if(bump){n++;store.set('seq',n)}return 'D-'+new Date().getFullYear()+'-'+String(n).padStart(3,'0')}
+if(!st)st=blank();
+const sel=$('#add');
+[['Prestations',T.prestations],['Options',T.options.filter(o=>!o.pct)]].forEach(([g,list])=>{const og=document.createElement('optgroup');og.label=g;list.forEach(o=>{const op=document.createElement('option');op.value=o.id;op.textContent=o.nom+' — '+(o.prix%1?o.prix.toFixed(2).replace('.',','):o.prix)+' €'+(o.unite?' / '+o.unite:'');og.appendChild(op)});sel.appendChild(og)});
+const pub=T.options.find(o=>o.pct);const op=document.createElement('option');op.value='pub';op.textContent=pub.nom+' (+'+pub.pct+' %)';sel.appendChild(op);
+function save(){store.set('draft',st)}
+function fields(){document.querySelectorAll('[data-k]').forEach(el=>{const k=el.dataset.k;
+  const v=SELLER.includes(k)?store.get('s.'+k,null):(k==='num'?st.num:k==='date'?st.date:st.f[k]);
+  if(v!=null)el.textContent=v;
+  el.oninput=()=>{const t=el.textContent.trim();if(SELLER.includes(k))store.set('s.'+k,t);else if(k==='num')st.num=t;else if(k==='date')st.date=t;else st.f[k]=t;save()};
+  el.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();el.blur()}};
+})}
+function num(t){const n=parseFloat(String(t).replace(/\s/g,'').replace(',','.'));return isFinite(n)?n:0}
+function render(){
+  $('#lines').innerHTML=st.lines.map((l,i)=>`<tr data-i="${i}"><td><span class="e" contenteditable data-f="nom">${esc(l.nom)}</span><span class="d e" contenteditable data-f="detail">${esc(l.detail||'')}</span></td>
+   <td class="r"><span class="e" contenteditable data-f="q">${esc(String(l.q).replace('.',','))}</span></td>
+   <td class="r">${l.pct?'+'+l.pct+' %':`<span class="e" contenteditable data-f="p">${esc(l.p.toFixed(2).replace('.',','))}</span> €`}</td>
+   <td class="r">${eur(lineTotal(l,i))}</td><td class="x noprint"><button type="button" aria-label="Supprimer la ligne" data-del="${i}">✕</button></td></tr>`).join('');
+  $('#lines').querySelectorAll('[data-f]').forEach(el=>{const i=+el.closest('tr').dataset.i,f=el.dataset.f;
+    el.onblur=()=>{const t=el.textContent.trim();st.lines[i][f]=(f==='q'||f==='p')?num(t):t;save();render()};
+    el.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();el.blur()}}});
+  $('#lines').querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{st.lines.splice(+b.dataset.del,1);save();render()});
+  const ht=st.lines.reduce((s,l,i)=>s+lineTotal(l,i),0),tv=st.tva?ht*.2:0,ttc=ht+tv,ac=Math.round(ttc*.3*100)/100;
+  $('#totals').innerHTML=(st.tva?`<dt>Total HT</dt><dd>${eur(ht)}</dd><dt>TVA 20 %</dt><dd>${eur(tv)}</dd>`:`<dt>Total HT</dt><dd>${eur(ht)}</dd><dt>TVA</dt><dd>0,00 €</dd>`)+
+    `<div class="big" style="display:contents"><dt>Total ${st.tva?'TTC':'net'}</dt><dd>${eur(ttc)}</dd></div><dt>Acompte 30 % à la signature</dt><dd>${eur(ac)}</dd><dt>Solde à la livraison</dt><dd>${eur(ttc-ac)}</dd>`;
+  $('#tvanote').textContent=st.tva?'TVA au taux de 20 % incluse dans le total TTC.':'TVA non applicable, art. 293 B du CGI.';
+  $('#tva').checked=st.tva;
+  $('#cond').innerHTML=[...T.conditions,'Client professionnel ou association : en cas de retard de paiement, pénalités au taux de 3 fois le taux d\'intérêt légal et indemnité forfaitaire pour frais de recouvrement de 40 € (art. L441-10 du Code de commerce).'].map(c=>`<li>${esc(c)}</li>`).join('');
+}
+function base(i){let s=0;for(let j=0;j<i;j++){const l=st.lines[j];if(!l.pct)s+=l.q*l.p}return s}
+function lineTotal(l,i){return l.pct?Math.round(base(i)*l.pct)/100:Math.round(l.q*l.p*100)/100}
+sel.onchange=()=>{const v=sel.value;sel.value='';if(!v)return;
+  if(v==='pub')st.lines.push({nom:pub.nom,detail:'Majoration sur les prestations ci-dessus.',q:1,p:0,pct:pub.pct});
+  else{const o=all.find(x=>x.id===v);st.lines.push({nom:o.nom,detail:o.detail,q:o.id==='km'?20:1,p:o.prix})}
+  save();render()};
+$('#addFree').onclick=()=>{st.lines.push({nom:'Prestation',detail:'Description',q:1,p:0});save();render()};
+$('#tva').onchange=e=>{st.tva=e.target.checked;save();render()};
+$('#nouveau').onclick=()=>{if(st.lines.length&&!$('#nouveau').dataset.c){$('#nouveau').dataset.c=1;$('#nouveau').textContent='Confirmer : nouveau devis ?';setTimeout(()=>{delete $('#nouveau').dataset.c;$('#nouveau').textContent='Nouveau devis'},3000);return}
+  delete $('#nouveau').dataset.c;$('#nouveau').textContent='Nouveau devis';const n=nextNum(true);st=blank();st.num=n;save();
+  document.querySelectorAll('[data-k]').forEach(el=>{if(!SELLER.includes(el.dataset.k))el.textContent=el.dataset.k==='num'?st.num:el.dataset.k==='date'?st.date:el.defaultText});fields();render()};
+document.querySelectorAll('[data-k]').forEach(el=>el.defaultText=el.textContent);
+$('#print').onclick=()=>{document.activeElement&&document.activeElement.blur();const t=document.title;document.title=(st.num||'Devis')+' - '+(st.f.cNom||'client');window.print();setTimeout(()=>document.title=t,500)};
+fields();render();
+}
+</script>
+</body>
+</html>
