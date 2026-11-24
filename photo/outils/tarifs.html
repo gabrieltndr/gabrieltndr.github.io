@@ -56,7 +56,7 @@ const T=window.TARIFS,esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'
 const fmt=p=>(p%1?p.toFixed(2).replace('.',','):p)+' €';
 document.getElementById('maj').textContent=T.maj;
 const cats=[...new Set(T.prestations.map(p=>p.cat))];
-const row=o=>`<div class="row"><b>${esc(o.nom)}</b><div class="pr"><strong>${o.pct?'+'+o.pct+' %':esc(fmt(o.prix))}</strong><span>${o.unite?'par '+esc(o.unite):''}</span></div><p>${esc(o.detail)}</p></div>`;
+const row=o=>`<div class="row"><b>${esc(o.nom)}</b><div class="pr"><strong>${o.pct?'+'+o.pct+' %':o.prix?esc(fmt(o.prix)):'Sur devis'}</strong><span>${o.prix&&o.unite?'par '+esc(o.unite):''}</span></div><p>${esc(o.detail)}</p></div>`;
 document.getElementById('m').innerHTML=cats.map(c=>`<section class="cat"><h2>${esc(c)}</h2>${T.prestations.filter(p=>p.cat===c).map(row).join('')}</section>`).join('')+
  `<section class="cat opt"><h2>Options</h2><div class="og">${T.options.map(row).join('')}</div></section><ul class="cond">${T.conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`;
 }

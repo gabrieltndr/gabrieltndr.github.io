@@ -157,7 +157,7 @@ function blank(){const d=new Date();return{num:nextNum(false),date:d.toLocaleDat
 function nextNum(bump){let n=store.get('seq',1);if(bump){n++;store.set('seq',n)}return 'D-'+new Date().getFullYear()+'-'+String(n).padStart(3,'0')}
 if(!st)st=blank();
 const sel=$('#add');
-[['Prestations',T.prestations],['Options',T.options.filter(o=>!o.pct)]].forEach(([g,list])=>{const og=document.createElement('optgroup');og.label=g;list.forEach(o=>{const op=document.createElement('option');op.value=o.id;op.textContent=o.nom+' — '+(o.prix%1?o.prix.toFixed(2).replace('.',','):o.prix)+' €'+(o.unite?' / '+o.unite:'');og.appendChild(op)});sel.appendChild(og)});
+[['Prestations',T.prestations],['Options',T.options.filter(o=>!o.pct)]].forEach(([g,list])=>{const og=document.createElement('optgroup');og.label=g;list.forEach(o=>{const op=document.createElement('option');op.value=o.id;op.textContent=o.nom+' — '+(o.prix?(o.prix%1?o.prix.toFixed(2).replace('.',','):o.prix)+' €'+(o.unite?' / '+o.unite:''):'montant à compléter');og.appendChild(op)});sel.appendChild(og)});
 const pub=T.options.find(o=>o.pct);const op=document.createElement('option');op.value='pub';op.textContent=pub.nom+' (+'+pub.pct+' %)';sel.appendChild(op);
 function save(){store.set('draft',st)}
 function fields(){document.querySelectorAll('[data-k]').forEach(el=>{const k=el.dataset.k;
@@ -187,7 +187,7 @@ function base(i){let s=0;for(let j=0;j<i;j++){const l=st.lines[j];if(!l.pct)s+=l
 function lineTotal(l,i){return l.pct?Math.round(base(i)*l.pct)/100:Math.round(l.q*l.p*100)/100}
 sel.onchange=()=>{const v=sel.value;sel.value='';if(!v)return;
   if(v==='pub')st.lines.push({nom:pub.nom,detail:'Majoration sur les prestations ci-dessus.',q:1,p:0,pct:pub.pct});
-  else{const o=all.find(x=>x.id===v);st.lines.push({nom:o.nom,detail:o.detail,q:o.id==='km'?20:1,p:o.prix})}
+  else{const o=all.find(x=>x.id===v);st.lines.push({nom:o.nom,detail:o.detail,q:1,p:o.prix})}
   save();render()};
 $('#addFree').onclick=()=>{st.lines.push({nom:'Prestation',detail:'Description',q:1,p:0});save();render()};
 $('#tva').onchange=e=>{st.tva=e.target.checked;save();render()};
