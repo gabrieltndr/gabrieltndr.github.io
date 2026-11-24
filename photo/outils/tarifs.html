@@ -23,6 +23,7 @@ header .h{font-size:34pt}
 header p{font-size:8.5pt;color:var(--mut);text-align:right;line-height:1.5}
 main{padding:4mm 14mm;flex:1;display:grid;grid-template-columns:1fr 1fr;gap:3mm 6mm;align-content:start}
 .cond{grid-column:1/-1}
+.opt{grid-column:1/-1}.og{display:grid;grid-template-columns:1fr 1fr;gap:0 6mm}
 .cat h2{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:12pt;color:var(--acc);margin-bottom:1.4mm}
 .row{display:grid;grid-template-columns:1fr auto;gap:.8mm 4mm;padding:1.6mm 3.5mm;background:var(--panel);margin-bottom:1mm}
 .row b{font-weight:600;font-size:9pt}
@@ -43,7 +44,7 @@ footer .h{font-size:14pt}
 <body>
 <div class="page">
   <header><h1 class="h">Tarifs <span class="acc">2026</span></h1>
-    <p>Gabriel Tondeur · Photographe sport · Caen<br>Prix nets, TVA non applicable (art. 293 B du CGI)<br>Mise à jour : <span id="maj"></span></p></header>
+    <p>Gabriel Tondeur · Photographe sport &amp; communication · Caen<br>Prix nets, TVA non applicable (art. 293 B du CGI)<br>Mise à jour : <span id="maj"></span></p></header>
   <main id="m"></main>
   <footer><span class="h">Gabriel Tondeur.</span><span>06 59 18 97 21 · gabrieltondeur14@gmail.com</span></footer>
 </div>
@@ -57,7 +58,7 @@ document.getElementById('maj').textContent=T.maj;
 const cats=[...new Set(T.prestations.map(p=>p.cat))];
 const row=o=>`<div class="row"><b>${esc(o.nom)}</b><div class="pr"><strong>${o.pct?'+'+o.pct+' %':esc(fmt(o.prix))}</strong><span>${o.unite?'par '+esc(o.unite):''}</span></div><p>${esc(o.detail)}</p></div>`;
 document.getElementById('m').innerHTML=cats.map(c=>`<section class="cat"><h2>${esc(c)}</h2>${T.prestations.filter(p=>p.cat===c).map(row).join('')}</section>`).join('')+
- `<section class="cat"><h2>Options</h2>${T.options.map(row).join('')}</section><ul class="cond">${T.conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`;
+ `<section class="cat opt"><h2>Options</h2><div class="og">${T.options.map(row).join('')}</div></section><ul class="cond">${T.conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`;
 }
 </script>
 </body>

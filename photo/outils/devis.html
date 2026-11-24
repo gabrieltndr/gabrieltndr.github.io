@@ -100,7 +100,7 @@ footer{background:var(--acc);padding:3.5mm 14mm;display:flex;justify-content:spa
   <header>
     <div class="who">
       <div class="h">Gabriel <span>Tondeur</span></div>
-      <p><span class="e" contenteditable data-k="statut">Photographe sport · EI</span><br>
+      <p><span class="e" contenteditable data-k="statut">Photographe sport &amp; communication · EI</span><br>
         <span class="e" contenteditable data-k="adresse">Adresse, 14000 Caen</span><br>
         SIRET : <span class="e" contenteditable data-k="siret">à compléter</span><br>
         <span class="e" contenteditable data-k="contact">06 59 18 97 21 · gabrieltondeur14@gmail.com</span></p>
@@ -116,7 +116,7 @@ footer{background:var(--acc);padding:3.5mm 14mm;display:flex;justify-content:spa
     <div class="parties">
       <div class="card"><div class="t">Prestataire</div>
         <div class="n">Gabriel Tondeur, EI</div>
-        Photographe sport · Caen, Normandie<br>gabrieltndr.github.io/photo</div>
+        Photographe sport &amp; conseil en communication · Caen<br>gabrieltndr.github.io/photo</div>
       <div class="card"><div class="t">Client</div>
         <div class="n e" contenteditable data-k="cNom">Nom du club ou de l'organisation</div><br>
         <span class="e" contenteditable data-k="cContact">Contact : prénom nom, fonction</span><br>
@@ -153,7 +153,7 @@ const eur=n=>n.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDi
 const store={get(k,d){try{const v=localStorage.getItem('devis.'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('devis.'+k,JSON.stringify(v))}catch(e){}}};
 const SELLER=['statut','adresse','siret','contact'];
 let st=store.get('draft',null);
-function blank(){const d=new Date();return{num:nextNum(false),date:d.toLocaleDateString('fr-FR'),lines:[{nom:'Couverture de match',detail:T.prestations[0].detail,q:1,p:150}],tva:false,f:{}}}
+function blank(){const d=new Date();return{num:nextNum(false),date:d.toLocaleDateString('fr-FR'),lines:[{nom:T.prestations[0].nom,detail:T.prestations[0].detail,q:1,p:T.prestations[0].prix}],tva:false,f:{}}}
 function nextNum(bump){let n=store.get('seq',1);if(bump){n++;store.set('seq',n)}return 'D-'+new Date().getFullYear()+'-'+String(n).padStart(3,'0')}
 if(!st)st=blank();
 const sel=$('#add');

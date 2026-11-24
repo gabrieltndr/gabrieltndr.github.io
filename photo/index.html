@@ -109,7 +109,7 @@ nav ul a:hover{color:var(--txt)}
 @media(max-width:860px){.clubs{grid-template-columns:1fr 1fr}}
 
 /* services */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:6px}
 .svc article{background:var(--panel);padding:30px 28px 32px;position:relative;min-height:240px}
 .svc .n{font-family:"Anton",sans-serif;color:var(--acc);font-size:1.3rem;letter-spacing:.06em}
 .svc h3{font-family:"Anton",sans-serif;font-weight:400;font-size:2.3rem;line-height:.95;margin:16px 0 12px}
@@ -319,9 +319,9 @@ nav .right{display:flex;align-items:center}
   <div class="head rv"><h2 class="h">Vous <span class="acc">êtes…</span></h2><p>Allez directement à ce qui vous concerne.</p></div>
   <div class="who rv">
     <a href="#accreditation"><span class="lbl">Presse · organisateur</span><b>Attaché·e de presse</b><p>Ma fiche d'accréditation est prête : identité, références, matériel, contact. À copier ou à télécharger en PDF.</p><span class="go">Voir la fiche →</span></a>
-    <a href="#contact" data-b="Couverture de match" data-s="Football"><span class="lbl">Club</span><b>Responsable com'</b><p>Matchs, média days, contenus réseaux et visuels partenaires : je suis moi-même responsable com d'un club et je livre des images prêtes à publier.</p><span class="go">Demander un devis →</span></a>
-    <a href="#contact" data-b="Photos joueur / portrait"><span class="lbl">Joueur · agent</span><b>Joueur·se ou agent</b><p>Photos d'action et portraits pour votre profil, vos réseaux ou votre dossier de recrutement.</p><span class="go">Réserver un shooting →</span></a>
-    <a href="#contact" data-b="Événement / tournoi"><span class="lbl">Organisation · marque</span><b>Événement</b><p>Tournois, galas, activations partenaires : l'ambiance, les temps forts et vos sponsors en image.</p><span class="go">Parler de mon événement →</span></a>
+    <a href="#contact" data-b="Couverture de match" data-s="Football"><span class="lbl">Club</span><b>Responsable com'</b><p>Matchs, événements et stratégie de communication : je suis moi-même responsable com d'un club, je sais ce qui marche sur vos réseaux.</p><span class="go">Demander un devis →</span></a>
+    <a href="#contact" data-b="Photos joueur / portrait"><span class="lbl">Joueur · agent</span><b>Joueur·se ou agent</b><p>Un match entier centré sur vous : actions et portraits pour votre profil, vos réseaux ou votre dossier de recrutement.</p><span class="go">Réserver un shooting →</span></a>
+    <a href="#contact" data-b="Événement / tournoi"><span class="lbl">Club · organisation</span><b>Événement</b><p>Tournois, galas, activations partenaires : l'ambiance, les temps forts et vos sponsors en image.</p><span class="go">Parler de mon événement →</span></a>
   </div>
 </div></section>
 
@@ -374,13 +374,12 @@ nav .right{display:flex;align-items:center}
 </div></section>
 
 <section id="prestations"><div class="wrap">
-  <div class="head rv"><h2 class="h">Prestations</h2><p>Pour les clubs, les organisateurs d'événements et les marques partenaires.</p></div>
+  <div class="head rv"><h2 class="h">Prestations</h2><p>Pour les clubs, les joueurs et les organisateurs d'événements.</p></div>
   <div class="svc rv">
-    <article data-b="Couverture de match" tabindex="0" role="link"><span class="n">01</span><h3>Couverture de match</h3><p>Avant-match, action, émotions, vestiaire. Une sélection retouchée, prête à publier.</p><span class="go">Demander un devis →</span></article>
-    <article data-b="Média day / portraits" tabindex="0" role="link"><span class="n">02</span><h3>Média day &amp; portraits</h3><p>Portraits joueurs et staff, photos d'équipe, présentations de maillots.</p><span class="go">Demander un devis →</span></article>
-    <article data-b="Événement / tournoi" tabindex="0" role="link"><span class="n">03</span><h3>Événements &amp; tournois</h3><p>Tournois, galas, remises de trophées : l'ambiance et les temps forts de la journée.</p><span class="go">Demander un devis →</span></article>
-    <article data-b="Contenus réseaux" tabindex="0" role="link"><span class="n">04</span><h3>Contenus réseaux</h3><p>Formats pensés pour Instagram et TikTok : carrousels, stories et vidéos courtes.</p><span class="go">Demander un devis →</span></article>
-    <article data-b="Visuels partenaires" tabindex="0" role="link"><span class="n">05</span><h3>Visuels partenaires</h3><p>Des images qui mettent en avant vos sponsors : maillots, panneaux, activations.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Couverture de match" tabindex="0" role="link"><span class="n">01</span><h3>Couverture de match</h3><p>Pour les clubs : avant-match, action, émotions, vestiaire. 50 photos retouchées livrées sous 48 h. Forfaits saison possibles.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Photos joueur / portrait" tabindex="0" role="link"><span class="n">02</span><h3>Couverture d'un joueur</h3><p>Tout un match centré sur un joueur : ses actions, ses duels, ses émotions et quelques portraits. Idéal pour un profil ou un dossier de recrutement.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Événement / tournoi" tabindex="0" role="link"><span class="n">03</span><h3>Événement de club</h3><p>Tournoi, gala, fête du club, remise de trophées : l'ambiance et les temps forts, en demi-journée ou en journée.</p><span class="go">Demander un devis →</span></article>
+    <article data-b="Stratégie de communication" tabindex="0" role="link"><span class="n">04</span><h3>Stratégie de communication</h3><p>Conseil pour un événement ou pour tout le club : audit, plan, calendrier, partenaires. Par un responsable com de club en poste.</p><span class="go">Demander un devis →</span></article>
     <article class="note"><span class="n">Tarifs</span><h3>Sur devis</h3><p>Chaque club a ses besoins. Dites-moi la date, le lieu et le format : je vous réponds avec une proposition adaptée.</p><a href="#contact" class="btn" data-b="">Demander mon devis</a></article>
   </div>
 </div></section>
@@ -428,7 +427,7 @@ nav .right{display:flex;align-items:center}
     <label>Téléphone ou e-mail *<input name="contact" required autocomplete="email" placeholder="Pour vous répondre"></label>
     <label>Sport<select name="sport"><option>Football</option><option>Futsal</option><option>Handball</option><option>Autre</option></select></label>
     <label>Date<input name="date" type="date"></label>
-    <label>Besoin<select name="besoin"><option>Couverture de match</option><option>Accréditation (match / événement)</option><option>Photos joueur / portrait</option><option>Média day / portraits</option><option>Événement / tournoi</option><option>Contenus réseaux</option><option>Visuels partenaires</option><option>Autre</option></select></label>
+    <label>Besoin<select name="besoin"><option value="Couverture de match">Couverture de match</option><option value="Photos joueur / portrait">Couverture d'un joueur</option><option value="Événement / tournoi">Événement de club</option><option value="Stratégie de communication">Stratégie de communication</option><option value="Accréditation (match / événement)">Accréditation (match / événement)</option><option value="Autre">Autre</option></select></label>
     <label>Lieu<input name="lieu" placeholder="Ville, stade, salle"></label>
     <label class="f">Message<textarea name="msg" placeholder="Quelques mots sur votre projet (facultatif)"></textarea></label>
     <div class="sendrow"><button class="btn wa" type="submit" data-via="wa">Envoyer par WhatsApp →</button><button class="btn o" type="submit" data-via="mail">Envoyer par e-mail</button></div>
@@ -483,7 +482,7 @@ function pick(b,sp){if(b){form.elements.besoin.value=b}if(sp){form.elements.spor
 document.querySelectorAll('[data-b]').forEach(function(el){
   var go=function(e){if(el.tagName=='ARTICLE'||el.getAttribute('href')=='#contact'){e.preventDefault();pick(el.dataset.b,el.dataset.s);close();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(function(){form.elements.nom.focus({preventScroll:true})},700)}};
   el.addEventListener('click',go);if(el.tagName=='ARTICLE')el.addEventListener('keydown',function(e){if(e.key=='Enter')go(e)})});
-var map={handball:'Couverture de match',futsal:'Couverture de match',football:'Couverture de match',sch:'Couverture de match',portraits:'Média day / portraits'};
+var map={handball:'Couverture de match',futsal:'Couverture de match',football:'Couverture de match',sch:'Couverture de match',portraits:'Photos joueur / portrait'};
 document.getElementById('lbcta').addEventListener('click',function(e){e.preventDefault();pick(map[cur]);var sp={handball:'Handball',futsal:'Futsal',football:'Football',sch:'Football'}[cur];if(sp)form.elements.sport.value=sp;close();document.getElementById('contact').scrollIntoView({behavior:'smooth'})});
 form.querySelectorAll('[data-via]').forEach(function(b){b.addEventListener('click',function(){via=b.dataset.via})});
 form.onsubmit=function(e){e.preventDefault();
