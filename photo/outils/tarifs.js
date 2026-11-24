@@ -11,6 +11,8 @@ window.TARIFS = {
       detail: "Tout le match centré sur un seul joueur : actions, duels, émotions, et des portraits avant ou après le match. Livraison sous 48 h." },
     { id: "event", cat: "3 · Événement de club", nom: "Couverture d'un événement", prix: 850, unite: "journée",
       detail: "Tournoi, gala, fête du club, remise de trophées : l'ambiance et les temps forts. Sélection retouchée, galerie en ligne, livraison sous 72 h." },
+    { id: "event-reel", cat: "3 · Événement de club", nom: "Option reel de l'événement", prix: 250, unite: "reel",
+      detail: "Reel vertical de 15 à 30 s, pensé pour Instagram et TikTok : temps forts, ambiance, musique tendance, sous-titres. Livré sous 48 h." },
     { id: "strat-event", cat: "4 · Conseil en communication", nom: "Stratégie de communication d'un événement", prix: 1800, unite: "forfait",
       detail: "Atelier de cadrage, plan de communication (avant, pendant, après), rétroplanning, calendrier des publications, plan partenaires et indicateurs de réussite." },
     { id: "strat-club", cat: "4 · Conseil en communication", nom: "Stratégie de communication d'un club", prix: 3000, unite: "forfait",
